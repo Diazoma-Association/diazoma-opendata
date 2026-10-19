@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # macOS
 .DS_Store
 
@@ -6,3 +7,7 @@
 .idea/
 __pycache__/
 *.pyc
+=======
+assets/.DS_Store
+.DS_Store
+>>>>>>> origin/main

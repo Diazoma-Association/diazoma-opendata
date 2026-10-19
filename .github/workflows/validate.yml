@@ -20,6 +20,9 @@ jobs:
       - name: Check embedded tourism data matches the CSV sources
         run: python3 scripts/build_tourism_data.py --check
 
+      - name: Check embedded demographics data matches the CSV sources
+        run: python3 scripts/build_demographics_data.py --check
+
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -33,3 +36,8 @@ jobs:
         run: |
           sed -n '/^<script>$/,/^<\/script>/p' tourism-activity/index.html | sed '1d;$d' > tourism.js
           node --check tourism.js
+
+      - name: Check demographics dashboard JavaScript syntax
+        run: |
+          sed -n '/^<script>$/,/^<\/script>/p' demographics/index.html | sed '1d;$d' > demographics.js
+          node --check demographics.js

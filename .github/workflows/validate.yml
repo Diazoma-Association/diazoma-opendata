@@ -23,5 +23,5 @@ jobs:
 
       - name: Check dashboard JavaScript syntax
         run: |
-          sed -n '/^<script>$/,/^<\/script>/p' index.html | sed '1d;$d' > dashboard.js
+          sed -n '/^<script>$/,/^<\/script>/p' archaeological-sites/index.html | sed '1d;$d' > dashboard.js
           node --check dashboard.js

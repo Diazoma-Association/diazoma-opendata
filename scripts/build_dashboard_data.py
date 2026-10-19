@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Generate the embedded dashboard data in index.html from the CSV files in data/.
+"""Generate the embedded dashboard data in archaeological-sites/index.html from the CSV files in data/.
 
 Usage:
-    python3 scripts/build_dashboard_data.py           # rewrite the data blocks in index.html
-    python3 scripts/build_dashboard_data.py --check   # verify index.html and the CSVs agree, change nothing
+    python3 scripts/build_dashboard_data.py           # rewrite the data blocks in archaeological-sites/index.html
+    python3 scripts/build_dashboard_data.py --check   # verify the dashboard and the CSVs agree, change nothing
 
 The CSV files are the source of truth. The two <script type="application/json">
-blocks in index.html are generated from them, so the dashboard and the downloadable
+blocks in archaeological-sites/index.html are generated from them, so the dashboard and the downloadable
 CSVs cannot drift apart.
 """
 
@@ -18,7 +18,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-HTML = ROOT / "index.html"
+HTML = ROOT / "archaeological-sites" / "index.html"
 SITE_CSV = ROOT / "data" / "archaeological_site_visits_by_site_1998_2026.csv"
 UNIT_CSV = ROOT / "data" / "archaeological_site_visits_by_source_unit_1998_2026.csv"
 
@@ -96,14 +96,14 @@ def main():
     if check_only:
         problems = []
         if not same_rows(embedded(html, SITE_BLOCK), json.loads(site_json)):
-            problems.append("site-data in index.html is out of date with the site CSV")
+            problems.append("site-data in the dashboard is out of date with the site CSV")
         if not same_rows(embedded(html, UNIT_BLOCK), json.loads(unit_json)):
-            problems.append("unit-data in index.html is out of date with the source-unit CSV")
+            problems.append("unit-data in the dashboard is out of date with the source-unit CSV")
         problems += check_totals(site_rows, unit_rows)
         if problems:
             print("\n".join(problems))
             sys.exit(1)
-        print(f"OK: {len(site_rows)} site rows, {len(unit_rows)} source-unit rows, data in index.html matches the CSVs.")
+        print(f"OK: {len(site_rows)} site rows, {len(unit_rows)} source-unit rows, data in the dashboard matches the CSVs.")
         return
 
     html = SITE_BLOCK.sub(lambda m: m.group(1) + site_json + m.group(3), html, count=1)

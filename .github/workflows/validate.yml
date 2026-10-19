@@ -29,6 +29,9 @@ jobs:
       - name: Check embedded census data matches the CSV sources
         run: python3 scripts/build_census_data.py --check
 
+      - name: Check embedded funding data matches the CSV sources
+        run: python3 scripts/build_funding_data.py --check
+
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -57,3 +60,10 @@ jobs:
         run: |
           sed -n '/^<script>$/,/^<\/script>/p' demographics/census-2021/index.html | sed '1d;$d' > census.js
           node --check census.js
+
+      - name: Check funding dashboards JavaScript syntax
+        run: |
+          for page in funding/progress funding/interreg funding; do
+            sed -n '/^<script>$/,/^<\/script>/p' $page/index.html | sed '1d;$d' > funding.js
+            node --check funding.js
+          done

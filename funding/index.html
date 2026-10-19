@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Χρηματοδοτήσεις και δημόσιες επενδύσεις: χρηματοδοτική πρόοδος των προγραμμάτων 2021–2027, προγράμματα Interreg και κατάλογος πράξεων ΕΣΠΑ.">
+<title>Χρηματοδοτήσεις και δημόσιες επενδύσεις | Διάζωμα</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+<style>
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:14px}
+a.tile{display:flex;flex-direction:column;text-decoration:none;color:inherit}a.tile:hover{border-color:var(--green)}
+.tile h3{font:500 19px/1.25 Georgia,serif;margin:0 0 6px}.tile p{font-size:13px;color:var(--muted);margin:0 0 12px;flex:1}
+.badge{align-self:flex-start;font-size:12px;padding:3px 10px;border-radius:100px;background:#e6ece3;color:#294535}.badge.soon{background:#f8efdf;color:#8a5f22}
+.phase{font-size:11px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
+.table-wrap td:nth-child(-n+2),.table-wrap th:nth-child(-n+2){white-space:normal}
+</style>
+</head>
+<body>
+<header class="hero"><div class="eyebrow"><a class="home-link" href="../">Διάζωμα · πολιτισμός και δεδομένα</a></div><h1>Χρηματοδοτήσεις και δημόσιες επενδύσεις</h1>
+<p>Δημόσια δεδομένα για χρηματοδοτούμενα έργα, ευρωπαϊκά προγράμματα και αναπτυξιακές παρεμβάσεις στην Ελλάδα, με έμφαση στη γεωγραφική και θεματική κατανομή των δημόσιων επενδύσεων και στην Πολιτική Συνοχής.</p>
+<div class="hero-meta"><span class="pill">Προγραμματική περίοδος 2021–2027</span><span class="pill">Κομισιόν · ΓΓ ΕΣΠΑ</span></div></header>
+<main class="page">
+<div class="sectionline"><h2>Υποενότητες</h2><div class="period">Τρία σύνολα δεδομένων με διαφορετικό επίπεδο ανάλυσης, που παρουσιάζονται χωριστά ώστε να μη γίνονται διπλομετρήσεις.</div></div>
+<section class="cards">
+<a class="card tile" href="projects/"><div class="phase">Φάση Α · έργα</div><h3>Έργα ΕΣΠΑ 2021–2027</h3><p>Κατάλογος εγκεκριμένων πράξεων ανά έργο, δικαιούχο, πρόγραμμα, περιφέρεια και κόστος, με φίλτρα, χάρτη και εξαγωγή CSV.</p><span class="badge soon">Αναμένεται το αρχείο πηγής</span></a>
+<a class="card tile" href="progress/"><div class="phase">Φάση Β · πρόοδος</div><h3>Χρηματοδοτική πρόοδος</h3><p>Προγραμματισμένοι πόροι, πόροι επιλεγμένων πράξεων και δηλωθείσες δαπάνες ανά πρόγραμμα, ταμείο, ειδικό στόχο και θεματική, ανά κύκλο αναφοράς.</p><span class="badge">Διαθέσιμο</span></a>
+<a class="card tile" href="interreg/"><div class="phase">Φάση Γ · συνεργασία</div><h3>Interreg</h3><p>Προγραμματισμένες ετήσιες κατανομές των προγραμμάτων διασυνοριακής και διακρατικής συνεργασίας στα οποία συμμετέχει η Ελλάδα.</p><span class="badge">Διαθέσιμο</span></a>
+</section>
+<section class="grid">
+<article class="card wide"><div class="panel-title"><div><h3>Πηγές και ενημέρωση των δεδομένων</h3><p>Η τελευταία εισαγωγή κάθε συνόλου δεδομένων, όπως καταγράφεται στο αρχείο εισαγωγών.</p></div></div><div class="table-wrap" id="syncTable"><p class="empty">Φόρτωση…</p></div></article>
+<article class="card wide"><div class="panel-title"><div><h3>Μεθοδολογία</h3><p>Βασικές αρχές της ενότητας.</p></div></div>
+<ul class="notes">
+<li>Τα τρία σύνολα δεδομένων έχουν διαφορετικό επίπεδο ανάλυσης: μεμονωμένες πράξεις (κατάλογος ΕΣΠΑ), συγκεντρωτικά οικονομικά μεγέθη ανά πρόγραμμα και πεδίο παρέμβασης (Κομισιόν) και προγραμματισμένες ετήσιες κατανομές (Interreg). Δεν αθροίζονται μεταξύ τους.</li>
+<li>Τα ευρωπαϊκά οικονομικά στοιχεία κάθε κύκλου αναφοράς είναι σωρευτικά και δεν αθροίζονται μεταξύ κύκλων. Οι προγραμματισμένες κατανομές δεν παρουσιάζονται ως πραγματικές δαπάνες.</li>
+<li>Οι εισαγωγές είναι επαναλήψιμες: το ίδιο αρχείο δεν δημιουργεί διπλοεγγραφές, οι αναθεωρημένες εγγραφές ενημερώνονται και οι εγγραφές που λείπουν από νεότερη έκδοση της πηγής διατηρούνται. Κάθε εισαγωγή καταγράφεται με την πηγή, τις ημερομηνίες δημοσίευσης και τροποποίησης και το αποτέλεσμα.</li>
+<li>Η ταξινόμηση σε θεματικές βασίζεται σε επίσημους κωδικούς παρέμβασης και τεκμηριώνεται ανά κωδικό στο <a href="../data/funding/taxonomy_intervention_fields.csv">αρχείο ταξινόμησης</a>.</li>
+</ul></article>
+</section>
+<footer class="footer"><div class="source-attribution"><div>Πηγές: Ευρωπαϊκή Επιτροπή · <a href="https://cohesiondata.ec.europa.eu" target="_blank" rel="noopener">Cohesion Open Data</a> · Γενική Γραμματεία ΕΣΠΑ · <a href="https://www.espa.gr/el/Pages/List_of_Operations.aspx" target="_blank" rel="noopener">Κατάλογος Πράξεων</a></div><div class="initiative-note-row"><img class="initiative-logo" src="../assets/img/diazoma-logo-header.png" alt="Λογότυπο Σωματείου ΔΙΑΖΩΜΑ"><p class="initiative-note">Η πλατφόρμα αποτελεί πρωτοβουλία του Σωματείου ΔΙΑΖΩΜΑ για την πιο προσιτή και κατανοητή παρουσίαση δεδομένων που αφορούν τον πολιτισμό και τον τουρισμό στην Ελλάδα.</p></div></div>
+<div class="source-links"><a href="../data/funding/sync_log.csv" download>Λήψη αρχείου εισαγωγών (CSV)</a><a href="../data/README.md" target="_blank" rel="noopener">Πηγή και μέθοδος επεξεργασίας</a></div></footer>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const nf = new Intl.NumberFormat('el-GR');
+// Minimal CSV parser for the import log (quoted fields, no embedded newlines).
+function parseCsv(text) {
+  return text.trim().split('\n').map(line => { const out = []; let cur = '', q = false;
+    for (const ch of line) { if (ch === '"') q = !q; else if (ch === ',' && !q) { out.push(cur); cur = ''; } else cur += ch; }
+    out.push(cur); return out; });
+}
+fetch('../data/funding/sync_log.csv').then(r => { if (!r.ok) throw new Error(r.status); return r.text(); }).then(text => {
+  const [head, ...rows] = parseCsv(text), col = n => head.indexOf(n);
+  const latest = new Map(); rows.forEach(r => latest.set(r[col('dataset')] + '|' + r[col('note')], r));
+  const date = v => v ? v.slice(0, 10) : '—';
+  $('syncTable').innerHTML = `<table><thead><tr><th>Σύνολο δεδομένων</th><th>Πηγή</th><th>Δημοσίευση πηγής</th><th>Τροποποίηση πηγής</th><th>Τελευταία εισαγωγή</th><th>Γραμμές</th><th>Νέες / ενημερωμένες / αμετάβλητες</th><th>Αποτέλεσμα</th></tr></thead><tbody>${
+    [...latest.values()].map(r => `<tr><td>${esc(r[col('source_title')])}</td><td><a href="${esc(r[col('source_url')])}" target="_blank" rel="noopener">${esc(r[col('dataset')])}</a></td><td>${date(r[col('source_published')])}</td><td>${date(r[col('source_modified')])}</td><td>${date(r[col('imported_at')])}</td><td>${nf.format(+r[col('rows_in_source')])}</td><td>${r[col('inserted')]} / ${r[col('updated')]} / ${r[col('unchanged')]}</td><td>${esc(r[col('status')])}</td></tr>`).join('')}</tbody></table>
+    <p class="insight">Κατάλογος Πράξεων ΕΣΠΑ: δεν έχει εισαχθεί ακόμα. Το σχετικό αρχείο δεν ήταν προσβάσιμο κατά την ενημέρωση.</p>`;
+}).catch(() => { $('syncTable').innerHTML = '<p class="empty">Το αρχείο εισαγωγών δεν είναι διαθέσιμο.</p>'; });
+</script>
+</body>
+</html>

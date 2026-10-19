@@ -1,0 +1,179 @@
+scope,code,title_en,theme_id,basis
+cohesion,001,001 R+I fixed asset investment in micro enterprises,enterprise,Έρευνα και καινοτομία σε επιχειρήσεις (επενδύσεις και δραστηριότητες)
+cohesion,002,002 R+I fixed asset investment in SMEs,enterprise,Έρευνα και καινοτομία σε επιχειρήσεις (επενδύσεις και δραστηριότητες)
+cohesion,003,003 R+I fixed asset investment in large enterprises,enterprise,Έρευνα και καινοτομία σε επιχειρήσεις (επενδύσεις και δραστηριότητες)
+cohesion,004,004 R+I fixed asset investment: Public research centres + HEI,education,Έρευνα και καινοτομία σε δημόσια ερευνητικά κέντρα και ΑΕΙ
+cohesion,005,005 R+I intangible asset in micro enterprises,enterprise,Έρευνα και καινοτομία σε επιχειρήσεις (επενδύσεις και δραστηριότητες)
+cohesion,006,006 R+I intangible asset in SMEs,enterprise,Έρευνα και καινοτομία σε επιχειρήσεις (επενδύσεις και δραστηριότητες)
+cohesion,008,008 R+I Intangible assets in public research centres + HEI,education,Έρευνα και καινοτομία σε δημόσια ερευνητικά κέντρα και ΑΕΙ
+cohesion,009,009 R+I activities in micro enterprises,enterprise,Έρευνα και καινοτομία σε επιχειρήσεις (επενδύσεις και δραστηριότητες)
+cohesion,010,010 R+I activities in SMEs,enterprise,Έρευνα και καινοτομία σε επιχειρήσεις (επενδύσεις και δραστηριότητες)
+cohesion,011,011 R+I activities in large enterprises,enterprise,Έρευνα και καινοτομία σε επιχειρήσεις (επενδύσεις και δραστηριότητες)
+cohesion,012,"012 R+I activities in public research centres, HEI +",education,Έρευνα και καινοτομία σε δημόσια ερευνητικά κέντρα και ΑΕΙ
+cohesion,013,013 Digitising SMEs,digital,Ψηφιοποίηση ΜμΕ και επιχειρήσεων
+cohesion,014,014 Digitising large enterprises,digital,Ψηφιοποίηση ΜμΕ και επιχειρήσεων
+cohesion,015,015 Digitising SMEs or large enterprises - GHG reduction,digital,Ψηφιοποίηση ΜμΕ και επιχειρήσεων
+cohesion,016,"016 Government ICT solutions, e-services, apps",digital,"Κυβερνητικές λύσεις ΤΠΕ, ηλεκτρονικές υπηρεσίες, ψηφιακές δεξιότητες και ένταξη"
+cohesion,017,"017 Government ICT solutions, e-services, apps - GHG reduction",digital,"Κυβερνητικές λύσεις ΤΠΕ, ηλεκτρονικές υπηρεσίες, ψηφιακές δεξιότητες και ένταξη"
+cohesion,018,018 IT services + applications for digital skills + inclusion,digital,"Κυβερνητικές λύσεις ΤΠΕ, ηλεκτρονικές υπηρεσίες, ψηφιακές δεξιότητες και ένταξη"
+cohesion,019,019 e-Health services and applications,health_social,Ηλεκτρονική υγεία και ψηφιοποίηση της υγειονομικής περίθαλψης
+cohesion,020,020 Business infrastructure for SMEs,enterprise,"Επιχειρηματικές υποδομές, ανάπτυξη και εξωστρέφεια ΜμΕ, συστάδες, μεταφορά τεχνολογίας"
+cohesion,021,021 SME business development and internationalisation,enterprise,"Επιχειρηματικές υποδομές, ανάπτυξη και εξωστρέφεια ΜμΕ, συστάδες, μεταφορά τεχνολογίας"
+cohesion,022,022 Support for large enterprises with financial instruments,enterprise,"Επιχειρηματικές υποδομές, ανάπτυξη και εξωστρέφεια ΜμΕ, συστάδες, μεταφορά τεχνολογίας"
+cohesion,023,"023 Skills for smart specialisation, industrial transition",education,Δεξιότητες για την έξυπνη εξειδίκευση και τη βιομηχανική μετάβαση
+cohesion,024,024 Advanced support services for SMEs and groups of SMEs,enterprise,"Επιχειρηματικές υποδομές, ανάπτυξη και εξωστρέφεια ΜμΕ, συστάδες, μεταφορά τεχνολογίας"
+cohesion,025,"025 Incubation, support to spin offs/outs + start ups",enterprise,"Επιχειρηματικές υποδομές, ανάπτυξη και εξωστρέφεια ΜμΕ, συστάδες, μεταφορά τεχνολογίας"
+cohesion,026,026 Innovation cluster support and business networks for SMEs,enterprise,"Επιχειρηματικές υποδομές, ανάπτυξη και εξωστρέφεια ΜμΕ, συστάδες, μεταφορά τεχνολογίας"
+cohesion,027,027 Innovation processes in SMEs,enterprise,"Επιχειρηματικές υποδομές, ανάπτυξη και εξωστρέφεια ΜμΕ, συστάδες, μεταφορά τεχνολογίας"
+cohesion,028,028 Technology transfer and cooperation,enterprise,"Επιχειρηματικές υποδομές, ανάπτυξη και εξωστρέφεια ΜμΕ, συστάδες, μεταφορά τεχνολογίας"
+cohesion,029,"029 Low carbon R+I processes, tech-transfer and cooperation",energy,Έρευνα και καινοτομία για χαμηλές εκπομπές άνθρακα
+cohesion,030,"030 Circular economy R+I processes, tech-transfer + cooperation",environment,Έρευνα και καινοτομία για την κυκλική οικονομία
+cohesion,033,033 VHC Broadband (access/local loops),digital,Ευρυζωνικά δίκτυα και υποδομές ΤΠΕ
+cohesion,034,034 VHC Broadband (for homes and businesses),digital,Ευρυζωνικά δίκτυα και υποδομές ΤΠΕ
+cohesion,036,036 ICT: Other types of infrastructure,digital,Ευρυζωνικά δίκτυα και υποδομές ΤΠΕ
+cohesion,037,037 ICT: Other types of ICT infrastructure - GHG reduction,digital,Ευρυζωνικά δίκτυα και υποδομές ΤΠΕ
+cohesion,038,038 Energy efficiency in SMEs,energy,Ενεργειακή απόδοση και υπηρεσίες χαμηλών εκπομπών
+cohesion,040,040 Energy efficiency in enterprises - deep renovation,energy,Ενεργειακή απόδοση και υπηρεσίες χαμηλών εκπομπών
+cohesion,041,041 Energy efficiency in housing,energy,Ενεργειακή απόδοση και υπηρεσίες χαμηλών εκπομπών
+cohesion,042,042 Energy efficiency in housing - deep renovation,energy,Ενεργειακή απόδοση και υπηρεσίες χαμηλών εκπομπών
+cohesion,043,043 New energy efficient buildings,energy,Ενεργειακή απόδοση και υπηρεσίες χαμηλών εκπομπών
+cohesion,044,044 Energy efficiency in public infrastructure,energy,Ενεργειακή απόδοση και υπηρεσίες χαμηλών εκπομπών
+cohesion,045,045 Energy efficiency in public infrastructure - deep renovation,energy,Ενεργειακή απόδοση και υπηρεσίες χαμηλών εκπομπών
+cohesion,046,046 Services linked to LCE and resilience to climate change,energy,Ενεργειακή απόδοση και υπηρεσίες χαμηλών εκπομπών
+cohesion,047,047 Renewable energy: wind,energy,"Ανανεώσιμες πηγές ενέργειας, έξυπνα ενεργειακά συστήματα, συμπαραγωγή"
+cohesion,048,048 Renewable energy: solar,energy,"Ανανεώσιμες πηγές ενέργειας, έξυπνα ενεργειακά συστήματα, συμπαραγωγή"
+cohesion,049,049 Renewable energy: biomass,energy,"Ανανεώσιμες πηγές ενέργειας, έξυπνα ενεργειακά συστήματα, συμπαραγωγή"
+cohesion,051,051 Renewable energy: marine,energy,"Ανανεώσιμες πηγές ενέργειας, έξυπνα ενεργειακά συστήματα, συμπαραγωγή"
+cohesion,052,052 Other renewable energy (including geothermal energy),energy,"Ανανεώσιμες πηγές ενέργειας, έξυπνα ενεργειακά συστήματα, συμπαραγωγή"
+cohesion,053,053 Smart Energy Systems and related storage,energy,"Ανανεώσιμες πηγές ενέργειας, έξυπνα ενεργειακά συστήματα, συμπαραγωγή"
+cohesion,054,"054 High efficiency co-generation, district heating + cooling",energy,"Ανανεώσιμες πηγές ενέργειας, έξυπνα ενεργειακά συστήματα, συμπαραγωγή"
+cohesion,055,"055 Low emissions, HE co-generation, district heating + cooling",energy,"Ανανεώσιμες πηγές ενέργειας, έξυπνα ενεργειακά συστήματα, συμπαραγωγή"
+cohesion,058,058 Prevention or management of floods and landslides,environment,Πρόληψη και διαχείριση κλιματικών και άλλων κινδύνων
+cohesion,059,059 Prevention or management of climate related risks: fires,environment,Πρόληψη και διαχείριση κλιματικών και άλλων κινδύνων
+cohesion,060,060 Climate change measures - prevention and management,environment,Πρόληψη και διαχείριση κλιματικών και άλλων κινδύνων
+cohesion,061,061 Non-climate + human-induced risk: prevention + management,environment,Πρόληψη και διαχείριση κλιματικών και άλλων κινδύνων
+cohesion,062,062 Water for human consumption,environment,"Ύδατα, λύματα, απόβλητα και αποκατάσταση χώρων"
+cohesion,063,063 Water for human consumption - low energy/ leakage,environment,"Ύδατα, λύματα, απόβλητα και αποκατάσταση χώρων"
+cohesion,064,064 Water management and water resource conservation,environment,"Ύδατα, λύματα, απόβλητα και αποκατάσταση χώρων"
+cohesion,065,065 Waste water collection and treatment,environment,"Ύδατα, λύματα, απόβλητα και αποκατάσταση χώρων"
+cohesion,066,066 Waste water collection and treatment - low energy,environment,"Ύδατα, λύματα, απόβλητα και αποκατάσταση χώρων"
+cohesion,067,067 Household waste management,environment,"Ύδατα, λύματα, απόβλητα και αποκατάσταση χώρων"
+cohesion,068,068 Household waste management: residual waste treatment,environment,"Ύδατα, λύματα, απόβλητα και αποκατάσταση χώρων"
+cohesion,069,"069 Commercial, industrial or waste management: prevention etc.",environment,"Ύδατα, λύματα, απόβλητα και αποκατάσταση χώρων"
+cohesion,070,"070 Commercial, industrial waste management: residual/ hazardous",environment,"Ύδατα, λύματα, απόβλητα και αποκατάσταση χώρων"
+cohesion,071,071 Promoting the use of recycled materials as raw materials,environment,"Ύδατα, λύματα, απόβλητα και αποκατάσταση χώρων"
+cohesion,073,073 Rehabilitation of industrial sites and contaminated land,environment,"Ύδατα, λύματα, απόβλητα και αποκατάσταση χώρων"
+cohesion,075,075 Enviro-friendly production processes in SMEs,enterprise,Φιλικές προς το περιβάλλον παραγωγικές διαδικασίες σε ΜμΕ (επένδυση σε επιχειρήσεις)
+cohesion,077,077 Air quality and noise reduction measures,environment,"Ποιότητα αέρα, προστασία φύσης και βιοποικιλότητας"
+cohesion,078,"078 Protection, restoration + use of Natura 2000 sites",environment,"Ποιότητα αέρα, προστασία φύσης και βιοποικιλότητας"
+cohesion,079,079 Nature + biodiversity protection,environment,"Ποιότητα αέρα, προστασία φύσης και βιοποικιλότητας"
+cohesion,081,081 Clean urban transport infrastructure,infrastructure,"Αστικές καθαρές μεταφορές, ποδηλατικές υποδομές, ψηφιοποίηση αστικών μεταφορών"
+cohesion,082,082 Clean urban transport rolling stock,infrastructure,"Αστικές καθαρές μεταφορές, ποδηλατικές υποδομές, ψηφιοποίηση αστικών μεταφορών"
+cohesion,083,083 Cycling infrastructure,infrastructure,"Αστικές καθαρές μεταφορές, ποδηλατικές υποδομές, ψηφιοποίηση αστικών μεταφορών"
+cohesion,084,084 Digitalisation of urban transport,infrastructure,"Αστικές καθαρές μεταφορές, ποδηλατικές υποδομές, ψηφιοποίηση αστικών μεταφορών"
+cohesion,085,085 Digitalisation of urban transport - GHG emission reduction,infrastructure,"Αστικές καθαρές μεταφορές, ποδηλατικές υποδομές, ψηφιοποίηση αστικών μεταφορών"
+cohesion,086,086 Alternative fuels infrastructure,energy,Υποδομή εναλλακτικών καυσίμων
+cohesion,087,087 Road: Newly built or upgraded - TEN-T (core),infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,088,088 Road: New + upgraded TEN-T (comprehensive),infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,089,089 Road: New + upgraded secondary links to TEN-T network,infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,090,"090 Road: New + upgraded - national, regional + local",infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,091,091 Road: Reconstructed or modernised - TEN-T (core),infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,092,092 Road: Reconstructed or modernised - TEN-T (comprehensive),infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,093,093 Road: Other reconstructed or modernised,infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,095,095 Road: Digitalisation of transport - GHG emission reduction,infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,096,096 Railway: Newly built / upgraded - TEN-T (core),infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,097,097 Railway: Newly built / upgraded - TEN-T (comprehensive),infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,098,098 Railway: Other newly built or upgraded,infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,099,099 Railway: Other newly built or upgraded - zero emission,infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,105,105 Railway: European Rail Traffic Management System (ERTMS),infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,109,109 Multimodal transport (not urban),infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,110,110 Seaports (TEN-T),infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,111,111 Seaports (TEN-T) - no fossil fuel,infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,112,112 Other seaports,infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,113,113 Other seaports - no fossil fuel,infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,118,"118 Airport security, safety and air traffic management",infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,119,119 Digitising transport: other transport modes,infrastructure,"Οδικές, σιδηροδρομικές, λιμενικές, αεροπορικές υποδομές, πολυτροπικές μεταφορές και ψηφιοποίηση μεταφορών"
+cohesion,121,121 Infrastructure for early childhood education and care,education,Υποδομές εκπαίδευσης και κατάρτισης
+cohesion,122,122 Infrastructure for primary and secondary education,education,Υποδομές εκπαίδευσης και κατάρτισης
+cohesion,123,123 Infrastructure for tertiary education,education,Υποδομές εκπαίδευσης και κατάρτισης
+cohesion,124,124 Infrastructure for vocational education and training,education,Υποδομές εκπαίδευσης και κατάρτισης
+cohesion,127,127 Other social infrastructure for social inclusion,health_social,Λοιπές κοινωνικές υποδομές για κοινωνική ένταξη
+cohesion,128,128 Health infrastructure,health_social,"Υποδομές, εξοπλισμός και κινητά μέσα υγείας, εξοπλισμός έκτακτης ανάγκης"
+cohesion,129,129 Health equipment,health_social,"Υποδομές, εξοπλισμός και κινητά μέσα υγείας, εξοπλισμός έκτακτης ανάγκης"
+cohesion,130,130 Health mobile assets,health_social,"Υποδομές, εξοπλισμός και κινητά μέσα υγείας, εξοπλισμός έκτακτης ανάγκης"
+cohesion,131,131 Digitalisation in health care,health_social,Ηλεκτρονική υγεία και ψηφιοποίηση της υγειονομικής περίθαλψης
+cohesion,132,132 Equipment and supplies for emergency situation,health_social,"Υποδομές, εξοπλισμός και κινητά μέσα υγείας, εξοπλισμός έκτακτης ανάγκης"
+cohesion,134,134 Access to employment,education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,135,135 Access to employment of long-term unemployed,education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,136,136 Youth employment and socio-economic integration,education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,137,137 Self-employment and business start-up,enterprise,Αυτοαπασχόληση και σύσταση επιχειρήσεων
+cohesion,138,138 Social economy and social enterprises,health_social,Κοινωνική οικονομία και κοινωνικές επιχειρήσεις
+cohesion,139,139 Modernise labour market institutions to anticipate needs,education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,140,140 Labour market matching and transitions,education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,142,142 Women’s labour market participation and non segregation,education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,143,143 Work-life balance,education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,144,144 Healthy and well–adapted working environment,education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,145,145 Digital skills,education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,145a,"145a Skills, employment in digital, deeptech, biotech, defence",education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,145b,145b Support for skills and employment in clean tech,education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,146,"146 Adaptation to change of workers, firms and entrepreneurs",education,"Απασχόληση, αγορά εργασίας, δεξιότητες και προσαρμογή εργαζομένων"
+cohesion,147,147 Active and healthy ageing,health_social,Ενεργός και υγιής γήρανση
+cohesion,148,148 Early childhood education and care (excl. infrastructure),education,Εκπαίδευση και διά βίου μάθηση (εκτός υποδομών)
+cohesion,149,149 Primary and secondary education (excluding infrastructure),education,Εκπαίδευση και διά βίου μάθηση (εκτός υποδομών)
+cohesion,150,150 Tertiary education (excluding infrastructure),education,Εκπαίδευση και διά βίου μάθηση (εκτός υποδομών)
+cohesion,151,151 Adult education (excluding infrastructure),education,Εκπαίδευση και διά βίου μάθηση (εκτός υποδομών)
+cohesion,152,152 Equal opportunities & participation in society,health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,153,153 Employment integration for disadvantaged people,health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,154,"154 Access of Roma to education, employment and social inclusion",health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,155,155 Support to civil society working with Roma,health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,156,156 Participation of third-country nationals in employment,health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,157,157 Social integration of third-country nationals,health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,158,"158 Access to quality, sustainable and affordable services",health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,159,159 Delivery of family and community-based care services,health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,160,"160 Accessibility, effectiveness & resilience of health systems",health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,161,161 Access to long-term care (excluding infrastructure),health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,162,162 Modernisation of social protection systems,health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,163,163 Social integration of people experiencing poverty/exclusion,health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,164,164 Addressing material deprivation to the most deprived,health_social,"Κοινωνική ένταξη, ισότητα ευκαιριών, υπηρεσίες φροντίδας και υγείας, κοινωνική προστασία"
+cohesion,165,165 Public tourism assets and related tourism services,tourism,Δημόσιοι τουριστικοί πόροι και συναφείς τουριστικές υπηρεσίες
+cohesion,166,166 Cultural heritage and cultural services,culture,Πολιτιστική κληρονομιά και πολιτιστικές υπηρεσίες
+cohesion,167,167 Natural heritage and eco-tourism other than Natura 2000,tourism,Φυσική κληρονομιά και οικοτουρισμός εκτός Natura 2000
+cohesion,168,168 Physical regeneration and security of public spaces,territorial,Αναζωογόνηση δημόσιων χώρων και εδαφικές αναπτυξιακές πρωτοβουλίες (επίσημοι κωδικοί)
+cohesion,169,169 Territorial developement initiatives - preparation,territorial,Αναζωογόνηση δημόσιων χώρων και εδαφικές αναπτυξιακές πρωτοβουλίες (επίσημοι κωδικοί)
+cohesion,170,170 Improve the capacity of programme authorities and bodies,other_ta,"Τεχνική βοήθεια, πληροφόρηση, παρακολούθηση, αξιολόγηση, διοικητική ικανότητα"
+cohesion,179,179 Information and communication,other_ta,"Τεχνική βοήθεια, πληροφόρηση, παρακολούθηση, αξιολόγηση, διοικητική ικανότητα"
+cohesion,180,"180 Preparation, implementation, monitoring and control",other_ta,"Τεχνική βοήθεια, πληροφόρηση, παρακολούθηση, αξιολόγηση, διοικητική ικανότητα"
+cohesion,181,"181 Evaluation and studies, data collection",other_ta,"Τεχνική βοήθεια, πληροφόρηση, παρακολούθηση, αξιολόγηση, διοικητική ικανότητα"
+cohesion,182,182 Reinforcement of administrative capacity,other_ta,"Τεχνική βοήθεια, πληροφόρηση, παρακολούθηση, αξιολόγηση, διοικητική ικανότητα"
+cohesion,183,183 Household waste management: landfill (CARE),environment,Διαχείριση αστικών αποβλήτων (CARE)
+cohesion,185,"185 Natural gas: storage, transmission and distribution (CARE)",energy,"Φυσικό αέριο: αποθήκευση, μεταφορά και διανομή (CARE)"
+cohesion,186,186 Airports (CARE),infrastructure,Αεροδρόμια (CARE)
+cohesion,188,188 Productive investments in large firms linked to clean tech,energy,Παραγωγικές επενδύσεις σε επιχειρήσεις καθαρής τεχνολογίας
+cohesion,189,189 Productive investments in SMEs linked to clean tech,energy,Παραγωγικές επενδύσεις σε επιχειρήσεις καθαρής τεχνολογίας
+cohesion,190,190 Productive investments in large firms linked to biotech,enterprise,Παραγωγικές επενδύσεις σε επιχειρήσεις βιοτεχνολογίας
+cohesion,191,191 Productive investments in SMEs linked to biotech,enterprise,Παραγωγικές επενδύσεις σε επιχειρήσεις βιοτεχνολογίας
+cohesion,192,192 Productive investments in large firms linked to digital tech,digital,Παραγωγικές επενδύσεις σε επιχειρήσεις ψηφιακής τεχνολογίας
+cohesion,193,193 Productive investments in SMEs linked to digital tech,digital,Παραγωγικές επενδύσεις σε επιχειρήσεις ψηφιακής τεχνολογίας
+cohesion,194,194 Productive investment in LE for defence and dual use,enterprise,Παραγωγικές επενδύσεις σε επιχειρήσεις άμυνας και διπλής χρήσης
+cohesion,195,195 Productive investment in SMEs for defence and dual use,enterprise,Παραγωγικές επενδύσεις σε επιχειρήσεις άμυνας και διπλής χρήσης
+cohesion,196,196 Energy interconnectors and support infrastructure,energy,Ενεργειακές διασυνδέσεις και υποστηρικτική υποδομή
+cohesion,197,197 Protection of critical infrastructure,infrastructure,"Προστασία κρίσιμων υποδομών, αμυντικές υποδομές και στρατιωτική κινητικότητα"
+cohesion,198,"198 Defence infrastructure, including military mobility",infrastructure,"Προστασία κρίσιμων υποδομών, αμυντικές υποδομές και στρατιωτική κινητικότητα"
+emfaf,01,TOI 1 Impacts on environment and contribution to GES,environment,Επιπτώσεις στο περιβάλλον
+emfaf,02,TOI 2 Promoting conditions for a viable and competitive sector,agrifood,Βιώσιμος και ανταγωνιστικός τομέας αλιείας και υδατοκαλλιέργειας
+emfaf,03,TOI 3 Contributing to climate neutrality,energy,Συμβολή στην κλιματική ουδετερότητα
+emfaf,04,TOI 4 Temporary cessation of fishing activities,agrifood,Προσωρινή παύση αλιευτικών δραστηριοτήτων
+emfaf,05,TOI 5 Permanent cessation of fishing activities,agrifood,Οριστική παύση αλιευτικών δραστηριοτήτων
+emfaf,06,TOI 6 Implementing and monitoring MPAs including Natura 2000,environment,Θαλάσσιες προστατευόμενες περιοχές και Natura 2000
+emfaf,07,TOI 7 Compensation for unexpected events,agrifood,Αποζημιώσεις για απρόβλεπτα γεγονότα
+emfaf,08,TOI 8 Compensation for additional costs in ORs,agrifood,Αποζημίωση πρόσθετων κοστών σε εξόχως απομακρυσμένες περιοχές
+emfaf,09,TOI 9 Animal health and welfare,agrifood,Υγεία και καλή διαβίωση ζώων
+emfaf,10,TOI 10 Control and enforcement,agrifood,Έλεγχος και επιβολή της αλιευτικής νομοθεσίας
+emfaf,11,"TOI 11 Data collection and analysis, and marine knowledge",environment,Συλλογή δεδομένων και θαλάσσια γνώση
+emfaf,12,TOI 12 Maritime surveillance and security,other_home,Θαλάσσια επιτήρηση και ασφάλεια
+emfaf,13,TOI 13 CLLD preparation actions,territorial,Προπαρασκευαστικές δράσεις ΤΑΠΤοΚ (CLLD)
+emfaf,14,TOI 14 CLLD implementation of strategy,territorial,Υλοποίηση στρατηγικής ΤΑΠΤοΚ (CLLD)
+emfaf,15,TOI 15 CLLD running costs and animation,territorial,Λειτουργικά έξοδα και εμψύχωση ΤΑΠΤοΚ (CLLD)
+emfaf,16,TOI 16 Technical Assistance,other_ta,Τεχνική βοήθεια
+home,TA.*,Τεχνική βοήθεια των ταμείων Εσωτερικών Υποθέσεων (κωδικοί TA.36(5)),other_ta,Κωδικοί με πρόθεμα TA
+home,*,"Ταμεία Εσωτερικών Υποθέσεων (ΤΑΜΕ, ΜΔΣΘ, ΤΕΑ): ειδικοί στόχοι SO1–SO4",other_home,Επίπεδο ταμείου: ισχύει για όλους τους κωδικούς του ταμείου

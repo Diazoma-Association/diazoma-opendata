@@ -18,7 +18,8 @@ The links of the two charts point at visualisations, not at tables, so the under
 read through the Socrata API after the column names were checked against the dataset metadata.
 
 Outputs (data/funding/): cohesion_financial_implementation_el.csv, interreg_allocations.csv,
-interreg_greek_territories.csv and an entry per dataset in sync_log.csv. Importing the same data again
+interreg_greek_territories.csv, programmes_el.csv (official Greek programme names) and an entry per
+dataset in sync_log.csv. Importing the same data again
 changes nothing; revised rows are updated and rows missing from the source are kept.
 """
 
@@ -60,6 +61,7 @@ ALLOCATION_FIELDS = ["row_key", "cci", "programme_title", "dg", "programme_versi
                      "financial_allocation_category", *[f"eu_commitment_{y}_eur" for y in YEARS],
                      "total_non_flexible_eur", "total_flexible_eur", "total_eu_commitments_eur"]
 TERRITORY_FIELDS = ["row_key", "cci", "programme_title", "programme_title_local", "nuts_code", "territory", "nuts_level"]
+PROGRAMME_FIELDS = ["row_key", "cci", "programme_title_en", "programme_title_el"]
 
 
 def with_log(dataset, title, meta, rows_in_source, counts, note=""):
@@ -149,9 +151,22 @@ def import_territories(imported_at):
     print("Greek territories of Interreg programmes:", len(rows), "rows", counts)
 
 
+def import_programmes(imported_at):
+    """Official Greek titles of the national programmes, from the same lookup table."""
+    meta = lib.socrata_metadata(HOST, LOOKUP_DATASET)
+    found = {}
+    for source in lib.socrata_rows(HOST, LOOKUP_DATASET, where="ms='EL'", select="cci,cci_title_short,cci_title_local"):
+        found[source["cci"]] = (lib.clean_text(source["cci_title_short"]), lib.clean_text(source["cci_title_local"]))
+    rows = [{"row_key": lib.row_key(cci), "cci": cci, "programme_title_en": en, "programme_title_el": el} for cci, (en, el) in sorted(found.items())]
+    counts = lib.upsert(lib.FUNDING / "programmes_el.csv", PROGRAMME_FIELDS, rows, imported_at)
+    with_log(LOOKUP_DATASET, meta["name"], meta, len(rows), counts, "ms = EL; programme titles")
+    print("Greek programmes:", len(rows), "rows", counts)
+
+
 if __name__ == "__main__":
     lib.FUNDING.mkdir(parents=True, exist_ok=True)
     started = lib.now_utc()
     import_progress(started)
     import_allocations(started)
     import_territories(started)
+    import_programmes(started)

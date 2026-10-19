@@ -12,7 +12,6 @@ p{margin:0 0 12px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:24px}
 .card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;text-decoration:none;color:inherit}
 .card:hover{border-color:var(--accent)}
-.card .num{font-size:12px;color:var(--muted);letter-spacing:.04em}
 .card p{font-size:14px;color:var(--muted);margin:6px 0 12px;flex:1}
 .badge{align-self:flex-start;font-size:12px;padding:3px 10px;border-radius:100px;background:var(--accent-soft);color:var(--accent)}
 .badge.soon{background:var(--soon-bg);color:var(--soon)}

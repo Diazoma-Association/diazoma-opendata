@@ -23,6 +23,9 @@ jobs:
       - name: Check embedded demographics data matches the CSV sources
         run: python3 scripts/build_demographics_data.py --check
 
+      - name: Check embedded economy data matches the CSV sources
+        run: python3 scripts/build_economy_data.py --check
+
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -41,3 +44,8 @@ jobs:
         run: |
           sed -n '/^<script>$/,/^<\/script>/p' demographics/index.html | sed '1d;$d' > demographics.js
           node --check demographics.js
+
+      - name: Check regional economy dashboard JavaScript syntax
+        run: |
+          sed -n '/^<script>$/,/^<\/script>/p' regional-economy/index.html | sed '1d;$d' > economy.js
+          node --check economy.js

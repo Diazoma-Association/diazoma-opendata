@@ -1,0 +1,90 @@
+geo_code,level,name_el,parent_code,nuts2,census_unit_code
+EL,country,Ελλάδα,,,
+EL51,region,Ανατολική Μακεδονία και Θράκη,EL,EL51,
+EL52,region,Κεντρική Μακεδονία,EL,EL52,
+EL53,region,Δυτική Μακεδονία,EL,EL53,
+EL54,region,Ήπειρος,EL,EL54,
+EL61,region,Θεσσαλία,EL,EL61,
+EL62,region,Ιόνια Νησιά,EL,EL62,
+EL63,region,Δυτική Ελλάδα,EL,EL63,
+EL64,region,Στερεά Ελλάδα,EL,EL64,
+EL65,region,Πελοπόννησος,EL,EL65,
+EL30,region,Αττική,EL,EL30,
+EL41,region,Βόρειο Αιγαίο,EL,EL41,
+EL42,region,Νότιο Αιγαίο,EL,EL42,
+EL43,region,Κρήτη,EL,EL43,
+PE01,unit,Ροδόπης,EL51,EL51,11101
+PE02,unit,Δράμας,EL51,EL51,11102
+PE03,unit,Έβρου,EL51,EL51,11103
+PE04,unit,Θάσου,EL51,EL51,11104
+PE05,unit,Καβάλας,EL51,EL51,11105
+PE06,unit,Ξάνθης,EL51,EL51,11106
+PE07,unit,Θεσσαλονίκης,EL52,EL52,11207
+PE08,unit,Ημαθίας,EL52,EL52,11208
+PE09,unit,Κιλκίς,EL52,EL52,11209
+PE10,unit,Πέλλας,EL52,EL52,11210
+PE11,unit,Πιερίας,EL52,EL52,11211
+PE12,unit,Σερρών,EL52,EL52,11212
+PE13,unit,Χαλκιδικής,EL52,EL52,11213
+PE14,unit,Κοζάνης,EL53,EL53,12114
+PE15,unit,Γρεβενών,EL53,EL53,12115
+PE16,unit,Καστοριάς,EL53,EL53,12116
+PE17,unit,Φλώρινας,EL53,EL53,12117
+PE18,unit,Ιωαννίνων,EL54,EL54,12218
+PE19,unit,Άρτας,EL54,EL54,12219
+PE20,unit,Θεσπρωτίας,EL54,EL54,12220
+PE21,unit,Πρέβεζας,EL54,EL54,12221
+PE22,unit,Λάρισας,EL61,EL61,23122
+PE23,unit,Καρδίτσας,EL61,EL61,23123
+PE24,unit,Μαγνησίας,EL61,EL61,23124
+PE25,unit,Σποράδων,EL61,EL61,23125
+PE26,unit,Τρικάλων,EL61,EL61,23126
+PE27,unit,Φθιώτιδας,EL64,EL64,23227
+PE28,unit,Βοιωτίας,EL64,EL64,23228
+PE29,unit,Εύβοιας,EL64,EL64,23229
+PE30,unit,Ευρυτανίας,EL64,EL64,23230
+PE31,unit,Φωκίδας,EL64,EL64,23231
+PE32,unit,Κέρκυρας,EL62,EL62,24132
+PE33,unit,Ζακύνθου,EL62,EL62,24133
+PE34,unit,Ιθάκης,EL62,EL62,24134
+PE35,unit,Κεφαλληνίας,EL62,EL62,24135
+PE36,unit,Λευκάδας,EL62,EL62,24136
+PE37,unit,Αχαϊας,EL63,EL63,24237
+PE38,unit,Αιτωλοακαρνανίας,EL63,EL63,24238
+PE39,unit,Ηλείας,EL63,EL63,24239
+PE40,unit,Αρκαδίας,EL65,EL65,24340
+PE41,unit,Αργολίδας,EL65,EL65,24341
+PE42,unit,Κορινθίας,EL65,EL65,24342
+PE43,unit,Λακωνίας,EL65,EL65,24343
+PE44,unit,Μεσσηνίας,EL65,EL65,24344
+PE45,unit,Κεντρικού Τομέα Αθηνών,EL30,EL30,35145
+PE46,unit,Βορείου Τομέα Αθηνών,EL30,EL30,35146
+PE47,unit,Δυτικού Τομέα Αθηνών,EL30,EL30,35147
+PE48,unit,Νοτίου Τομέα Αθηνών,EL30,EL30,35148
+PE49,unit,Ανατολικής Αττικής,EL30,EL30,35149
+PE50,unit,Δυτικής Αττικής,EL30,EL30,35150
+PE51,unit,Πειραιώς,EL30,EL30,35151
+PE52,unit,Νήσων,EL30,EL30,35152
+PE53,unit,Λέσβου,EL41,EL41,46153
+PE54,unit,Ικαρίας,EL41,EL41,46154
+PE55,unit,Λήμνου,EL41,EL41,46155
+PE56,unit,Σάμου,EL41,EL41,46156
+PE57,unit,Χίου,EL41,EL41,46157
+PE58,unit,Σύρου,EL42,EL42,46258
+PE59,unit,Άνδρου,EL42,EL42,46259
+PE60,unit,Θήρας,EL42,EL42,46260
+PE61,unit,Καλύμνου,EL42,EL42,46261
+PE62,unit,Καρπάθου - Ηρωικής Νήσου Κάσου,EL42,EL42,46262
+PE63,unit,Κέας - Κύθνου,EL42,EL42,46263
+PE64,unit,Κω,EL42,EL42,46264
+PE65,unit,Μήλου,EL42,EL42,46265
+PE66,unit,Μυκόνου,EL42,EL42,46266
+PE67,unit,Νάξου,EL42,EL42,46267
+PE68,unit,Πάρου,EL42,EL42,46268
+PE69,unit,Ρόδου,EL42,EL42,46269
+PE70,unit,Τήνου,EL42,EL42,46270
+PE71,unit,Ηρακλείου,EL43,EL43,47171
+PE72,unit,Λασιθίου,EL43,EL43,47172
+PE73,unit,Ρεθύμνου,EL43,EL43,47173
+PE74,unit,Χανίων,EL43,EL43,47174
+PE99,unit,Άγιον Όρος,EL52,EL52,11299

@@ -38,3 +38,11 @@ th,td{padding:7px 10px;border-bottom:1px solid #edf0e9;text-align:right;white-sp
 a.pill{text-decoration:none}a.pill:hover,a.pill:focus-visible{background:rgba(255,255,255,.12)}
 input[type="search"]{width:100%;height:38px;padding:0 11px;border:1px solid #d8dfd4;border-radius:8px;background:#fffefa;color:var(--ink);font:inherit;outline:none}input[type="search"]:focus{outline:2px solid var(--gold);outline-offset:2px}
 tbody tr:hover,tbody tr.sel{background:#f1f5ee}th[data-k]{user-select:none}
+/* Hub page: thematic cards that link to the dashboards. */
+.topics{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:14px}
+a.topic{display:flex;flex-direction:column;color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}a.topic:hover,a.topic:focus-visible{border-color:var(--green);transform:translateY(-2px)}
+.topic h3{font:500 20px/1.25 Georgia,serif;margin:0 0 8px}.topic p{font-size:13px;color:var(--muted);margin:0 0 14px;flex:1}
+.topic-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}.tag{display:inline-flex;padding:4px 9px;border:1px solid #cbd6ca;border-radius:100px;background:#edf2e9;color:#294535;font-size:11px;line-height:1.25}
+.topic-cta{font-size:13px;font-weight:650;color:var(--green)}.topic-cta:after{content:" →"}
+.intro{max-width:760px;font-size:14px;color:#415448;margin:0 2px}
+@media(max-width:600px){.topics{grid-template-columns:1fr}}

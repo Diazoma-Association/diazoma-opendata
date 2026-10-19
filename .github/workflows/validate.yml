@@ -1,0 +1,27 @@
+name: Validate dashboard data
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check embedded data matches the CSV sources
+        run: python3 scripts/build_dashboard_data.py --check
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check dashboard JavaScript syntax
+        run: |
+          sed -n '/^<script>$/,/^<\/script>/p' index.html | sed '1d;$d' > dashboard.js
+          node --check dashboard.js

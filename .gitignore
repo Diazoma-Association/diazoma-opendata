@@ -1,2 +1,8 @@
-assets/.DS_Store
+# macOS
 .DS_Store
+
+# Editor and Python cache
+.vscode/
+.idea/
+__pycache__/
+*.pyc

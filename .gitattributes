@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Binary spreadsheet: never normalize or diff as text
+*.xlsx binary

@@ -26,6 +26,9 @@ jobs:
       - name: Check embedded economy data matches the CSV sources
         run: python3 scripts/build_economy_data.py --check
 
+      - name: Check embedded census data matches the CSV sources
+        run: python3 scripts/build_census_data.py --check
+
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -49,3 +52,8 @@ jobs:
         run: |
           sed -n '/^<script>$/,/^<\/script>/p' regional-economy/index.html | sed '1d;$d' > economy.js
           node --check economy.js
+
+      - name: Check census dashboard JavaScript syntax
+        run: |
+          sed -n '/^<script>$/,/^<\/script>/p' demographics/census-2021/index.html | sed '1d;$d' > census.js
+          node --check census.js

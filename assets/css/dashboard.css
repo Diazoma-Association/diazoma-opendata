@@ -35,3 +35,6 @@ th,td{padding:7px 10px;border-bottom:1px solid #edf0e9;text-align:right;white-sp
 @media(max-width:600px){.hero{padding:27px 12px 25px}.page{padding:0 12px;margin-top:13px}.filters{padding:12px}.kpis{grid-template-columns:1fr 1fr;gap:8px}.card{padding:13px}.kpi-value{font-size:23px}.sectionline{align-items:start;flex-direction:column}.period{text-align:left}.hrow{grid-template-columns:minmax(80px,1fr) 1.3fr 62px;gap:7px}.col .tot{font-size:9px}.col .m{font-size:10px}.initiative-note-row{gap:10px;align-items:flex-start}.initiative-logo{width:96px;max-width:30%}}
 .track{position:relative}.track .mark{position:absolute;top:0;bottom:0;width:2px;background:#8a5f22;opacity:.85}
 .swatch{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+a.pill{text-decoration:none}a.pill:hover,a.pill:focus-visible{background:rgba(255,255,255,.12)}
+input[type="search"]{width:100%;height:38px;padding:0 11px;border:1px solid #d8dfd4;border-radius:8px;background:#fffefa;color:var(--ink);font:inherit;outline:none}input[type="search"]:focus{outline:2px solid var(--gold);outline-offset:2px}
+tbody tr:hover,tbody tr.sel{background:#f1f5ee}th[data-k]{user-select:none}

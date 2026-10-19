@@ -19,6 +19,38 @@ SPG06,2011,206124,ΠΙΝΑΚΑΣ 5β ΣΥΝΟΛΙΚΟΣ,warning,region_row_missi
 SPG06,2011,206124,ΠΙΝΑΚΑΣ 5β ΣΥΝΟΛΙΚΟΣ,warning,total_differs_from_parts,"13 published totals differ from the sum of their parts, e.g. EL51 Πορτοκαλιές [trees_total]: units add up to 100, region total is 2961.63"
 SPG06,2011,206125,ΠΙΝΑΚΑΣ 6α ΠΟΤΙΣΤΙΚΕΣ,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
 SPG06,2011,206126,ΠΙΝΑΚΑΣ 7 ΔΕΥΤΕΡΟΓΕΝΗ ΠΡΟΪΟΝΤΑ,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2011,206166,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2011,206167,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2011,206168,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2011,206168,Sheet1,warning,total_differs_from_parts,"21 published totals differ from the sum of their parts, e.g. EL52 Πρόβατα > Σύνολο [animals]: parts add up to 1.07178e+06, region total is 1.52238e+06"
+SPK33,2011,206169,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2011,206170,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2011,206171,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2011,206172,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2011,206173,ΠΙΝΑΚΑΣ 7β ΣΥΝΟΛΙΚΟΣ,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2011,206174,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2011,206174,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2011,206174,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2011,206174,Sheet1,warning,total_differs_from_parts,"2 published totals differ from the sum of their parts, e.g. EL52 Κερί [production]: parts add up to 111.779, region total is 120.993"
+SPK33,2011,206175,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2012,201654,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2012,201655,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2012,201656,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2012,201656,Sheet1,warning,total_differs_from_parts,"21 published totals differ from the sum of their parts, e.g. EL52 Πρόβατα > Σύνολο [animals]: parts add up to 904823, region total is 1.357e+06"
+SPK33,2012,201657,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2012,201658,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2012,201659,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2012,201660,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2012,201661,,warning,year_on_year_jump,lv_meat.koynelia.polithenta_gia_sfagi_exo_apo_tin_koinotita (carcass_weight): 74090.8 in 2011 and 1191.6 in 2012 for the whole country; check the unit and the definition before comparing the two years
+SPK33,2012,201661,,warning,year_on_year_jump,lv_meat.koynelia.polithenta_gia_sfagi_exo_apo_tin_koinotita (slaughtered): 4.29198e+07 in 2011 and 686877 in 2012 for the whole country; check the unit and the definition before comparing the two years
+SPK33,2012,201661,,warning,year_on_year_jump,lv_meat.poylerika.polithenta_gia_sfagi_exo_apo_tin_koinotita (carcass_weight): 1179.37 in 2011 and 84954.2 in 2012 for the whole country; check the unit and the definition before comparing the two years
+SPK33,2012,201661,,warning,year_on_year_jump,lv_meat.poylerika.polithenta_gia_sfagi_exo_apo_tin_koinotita (slaughtered): 654890 in 2011 and 4.9902e+07 in 2012 for the whole country; check the unit and the definition before comparing the two years
+SPK33,2012,201661,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2012,201662,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPK33,2012,201662,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2012,201662,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2012,201662,Sheet1,warning,total_differs_from_parts,"1 published totals differ from the sum of their parts, e.g. EL52 Κερί [production]: parts add up to 80.943, region total is 90.631"
+SPK33,2012,201663,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
 SPG06,2012,205339,ΠΙΝΑΚΑΣ 7 ΔΕΥΤΕΡΟΓΕΝΗ ΠΡΟΪΟΝΤΑ,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
 SPG06,2012,205340,ΠΙΝΑΚΑΣ 6α ΠΟΤΙΣΤΙΚΕΣ,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
 SPG06,2012,205340,ΠΙΝΑΚΑΣ 6α ΠΟΤΙΣΤΙΚΕΣ,warning,total_differs_from_parts,"1 published totals differ from the sum of their parts, e.g. EL52 Σύνολο [area]: units add up to 3.22866e+06, region total is 3.69147e+06"
@@ -53,18 +85,34 @@ SPG06,2013,368469,Sheet1,info,label_inherited,column 7: label taken from column 
 SPG06,2013,368469,Sheet1,info,label_inherited,column 9: label taken from column 8 (header cell not merged in the source)
 SPG06,2013,368470,ΠΙΝΑΚΑΣ 2(β),warning,total_differs_from_parts,"2 published totals differ from the sum of their parts, e.g. EL61 Σύνολο [area]: units add up to 49877, region total is 44906"
 SPG06,2013,368471,Πίνακας2(α)Συνολικός,warning,total_differs_from_parts,"1 published totals differ from the sum of their parts, e.g. EL62 Σύνολο [area]: units add up to 107633, region total is 35098"
+SPK33,2013,430351,,warning,year_on_year_jump,lv_other.koykoylia_chlora (production): 2.508 in 2012 and 1918 in 2013 for the whole country; check the unit and the definition before comparing the two years
+SPK33,2013,430351,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2013,430351,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2013,430353,Sheet1,warning,total_differs_from_parts,"1 published totals differ from the sum of their parts, e.g. EL30 Βόδια, ταύροι, δαμάλια, αγελάδες > Σύνολο > Θήλεα [animals]: parts add up to 3468, region total is 3427"
+SPK33,2013,430354,Sheet1,warning,total_differs_from_parts,"1 published totals differ from the sum of their parts, e.g. EL41 Αίγες > Σύνολο [animals]: parts add up to 149940, region total is 152360"
+SPK33,2013,430359,Sheet1,warning,total_differs_from_parts,"42 published totals differ from the sum of their parts, e.g. EL Μοσχάρια κάτω του έτους > Σφαγέντα μέσα στην κοινότητα [slaughtered]: regions add up to 30288, country total is 29066"
 SPG06,2014,350091,Sheet1,warning,total_differs_from_parts,"32 published totals differ from the sum of their parts, e.g. EL51 Μανταρινιές [trees_regular]: units add up to 80, region total is 0"
 SPG06,2014,350091,Sheet2,warning,skipped_sheet,values in kilograms (1000 × Sheet1) although the unit line says tonnes; Sheet1 is the same table in tonnes
 SPG06,2014,350093,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2014 publication; ignored as a stale sheet
 SPG06,2014,350093,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
 SPG06,2014,350095,Sheet1,warning,total_differs_from_parts,"4 published totals differ from the sum of their parts, e.g. EL41 Μπρόκολλο [area]: units add up to 266, region total is 0"
 SPG06,2014,350096,ΠΙΝΑΚΑΣ 2(η),warning,total_differs_from_parts,"14 published totals differ from the sum of their parts, e.g. EL30 Πατάτες > Σύνολο [area]: units add up to 1418, region total is 1662"
+SPK33,2014,350130,,warning,year_on_year_jump,lv_other.koykoylia_chlora (production): 1918 in 2013 and 75.589 in 2014 for the whole country; check the unit and the definition before comparing the two years
+SPK33,2014,350130,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2014,350130,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
 SPG06,2015,356927,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2015 publication; ignored as a stale sheet
 SPG06,2015,356927,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
 SPG06,2015,356929,Sheet2,warning,skipped_sheet,the 2014 table with values in kilograms although the unit line says tonnes; the 2014 publication has it in tonnes
+SPK33,2015,356966,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2015,356966,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK12,2016,331385,Φύλλο1,warning,total_differs_from_parts,"3 published totals differ from the sum of their parts, e.g. EL41 Βοοειδή > Σύνολο [holdings]: parts add up to 553, region total is 551"
+SPK12,2016,331386,Φύλλο1,warning,total_differs_from_parts,"2 published totals differ from the sum of their parts, e.g. EL41 Βοοειδή > Σύνολο [holdings]: parts add up to 553, region total is 551"
+SPG32,2016,336634,Φύλλο 1,warning,total_differs_from_parts,"2 published totals differ from the sum of their parts, e.g. EL62 Αμιγώς κτηνοτροφικές εκμεταλλεύσεις [holdings]: parts add up to 141, region total is 139"
 SPG06,2016,337966,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2016 publication; ignored as a stale sheet
 SPG06,2016,337966,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
 SPG06,2016,337968,Sheet2,warning,stale_sheet,sheet is for 2014 in the 2016 publication; ignored as a stale sheet
+SPK33,2016,338107,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2016,338107,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
 SPG06,2017,371349,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2017 publication; ignored as a stale sheet
 SPG06,2017,371349,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
 SPG06,2017,371351,Sheet1,warning,skipped_column,column 16 (Ακτινίδια) not imported: column 16 (Ακτινίδια) has no marker although the table numbers its measures
@@ -73,6 +121,8 @@ SPG06,2017,371351,Sheet1,warning,skipped_column,column 18 (Ακτινίδια) n
 SPG06,2017,371351,Sheet1,warning,skipped_column,column 19 (Ροδιές) not imported: column 19 (Ροδιές) has no marker although the table numbers its measures
 SPG06,2017,371351,Sheet1,warning,skipped_column,column 20 (Ροδιές) not imported: column 20 (Ροδιές) has no marker although the table numbers its measures
 SPG06,2017,371351,Sheet1,warning,skipped_column,column 21 (Ροδιές) not imported: column 21 (Ροδιές) has no marker although the table numbers its measures
+SPK33,2017,371395,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2017,371395,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
 SPG06,2018,569166,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2018 publication; ignored as a stale sheet
 SPG06,2018,569166,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
 SPG06,2018,569168,Sheet1,warning,skipped_column,column 16 (Ακτινίδια) not imported: column 16 (Ακτινίδια) has no marker although the table numbers its measures
@@ -81,6 +131,8 @@ SPG06,2018,569168,Sheet1,warning,skipped_column,column 18 (Ακτινίδια) n
 SPG06,2018,569168,Sheet1,warning,skipped_column,column 19 (Ροδιές) not imported: column 19 (Ροδιές) has no marker although the table numbers its measures
 SPG06,2018,569168,Sheet1,warning,skipped_column,column 20 (Ροδιές) not imported: column 20 (Ροδιές) has no marker although the table numbers its measures
 SPG06,2018,569168,Sheet1,warning,skipped_column,column 21 (Ροδιές) not imported: column 21 (Ροδιές) has no marker although the table numbers its measures
+SPK33,2018,569337,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2018,569337,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
 SPG06,2019,444302,ΠΙΝΑΚΑΣ 2(η),warning,total_differs_from_parts,"13 published totals differ from the sum of their parts, e.g. EL51 Πατάτες > Σύνολο [area]: units add up to 0, region total is 28511"
 SPG06,2019,444305,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2019 publication; ignored as a stale sheet
 SPG06,2019,444305,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
@@ -91,21 +143,33 @@ SPG06,2019,444307,Sheet1,warning,skipped_column,column 19 (Ροδιές) not imp
 SPG06,2019,444307,Sheet1,warning,skipped_column,column 20 (Ροδιές) not imported: column 20 (Ροδιές) has no marker although the table numbers its measures
 SPG06,2019,444307,Sheet1,warning,skipped_column,column 21 (Ροδιές) not imported: column 21 (Ροδιές) has no marker although the table numbers its measures
 SPG06,2019,444307,Sheet1,info,source_correction,"the title says 2018, but the olive production totals 3.240,1 thousand tonnes, the 2019 figure of the 2019 press release (2018: 2.764,6, which is the 2018 publication's table)"
+SPK33,2019,444366,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2019,444366,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
 SPG06,2020,503799,Sheet2,warning,skipped_column,column 14 (Αραβόσιτος χλωρός) not imported: column 14 (Αραβόσιτος χλωρός) has no marker although the table numbers its measures
 SPG06,2020,503799,Sheet2,warning,skipped_column,column 15 (Αραβόσιτος χλωρός) not imported: column 15 (Αραβόσιτος χλωρός) has no marker although the table numbers its measures
 SPG06,2020,503804,Sheet1,info,source_correction,"the title says 2021, but the values equal the 2020 garden land of table 1 in the same publication"
 SPG06,2020,503805,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2020 publication; ignored as a stale sheet
 SPG06,2020,503805,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
+SPK33,2020,503948,Sheet1,info,source_correction,"the title of the sheet states 2021, the publication page is the 2020 survey; 2020 is used"
+SPK33,2020,503957,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2020,503957,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
 SPG06,2021,505471,Πίνακας2(δ),warning,total_differs_from_parts,"2 published totals differ from the sum of their parts, e.g. EL53 Λοιπά [area]: units add up to 71, region total is 5558"
 SPG06,2021,505472,Sheet2,warning,skipped_column,column 14 (Αραβόσιτος χλωρός) not imported: column 14 (Αραβόσιτος χλωρός) has no marker although the table numbers its measures
 SPG06,2021,505472,Sheet2,warning,skipped_column,column 15 (Αραβόσιτος χλωρός) not imported: column 15 (Αραβόσιτος χλωρός) has no marker although the table numbers its measures
 SPG06,2021,505476,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2021 publication; ignored as a stale sheet
 SPG06,2021,505476,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
+SPK33,2021,569301,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2021,569301,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPK33,2022,525057,,warning,year_on_year_jump,lv_other.koykoylia_chlora (production): 36.562 in 2021 and 2120.37 in 2022 for the whole country; check the unit and the definition before comparing the two years
 SPG06,2022,569472,Sheet2,warning,skipped_column,column 14 (Αραβόσιτος χλωρός) not imported: column 14 (Αραβόσιτος χλωρός) has no marker although the table numbers its measures
 SPG06,2022,569472,Sheet2,warning,skipped_column,column 15 (Αραβόσιτος χλωρός) not imported: column 15 (Αραβόσιτος χλωρός) has no marker although the table numbers its measures
 SPG06,2022,569476,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2022 publication; ignored as a stale sheet
 SPG06,2022,569476,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
 SPG06,2023,569405,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2023 publication; ignored as a stale sheet
 SPG06,2023,569405,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
+SPK33,2023,574436,,warning,year_on_year_jump,lv_stock.kypseles_melisson.egchories (hives): 108645 in 2022 and 3662 in 2023 for the whole country; check the unit and the definition before comparing the two years
+SPK33,2023,574441,,warning,year_on_year_jump,lv_meat.voyvalidia_mechri_2_eton (slaughtered): 3663 in 2022 and 414 in 2023 for the whole country; check the unit and the definition before comparing the two years
+SPK33,2023,574442,,warning,year_on_year_jump,lv_other.koykoylia_chlora (production): 2120.37 in 2022 and 164.928 in 2023 for the whole country; check the unit and the definition before comparing the two years
+SPG32,2023,579662,ΠΙΝΑΚΑΣ (TABLE) 09,warning,total_differs_from_parts,"1 published totals differ from the sum of their parts, e.g. EL52 Φυτείες σποροπαραγωγής και σπορόφυτα [holdings]: parts add up to 117, region total is 115"
 SPG06,2024,595891,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2024 publication; ignored as a stale sheet
 SPG06,2024,595891,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook

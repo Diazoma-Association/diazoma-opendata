@@ -1,5 +1,10 @@
 """Greek administrative geography used by the agriculture datasets.
 
+Besides the regional units, the farm structure surveys (SPG32, SPK12) publish their tables per prefecture
+(νομός; in Attica per nomarchy). A prefecture is always a union of whole regional units (PREFECTURES below), so
+its map geometry is the merge of theirs, but its values are never split among the units: the data stays at the
+level the source publishes it. geo_code of a prefecture is "NO" + the survey's two-character code.
+
 Units are the 74 regional units (περιφερειακές ενότητες) plus Mount Athos, with the codes ELSTAT numbers them
 with in its agricultural tables (the ListOfRegions sheet of every SPG06 workbook). `census_unit` links a unit to
 the 2021 census files in data/census_2021_population_by_area.csv. Regions are the 13 NUTS 2 regions.
@@ -114,7 +119,7 @@ def normalize(text):
 
 
 def region_name_key(label):
-    return normalize(re.sub(r"^\s*Περιφέρεια\s+", "", label, flags=re.I))
+    return re.sub(r"^ΠΕΡΙΦΕΡΕΙΑ\s+", "", normalize(label))
 
 
 _REGION_BY_LABEL = {}
@@ -156,4 +161,60 @@ def geography():
     rows = [(COUNTRY[0], "country", COUNTRY[1], "", "", "")]
     rows += [(code, "region", name, COUNTRY[0], code, "") for code, name in REGIONS.items()]
     rows += [("PE" + num, "unit", name, region, region, census) for num, name, region, census in UNITS]
+    return rows
+
+
+# Prefectures of the farm structure surveys: (survey code, display name, source label without "ΝΟΜΟΣ", regional units).
+# Names and members follow ELSTAT's definitions: Lesvos includes Limnos, Samos includes Ikaria, Magnesia includes the
+# Sporades, Kavala includes Thasos, Chalkidiki includes Mount Athos, Piraeus the islands of Attica.
+PREFECTURES = [
+    ("52", "Δράμας", ["02"]), ("55", "Καβάλας", ["05", "04"]), ("71", "Έβρου", ["03"]), ("72", "Ξάνθης", ["06"]),
+    ("73", "Ροδόπης", ["01"]), ("53", "Ημαθίας", ["08"]), ("54", "Θεσσαλονίκης", ["07"]), ("57", "Κιλκίς", ["09"]),
+    ("59", "Πέλλας", ["10"]), ("61", "Πιερίας", ["11"]), ("62", "Σερρών", ["12"]), ("64", "Χαλκιδικής", ["13", "99"]),
+    ("51", "Γρεβενών", ["15"]), ("56", "Καστοριάς", ["16"]), ("58", "Κοζάνης", ["14"]), ("63", "Φλώρινας", ["17"]),
+    ("31", "Άρτας", ["19"]), ("32", "Θεσπρωτίας", ["20"]), ("33", "Ιωαννίνων", ["18"]), ("34", "Πρέβεζας", ["21"]),
+    ("41", "Καρδίτσας", ["23"]), ("42", "Λάρισας", ["22"]), ("43", "Μαγνησίας", ["24", "25"]), ("44", "Τρικάλων", ["26"]),
+    ("03", "Βοιωτίας", ["28"]), ("04", "Εύβοιας", ["29"]), ("05", "Ευρυτανίας", ["30"]), ("06", "Φθιώτιδας", ["27"]),
+    ("07", "Φωκίδας", ["31"]), ("21", "Ζακύνθου", ["33"]), ("22", "Κέρκυρας", ["32"]), ("23", "Κεφαλληνίας", ["35", "34"]),
+    ("24", "Λευκάδας", ["36"]), ("01", "Αιτωλίας και Ακαρνανίας", ["38"]), ("13", "Αχαΐας", ["37"]), ("14", "Ηλείας", ["39"]),
+    ("11", "Αργολίδας", ["41"]), ("12", "Αρκαδίας", ["40"]), ("15", "Κορινθίας", ["42"]), ("16", "Λακωνίας", ["43"]),
+    ("17", "Μεσσηνίας", ["44"]), ("A1", "Νομαρχία Αθηνών", ["45", "46", "47", "48"]),
+    ("A2", "Νομαρχία Ανατολικής Αττικής", ["49"]), ("A3", "Νομαρχία Δυτικής Αττικής", ["50"]),
+    ("A4", "Νομαρχία Πειραιώς", ["51", "52"]), ("83", "Λέσβου", ["53", "55"]), ("84", "Σάμου", ["56", "54"]),
+    ("85", "Χίου", ["57"]), ("81", "Δωδεκανήσου", ["61", "62", "64", "69"]),
+    ("82", "Κυκλάδων", ["58", "59", "60", "63", "65", "66", "67", "68", "70"]),
+    ("91", "Ηρακλείου", ["71"]), ("92", "Λασιθίου", ["72"]), ("93", "Ρεθύμνης", ["73"]), ("94", "Χανίων", ["74"]),
+]
+_PREFECTURE_BY_LABEL = {}
+for _code, _name, _members in PREFECTURES:
+    _PREFECTURE_BY_LABEL[normalize(_name.replace("Νομαρχία ", ""))] = _code
+_PREFECTURE_BY_LABEL[normalize("Αιτωλίας και Ακαρνανίας")] = "01"
+# Spellings of the survey labels that differ from the display names (older genitive forms).
+for _alias, _code in {"Αργολίδος": "11", "Άρτης": "31", "Καρδίτσης": "41", "Λαρίσης": "42", "Λευκάδος": "24", "Πέλλης": "59",
+                      "Πρεβέζης": "34", "Φθιώτιδος": "06", "Φλωρίνης": "63", "Φωκίδος": "07"}.items():
+    _PREFECTURE_BY_LABEL[normalize(_alias)] = _code
+_PREFECTURE = {p[0]: p for p in PREFECTURES}
+# 2-digit region codes of the farm structure surveys -> NUTS 2 (the row label is matched by name instead; kept for reference)
+
+
+def prefecture_code(label):
+    """Survey code of a 'ΝΟΜΟΣ …' / 'ΝΟΜΑΡΧΙΑ …' row label (footnote marks removed), or None."""
+    text = re.sub(r"\(\d\)", "", label)
+    text = re.sub(r"^\s*(ΝΟΜΟΣ|ΝΟΜΑΡΧΙΑ)\s+", "", text.strip(), flags=re.I)
+    return _PREFECTURE_BY_LABEL.get(normalize(text))
+
+
+def prefecture_region(code):
+    return unit_region(_PREFECTURE[code][2][0])
+
+
+def prefecture_units():
+    return {code: members for code, _name, members in PREFECTURES}
+
+
+def geography_with_prefectures():
+    """geography() plus the prefectures: (geo_code, level, name_el, parent_code, nuts2, census_unit_code)."""
+    rows = geography()
+    rows += [("NO" + code, "prefecture", name, prefecture_region(code), prefecture_region(code), "")
+             for code, name, _members in PREFECTURES]
     return rows

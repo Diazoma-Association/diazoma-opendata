@@ -131,6 +131,8 @@ def parse_cell(value):
     text = clean(value)
     if text in DASHES:
         return "dash", None
+    if text in ("x", "X", "χ", "Χ"):
+        return "confidential", None  # ELSTAT suppresses values that would identify a holding
     try:
         return "ok", float(text.replace(".", "").replace(",", ".")) if re.fullmatch(r"[\d.]+,\d+|\d{1,3}(\.\d{3})+", text) else float(text)
     except ValueError:
@@ -146,13 +148,14 @@ def find_start(sheet):
     return None
 
 
-def header_cells(sheet, top, start):
+def header_cells(sheet, top, start, text=None):
     """Header rows with merged cells repeated over their whole range."""
-    grid = [[sheet.text(r, c) for c in range(sheet.ncols)] for r in range(top, start)]
+    text = text or sheet.text
+    grid = [[text(r, c) for c in range(sheet.ncols)] for r in range(top, start)]
     for r0, r1, c0, c1 in sheet.merges:
         if r1 < top or r0 >= start:
             continue
-        value = sheet.text(r0, c0)
+        value = text(r0, c0)
         for r in range(max(r0, top), min(r1, start - 1) + 1):
             for c in range(c0, min(c1, sheet.ncols - 1) + 1):
                 grid[r - top][c] = value

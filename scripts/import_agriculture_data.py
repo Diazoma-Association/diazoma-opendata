@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Import the ELSTAT Annual Agricultural Survey tables (SPG06) into the agriculture statistics tables.
+"""Import the ELSTAT agriculture tables (SPG06, SPG32, SPK12, SPK33) into the agriculture statistics tables.
 
 Usage:
-    python3 scripts/import_agriculture_data.py                    # every file listed in data/agriculture/spg06/manifest.csv
-    python3 scripts/import_agriculture_data.py --years 2024       # one publication year
-    python3 scripts/import_agriculture_data.py --file table.xlsx --year 2025 [--stage final] [--publication-date 2026-06-30]
+    python3 scripts/import_agriculture_data.py                    # every file listed in the manifests of data/agriculture/<publication>/
+    python3 scripts/import_agriculture_data.py --dataset SPK33    # one publication
+    python3 scripts/import_agriculture_data.py --years 2024       # one edition
+    python3 scripts/import_agriculture_data.py --file table.xlsx --dataset SPG06 --year 2025 [--stage final] [--publication-date 2026-06-30]
                                                                   # a spreadsheet downloaded by hand
     python3 scripts/import_agriculture_data.py --dry-run          # parse and report, write nothing
     python3 scripts/import_agriculture_data.py --rebuild          # start from empty tables (checks reproducibility)
@@ -35,15 +36,13 @@ from pathlib import Path
 
 import agri_geo
 import agri_products
+import agri_sources
 import agri_spg06
 import fetch_agriculture_data as fetch
-from agri_spg06 import CATEGORIES, parse_workbook, check_sums
 
 ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data" / "agriculture" / "spg06"
 OUT = ROOT / "data" / "agriculture"
-MANIFEST = RAW / "manifest.csv"
-DATASET = "SPG06"
+CATEGORIES = agri_sources.categories()
 
 OBS = ["dataset", "table_key", "ref_year", "pub_year", "geo_code", "product_code", "variable", "qualifier", "value", "unit",
        "status", "stage", "flags", "source_doc", "last_updated"]
@@ -57,14 +56,26 @@ PRODUCTS = ["product_code", "dataset", "table_key", "category", "subcategory", "
             "is_residual", "continues", "series_breaks", "first_year", "last_year", "source_labels"]
 GEO = ["geo_code", "level", "name_el", "parent_code", "nuts2", "census_unit_code"]
 VARIABLES = [
-    ("area", "Καλλιεργούμενη έκταση", "stremma", "στρέμματα", "Χρησιμοποιείται για έκταση. 1 στρέμμα = 0,1 εκτάριο."),
-    ("production", "Παραγωγή", "tonne", "τόνοι", "Ποσότητα προϊόντος στη μονάδα που δημοσιεύει η πηγή."),
+    ("area", "Έκταση", "stremma", "στρέμματα", "Έκταση στη μονάδα της πηγής. 1 στρέμμα = 0,1 εκτάριο."),
+    ("production", "Παραγωγή", "tonne", "τόνοι", "Ποσότητα προϊόντος σε τόνους."),
     ("trees_total", "Συνολικός αριθμός δένδρων", "tree", "δένδρα", "Αριθμός δένδρων."),
     ("trees_regular", "Δένδρα κανονικών δενδρώνων", "tree", "δένδρα", "Αριθμός δένδρων σε κανονικούς δενδρώνες."),
+    ("holdings", "Εκμεταλλεύσεις", "holding", "εκμεταλλεύσεις",
+     "Αριθμός εκμεταλλεύσεων που έχουν το αντικείμενο της γραμμής. Μια εκμετάλλευση μπορεί να ανήκει σε περισσότερες κατηγορίες· οι αριθμοί δεν αθροίζονται."),
+    ("animals", "Αριθμός ζώων", "head", "κεφάλια", "Αριθμός ζώων (κεφάλια) την ημερομηνία αναφοράς της έρευνας."),
+    ("livestock_units", "Ζωικές μονάδες", "livestock_unit", "ζωικές μονάδες",
+     "Ζώα εκφρασμένα σε ζωικές μονάδες με συντελεστές της ΕΛΣΤΑΤ· δεν είναι αριθμός ζώων."),
+    ("hives", "Κυψέλες μελισσών", "hive", "κυψέλες", "Αριθμός κυψελών."),
+    ("births", "Ζώα που γεννήθηκαν", "head", "κεφάλια", "Ζώα που γεννήθηκαν κατά το έτος αναφοράς."),
+    ("breeding", "Ζώα που γέννησαν", "head", "κεφάλια", "Θηλυκά ζώα που γέννησαν κατά το έτος αναφοράς."),
+    ("milked", "Ζώα που αρμέχτηκαν", "head", "κεφάλια", "Ζώα που αρμέχτηκαν όλο το έτος αναφοράς."),
+    ("slaughtered", "Ζώα που σφάχτηκαν", "head", "κεφάλια", "Αριθμός ζώων που σφάχτηκαν (παραγωγή κρέατος)."),
+    ("carcass_weight", "Βάρος σφαγίων", "tonne", "τόνοι", "Βάρος σφαγίων σε τόνους."),
+    ("production_kpieces", "Παραγωγή (χιλιάδες τεμάχια)", "thousand_pieces", "χιλιάδες τεμάχια",
+     "Αυγά και δέρματα (από το 2022), σε χιλιάδες τεμάχια όπως τα δημοσιεύει η πηγή."),
 ]
-DATASETS = [(
-    DATASET, "Ετήσια Γεωργική Στατιστική Έρευνα", "ΕΛΣΤΑΤ", "https://www.statistics.gr/el/statistics/-/publication/SPG06",
-    "Ετήσια", "Εκτάσεις και παραγωγή καλλιεργειών ανά Περιφέρεια και Περιφερειακή Ενότητα.")]
+DATASETS = [(code, s["title"], "ΕΛΣΤΑΤ", agri_sources.PAGE.format(code=code), s["frequency"], s["description"])
+            for code, s in agri_sources.SOURCES.items()]
 DATASET_FIELDS = ["dataset", "title", "publisher", "url", "frequency", "description"]
 
 
@@ -100,27 +111,35 @@ def number(value):
 
 # ---------------------------------------------------------------- manifest
 
-def manifest_entries(years):
-    rows = read_csv(MANIFEST)
-    entries = [r for r in rows if not years or int(r["edition"]) in years]
-    return sorted(entries, key=lambda r: (int(r["edition"]), r["doc_id"]))
+def manifest_entries(datasets, years):
+    entries = []
+    for dataset in datasets:
+        entries += [dict(r, dataset=dataset) for r in read_csv(agri_sources.manifest_path(dataset))
+                    if not years or int(r["edition"]) in years]
+    return sorted(entries, key=lambda r: (int(r["edition"]), r["dataset"], r["doc_id"]))
 
 
-def add_manual_file(path, year, stage, publication_date):
+def all_editions():
+    """document id -> edition over every manifest: a later edition replaces the figures of an earlier one."""
+    return {r["doc_id"]: int(r["edition"]) for dataset in agri_sources.SOURCES for r in read_csv(agri_sources.manifest_path(dataset))}
+
+
+def add_manual_file(path, dataset, year, stage, publication_date):
     """Copy a hand-downloaded spreadsheet next to the others and register it in the manifest."""
     path = Path(path)
     digest = sha256(path)
     ext = "xlsx" if path.read_bytes()[:2] == b"PK" else "xls"
     doc_id = f"manual-{digest[:10]}"
-    target = RAW / str(year) / f"{doc_id}.{ext}"
+    target = agri_sources.raw_dir(dataset) / str(year) / f"{doc_id}.{ext}"
     target.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(path, target)
-    rows = read_csv(MANIFEST)
+    manifest = agri_sources.manifest_path(dataset)
+    rows = read_csv(manifest)
     rows = [r for r in rows if not (r["edition"] == str(year) and r["doc_id"] == doc_id)]
-    rows.append({"dataset": DATASET, "edition": year, "doc_id": doc_id, "filename": target.name, "title": path.name,
+    rows.append({"dataset": dataset, "edition": year, "doc_id": doc_id, "filename": target.name, "title": path.name,
                  "format": ext, "sha256": digest, "bytes": target.stat().st_size, "source_page": "manual upload",
                  "stage": stage, "publication_date": publication_date or "", "downloaded_at": date.today().isoformat()})
-    write_csv(MANIFEST, fetch.FIELDS, sorted(rows, key=lambda r: (int(r["edition"]), r["doc_id"])))
+    write_csv(manifest, fetch.FIELDS, sorted(rows, key=lambda r: (int(r["edition"]), r["doc_id"])))
     return doc_id
 
 
@@ -142,7 +161,7 @@ def observations_of(table, entry, flags_by_cell):
             if table["fix"]:
                 flags.append("source_corrected")
             out.append({
-                "dataset": DATASET, "table_key": table["table_key"], "ref_year": table["ref_year"],
+                "dataset": entry["dataset"], "table_key": table["table_key"], "ref_year": table["ref_year"],
                 "pub_year": entry["publication_date"][:4], "geo_code": row["geo_code"], "product_code": spec["product_code"],
                 "variable": spec["measure"], "qualifier": spec["qualifier"],
                 "value": number(value) if status in ("ok", "combined") else "", "unit": spec["unit"], "status": status,
@@ -216,9 +235,31 @@ class Store:
         return (self.edition.get(row["source_doc"], 0), row["source_doc"])
 
     def sorted_rows(self):
-        order = {code: n for n, (code, *_rest) in enumerate(agri_geo.geography())}
+        order = {code: n for n, (code, *_rest) in enumerate(agri_geo.geography_with_prefectures())}
         return sorted(self.rows.values(), key=lambda r: (
             r["table_key"], int(r["ref_year"]), r["product_code"], r["variable"], r["qualifier"], order.get(r["geo_code"], 999)))
+
+
+def year_jumps(rows, factor=8, floor=100):
+    """National figures of the annual livestock survey that change by more than `factor` from one year to the next.
+
+    Nothing is corrected: such a jump is either a real change of definition or a unit slip of the source, and the
+    reader is told. Small quantities (below `floor`) are ignored."""
+    series = defaultdict(dict)
+    for r in rows:
+        if r["dataset"] == "SPK33" and r["geo_code"] == "EL" and r["status"] == "ok":
+            series[(r["product_code"], r["variable"])][int(r["ref_year"])] = r
+    out = []
+    for (code, variable), by_year in sorted(series.items()):
+        for year in sorted(by_year):
+            before, now = by_year.get(year - 1), by_year[year]
+            if before is None:
+                continue
+            a, b = float(before["value"]), float(now["value"])
+            if a > 0 and b > 0 and max(a, b) >= floor and (b / a >= factor or a / b >= factor):
+                out.append((now["source_doc"], f"{code} ({variable}): {a:g} in {year - 1} and {b:g} in {year} for the whole country; "
+                                              f"check the unit and the definition before comparing the two years"))
+    return out
 
 
 # ---------------------------------------------------------------- registry
@@ -230,6 +271,8 @@ def build_products(store_rows, meta):
         years[r["product_code"]].add(int(r["ref_year"]))
     by_table = defaultdict(lambda: defaultdict(set))  # table -> year -> product codes present
     for code, ys in years.items():
+        if meta[code]["table_key"] not in agri_spg06.CATEGORIES:
+            continue  # series breaks are worked out for the annual crop tables only; the surveys are not joined across years
         for y in ys:
             by_table[meta[code]["table_key"]][y].add(code)
     breaks = series_breaks(by_table, meta)
@@ -238,7 +281,7 @@ def build_products(store_rows, meta):
         m = meta[code]
         path = m["path"]
         rows.append({
-            "product_code": code, "dataset": DATASET, "table_key": m["table_key"], "category": CATEGORIES[m["table_key"]],
+            "product_code": code, "dataset": m["dataset"], "table_key": m["table_key"], "category": CATEGORIES[m["table_key"]],
             "subcategory": path[0] if len(path) > 1 else "", "name_el": " – ".join(path), "name_en": m["name_en"],
             "path": " > ".join(path), "is_total": int(m["is_total"]), "is_residual": int(is_residual(path)),
             "continues": agri_products.CONTINUES.get(code, ""), "series_breaks": ";".join(str(y) for y in sorted(breaks.get(code, []))),
@@ -291,8 +334,9 @@ def series_breaks(by_table, meta):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("--years", nargs="*", type=int, help="editions (reference years of the ELSTAT pages) to import (default: all in the manifest)")
-    parser.add_argument("--file", help="import a spreadsheet downloaded by hand (needs --year)")
+    parser.add_argument("--dataset", nargs="*", choices=list(agri_sources.SOURCES), help="publications to import (default: all in the manifests)")
+    parser.add_argument("--years", nargs="*", type=int, help="editions (reference years of the ELSTAT pages) to import (default: all in the manifests)")
+    parser.add_argument("--file", help="import a spreadsheet downloaded by hand (needs --dataset and --year)")
     parser.add_argument("--year", type=int, help="publication year of --file")
     parser.add_argument("--stage", default="unspecified", choices=["final", "provisional", "unspecified"])
     parser.add_argument("--publication-date", default="")
@@ -301,32 +345,34 @@ def main():
     parser.add_argument("--today", default=date.today().isoformat(), help="date stored as last_updated (default: today)")
     args = parser.parse_args()
     if args.file:
-        if not args.year:
-            sys.exit("--file needs --year (the publication year)")
-        add_manual_file(args.file, args.year, args.stage, args.publication_date)
+        if not args.year or not args.dataset or len(args.dataset) != 1:
+            sys.exit("--file needs one --dataset and --year (the publication year)")
+        add_manual_file(args.file, args.dataset[0], args.year, args.stage, args.publication_date)
         args.years = [args.year]
 
-    entries = manifest_entries(set(args.years or []))
+    entries = manifest_entries(args.dataset or list(agri_sources.SOURCES), set(args.years or []))
     if not entries:
-        sys.exit(f"nothing to import: run scripts/fetch_agriculture_data.py first ({MANIFEST.relative_to(ROOT)})")
-    store = Store(args.rebuild, {r["doc_id"]: int(r["edition"]) for r in read_csv(MANIFEST)})
+        sys.exit("nothing to import: run scripts/fetch_agriculture_data.py first")
+    store = Store(args.rebuild, all_editions())
     publications = {} if args.rebuild else {(p["edition"], p["doc_id"], p["sheet"]): p for p in read_csv(OUT / "agri_publications.csv")}
     issues = [] if args.rebuild else [i for i in read_csv(OUT / "agri_import_issues.csv")
                                       if (i["edition"], i["doc_id"]) not in {(e["edition"], e["doc_id"]) for e in entries}]
     meta = {}
     for p in read_csv(OUT / "agri_products.csv") if not args.rebuild else []:
-        meta[p["product_code"]] = {"table_key": p["table_key"], "path": p["path"].split(" > "), "name_en": p["name_en"],
+        meta[p["product_code"]] = {"dataset": p["dataset"], "table_key": p["table_key"], "path": p["path"].split(" > "), "name_en": p["name_en"],
                                    "is_total": p["is_total"] == "1", "labels": set(filter(None, p["source_labels"].split(" | ")))}
     imported_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     errors = warnings = tables = 0
 
     for entry in entries:
-        path = RAW / entry["edition"] / entry["filename"]
+        path = agri_sources.raw_dir(entry["dataset"]) / entry["edition"] / entry["filename"]
         if not path.exists():
             sys.exit(f"{path} is listed in the manifest but missing; run scripts/fetch_agriculture_data.py")
         if sha256(path) != entry["sha256"]:
             issues.append(issue(entry, "", "warning", "checksum", "the file differs from the checksum in the manifest"))
-        parsed, notes = parse_workbook(path, int(entry["edition"]))
+        module = agri_sources.parser(entry["dataset"])
+        check_sums = module.check_sums
+        parsed, notes = module.parse_workbook(path, int(entry["edition"]))
         for note in notes:
             code = ("stale_sheet" if "stale" in note["message"] else "continuation_sheet" if "continuation" in note["message"]
                     else "skipped_sheet" if note["severity"] == "warning" else "unreadable_sheet")
@@ -343,12 +389,16 @@ def main():
                 continue
             tables += 1
             n_rows = len(table["rows"]) * len(table["columns"])
+            previous = publications.get((entry["edition"], entry["doc_id"], table["sheet"]))
             publications[(entry["edition"], entry["doc_id"], table["sheet"])] = {
-                "dataset": DATASET, "edition": entry["edition"], "pub_year": entry["publication_date"][:4], "doc_id": entry["doc_id"], "sheet": table["sheet"],
+                "dataset": entry["dataset"], "edition": entry["edition"], "pub_year": entry["publication_date"][:4], "doc_id": entry["doc_id"], "sheet": table["sheet"],
                 "source_table": table["source_table"], "table_key": table["table_key"], "ref_year": table["ref_year"],
                 "title": table["title"], "unit_line": table["units"], "stage": entry["stage"],
                 "publication_date": entry["publication_date"], "sha256": entry["sha256"], "imported_at": imported_at,
                 "columns": len(table["columns"]), "rows": n_rows, "note": table["fix"]}
+            if previous and all(str(previous[k]) == str(publications[(entry["edition"], entry["doc_id"], table["sheet"])][k])
+                                for k in ("sha256", "table_key", "ref_year", "columns", "rows", "stage", "publication_date", "note")):
+                publications[(entry["edition"], entry["doc_id"], table["sheet"])]["imported_at"] = previous["imported_at"]  # nothing changed
             if table["fix"]:
                 issues.append(issue(entry, table["sheet"], "info", "source_correction", table["fix"]))
             for column in table["skipped_columns"]:
@@ -368,11 +418,15 @@ def main():
                 issues.append(issue(entry, table["sheet"], "info", "ref_year_from_publication",
                                     "the sheet title states no year; the publication year is used"))
             for spec in table["columns"]:
-                m = meta.setdefault(spec["product_code"], {"table_key": table["table_key"], "path": spec["product_path"],
+                m = meta.setdefault(spec["product_code"], {"dataset": entry["dataset"], "table_key": table["table_key"], "path": spec["product_path"],
                                                            "name_en": "", "is_total": spec["is_total"], "labels": set()})
                 m["labels"].add(" > ".join(spec["source_path"]))
                 if spec["name_en"]:
                     m["name_en"] = spec["name_en"]
+    done = {e["doc_id"]: e for e in entries}
+    for doc, message in year_jumps(store.sorted_rows()):
+        if doc in done:
+            issues.append(issue(done[doc], "", "warning", "year_on_year_jump", message))
     errors = sum(1 for i in issues if i["severity"] == "error")
     warnings = sum(1 for i in issues if i["severity"] == "warning")
 
@@ -391,7 +445,7 @@ def main():
     write_csv(OUT / "agri_observations.csv", OBS, rows)
     write_csv(OUT / "agri_observation_revisions.csv", REVISIONS, store.revisions)
     write_csv(OUT / "agri_products.csv", PRODUCTS, build_products(rows, {k: v for k, v in meta.items() if k in used}))
-    write_csv(OUT / "agri_geo.csv", GEO, [dict(zip(GEO, g)) for g in agri_geo.geography()])
+    write_csv(OUT / "agri_geo.csv", GEO, [dict(zip(GEO, g)) for g in agri_geo.geography_with_prefectures()])
     write_csv(OUT / "agri_variables.csv", ["variable", "label_el", "unit", "unit_label_el", "note"],
               [dict(zip(["variable", "label_el", "unit", "unit_label_el", "note"], v)) for v in VARIABLES])
     write_csv(OUT / "agri_datasets.csv", DATASET_FIELDS, [dict(zip(DATASET_FIELDS, d)) for d in DATASETS])
@@ -407,7 +461,7 @@ def main():
 
 
 def issue(entry, sheet, severity, code, message):
-    return {"dataset": DATASET, "edition": entry["edition"], "doc_id": entry["doc_id"], "sheet": sheet,
+    return {"dataset": entry["dataset"], "edition": entry["edition"], "doc_id": entry["doc_id"], "sheet": sheet,
             "severity": severity, "code": code, "message": message}
 
 

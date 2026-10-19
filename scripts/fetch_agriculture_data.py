@@ -1,22 +1,23 @@
 #!/usr/bin/env python3
-"""Download the ELSTAT annual agricultural survey tables (SPG06) into data/agriculture/spg06/.
+"""Download the ELSTAT agriculture tables (see agri_sources.py) into data/agriculture/<publication>/.
 
 Usage:
-    python3 scripts/fetch_agriculture_data.py                  # every reference year from 2011, new files only
-    python3 scripts/fetch_agriculture_data.py --years 2024     # selected years
-    python3 scripts/fetch_agriculture_data.py --force          # download again and overwrite
+    python3 scripts/fetch_agriculture_data.py                          # every publication, new files only
+    python3 scripts/fetch_agriculture_data.py --dataset SPK33          # one or more publications
+    python3 scripts/fetch_agriculture_data.py --dataset SPG06 --years 2024   # selected editions
+    python3 scripts/fetch_agriculture_data.py --force                  # download again and overwrite
 
-Source: ELSTAT, Annual Agricultural Survey (Ετήσια Γεωργική Στατιστική Έρευνα)
-    https://www.statistics.gr/el/statistics/-/publication/SPG06
-Each publication page (…/SPG06/<year>) lists the XLS(X) tables and the press release. The tables are saved
-unchanged under data/agriculture/spg06/<year>/<document id>.<ext>, and data/agriculture/spg06/manifest.csv
-records, per file, the edition (the ELSTAT page of the reference year it belongs to), the document id, title, checksum, whether the publication is labelled final or provisional
-and, when the press release can be read, the publication date (the PDFs of some years have unreadable text, then it stays empty). The data is parsed by
-scripts/import_agriculture_data.py. Needs curl; pdftotext (poppler) is optional and only used to read the
-publication date from the press release.
+Publications: SPG06 annual agricultural survey, SPG32 and SPK12 farm structure survey (holdings and areas, livestock
+holdings), SPK33 annual livestock survey. Each ELSTAT publication page (…/publication/<code>/<year>) lists the XLS(X)
+tables and, for most publications, the press release. The tables are saved unchanged under
+data/agriculture/<publication>/<year>/<document id>.<ext>, and data/agriculture/<publication>/manifest.csv records, per
+file, the edition (the ELSTAT page of the reference year it belongs to), the document id, title, checksum, whether the
+publication is labelled final or provisional and, when the press release can be read, the publication date (the PDFs of
+some years have unreadable text, then it stays empty). The data is parsed by scripts/import_agriculture_data.py. Needs
+curl; pdftotext (poppler) is optional and only used to read the publication date from the press release.
 
 The ELSTAT site is not always reachable by script. Files can also be added by hand: put the ELSTAT
-spreadsheet under data/agriculture/spg06/<year>/ and run the importer with --file (see its docstring).
+spreadsheet under data/agriculture/<publication>/<year>/ and run the importer with --file (see its docstring).
 """
 
 import argparse
@@ -29,13 +30,11 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import agri_sources
+
 ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data" / "agriculture" / "spg06"
-MANIFEST = RAW / "manifest.csv"
-PAGE = "https://www.statistics.gr/el/statistics/-/publication/SPG06"
 FIELDS = ["dataset", "edition", "doc_id", "filename", "title", "format", "sha256", "bytes", "source_page",
           "stage", "publication_date", "downloaded_at"]
-FIRST_YEAR = 2011  # earlier publications only contain a vineyard table
 MONTHS = {"Ιανουαρίου": 1, "Φεβρουαρίου": 2, "Μαρτίου": 3, "Απριλίου": 4, "Μαΐου": 5, "Ιουνίου": 6, "Ιουλίου": 7,
           "Αυγούστου": 8, "Σεπτεμβρίου": 9, "Οκτωβρίου": 10, "Νοεμβρίου": 11, "Δεκεμβρίου": 12}
 
@@ -86,26 +85,31 @@ def stage_of(titles):
     return "unspecified"
 
 
-def read_manifest():
-    if not MANIFEST.exists():
+def read_manifest(dataset):
+    path = agri_sources.manifest_path(dataset)
+    if not path.exists():
         return {}
-    with MANIFEST.open(newline="", encoding="utf-8") as handle:
+    with path.open(newline="", encoding="utf-8") as handle:
         return {(r["edition"], r["doc_id"]): r for r in csv.DictReader(handle)}
 
 
-def write_manifest(rows):
-    RAW.mkdir(parents=True, exist_ok=True)
-    with MANIFEST.open("w", newline="", encoding="utf-8") as handle:
+def write_manifest(dataset, rows):
+    path = agri_sources.manifest_path(dataset)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, FIELDS, lineterminator="\n")
         writer.writeheader()
         for key in sorted(rows, key=lambda k: (int(k[0]), int(k[1]) if k[1].isdigit() else 0, k[1])):
             writer.writerow(rows[key])
 
 
-def fetch_year(year, rows, force):
-    page_url = f"{PAGE}/{year}"
+def fetch_year(dataset, year, rows, force):
+    source = agri_sources.SOURCES[dataset]
+    raw = agri_sources.raw_dir(dataset)
+    page_url = f"{agri_sources.PAGE.format(code=dataset)}/{year}"
     docs = documents(get(page_url).decode("utf-8", "ignore"))
-    releases = [d for d in docs if d[1] == "pdf" and "Ετήσια Γεωργική Στατιστική Έρευνα" in d[2]]
+    release = source["release"]
+    releases = [d for d in docs if d[1] == "pdf" and release and release(d[2])]
     stage = stage_of([d[2] for d in releases])
     pub_date = ""
     for _, _, title, url in releases:
@@ -113,41 +117,47 @@ def fetch_year(year, rows, force):
             pub_date = pub_date or press_release_date(get(url))
     tables = [d for d in docs if d[1] in ("xls", "xlsx")]
     if not tables:
-        print(f"{year}: no spreadsheets on the publication page")
+        print(f"{dataset} {year}: no spreadsheets on the publication page")
     for doc_id, _, title, url in tables:
         old = rows.get((str(year), doc_id))
-        if old and not force and (RAW / str(year) / old["filename"]).exists():
+        if old and not force and (raw / str(year) / old["filename"]).exists():
             old.update(stage=stage, publication_date=pub_date or old["publication_date"])
             continue
         data = get(url)
         ext = "xlsx" if data[:2] == b"PK" else "xls"  # ELSTAT names both formats .xls
-        target = RAW / str(year) / f"{doc_id}.{ext}"
+        target = raw / str(year) / f"{doc_id}.{ext}"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(data)
         rows[(str(year), doc_id)] = {
-            "dataset": "SPG06", "edition": year, "doc_id": doc_id, "filename": target.name, "title": title, "format": ext,
+            "dataset": dataset, "edition": year, "doc_id": doc_id, "filename": target.name, "title": title, "format": ext,
             "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data), "source_page": page_url, "stage": stage,
             "publication_date": pub_date, "downloaded_at": date.today().isoformat()}
-        print(f"{year}: {target.name}  {title[:70]}")
+        print(f"{dataset} {year}: {target.name}  {title[:70]}")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("--years", nargs="*", type=int, help="publication years (default: every year from 2011)")
+    parser.add_argument("--dataset", nargs="*", choices=list(agri_sources.SOURCES), help="publications (default: all)")
+    parser.add_argument("--years", nargs="*", type=int, help="editions (default: every year the publication is imported for)")
     parser.add_argument("--force", action="store_true", help="download again and overwrite existing files")
     args = parser.parse_args()
-    years = args.years
-    if not years:
-        index = get(PAGE).decode("utf-8", "ignore")
-        years = sorted({int(y) for y in re.findall(r"publication/SPG06/(\d{4})", index) if int(y) >= FIRST_YEAR})
-    rows = read_manifest()
-    for year in years:
-        try:
-            fetch_year(year, rows, args.force)
-        except RuntimeError as error:
-            print(f"{year}: {error}", file=sys.stderr)
-    write_manifest(rows)
-    print(f"manifest: {len(rows)} files in {MANIFEST.relative_to(ROOT)}")
+    for dataset in args.dataset or agri_sources.SOURCES:
+        source = agri_sources.SOURCES[dataset]
+        years = args.years
+        if not years:
+            if source["editions"]:
+                years = source["editions"]
+            else:
+                index = get(agri_sources.PAGE.format(code=dataset)).decode("utf-8", "ignore")
+                years = sorted({int(y) for y in re.findall(rf"publication/{dataset}/(\d{{4}})", index) if int(y) >= source["first_year"]})
+        rows = read_manifest(dataset)
+        for year in years:
+            try:
+                fetch_year(dataset, year, rows, args.force)
+            except RuntimeError as error:
+                print(f"{dataset} {year}: {error}", file=sys.stderr)
+        write_manifest(dataset, rows)
+        print(f"{dataset}: {len(rows)} files in {agri_sources.manifest_path(dataset).relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Build the map geometries of the agriculture dashboards: 13 regions and the regional units (περιφερειακές ενότητες).
+"""Build the map geometries of the agriculture dashboards: 13 regions, the regional units (περιφερειακές ενότητες) and the
+prefectures (νομοί) of the farm structure surveys.
 
 Usage:
     python3 scripts/build_agriculture_geometry.py                  # download LAU, write data/agriculture/geo/greece_units.json
@@ -10,7 +11,7 @@ Source: Eurostat GISCO, Local Administrative Units (LAU) 2021, 1:1 million, © E
 Every Greek LAU of the file is a community or municipal unit whose id starts with the ELSTAT number of the regional
 unit it belongs to (the number the SPG06 agricultural tables use: 01 Ροδόπης … 74 Χανίων, 99 Άγιον Όρος), so the real
 administrative boundaries of the regional units are obtained by merging the LAUs with the same two-digit prefix; the
-regions are the merge of their units. The 52 NUTS 3 areas of Eurostat cannot be used: they group several regional
+regions are the merge of their units, and a prefecture is the merge of the units listed for it in agri_geo.PREFECTURES. The 52 NUTS 3 areas of Eurostat cannot be used: they group several regional
 units (e.g. Άρτα + Πρέβεζα) while ELSTAT publishes the tables per regional unit.
 
 The geometries are simplified to roughly one kilometre and written as SVG paths in a projection that keeps
@@ -104,8 +105,10 @@ def main():
         regions.setdefault(agri_geo.unit_region(num), []).append(geom)
     regions = {code: unary_union(geoms).buffer(0) for code, geoms in regions.items()}
 
+    prefectures = {"NO" + code: unary_union([units[n] for n in members]).buffer(0) for code, members in agri_geo.prefecture_units().items()}
     simple_units = {n: keep_parts(g.simplify(TOLERANCE, preserve_topology=True)) for n, g in units.items()}
     simple_regions = {c: keep_parts(g.simplify(TOLERANCE, preserve_topology=True)) for c, g in regions.items()}
+    simple_prefectures = {c: keep_parts(g.simplify(TOLERANCE, preserve_topology=True)) for c, g in prefectures.items()}
 
     minx = min(g.bounds[0] for g in simple_regions.values())
     maxx = max(g.bounds[2] for g in simple_regions.values())
@@ -127,11 +130,13 @@ def main():
         "viewBox": [0, 0, round(WIDTH), round(height)],
         "regions": {c: {"path": path_of(g, project), "label": centroid(g)} for c, g in sorted(simple_regions.items())},
         "units": {"PE" + n: {"path": path_of(g, project), "label": centroid(g)} for n, g in sorted(simple_units.items())},
+        "prefectures": {c: {"path": path_of(g, project), "label": centroid(g)} for c, g in sorted(simple_prefectures.items())},
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(document, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     size = OUT.stat().st_size
     print(f"wrote {OUT.relative_to(ROOT)}: {len(document['regions'])} regions, {len(document['units'])} units, "
+          f"{len(document['prefectures'])} prefectures, "
           f"viewBox {document['viewBox']}, {size / 1024:.0f} KB")
 
 

@@ -56,3 +56,5 @@ td.flag{white-space:normal;min-width:120px;color:#8a5f22}
 @media(max-width:900px){.grid.map-grid{grid-template-columns:1fr}.filters .field.span2{grid-column:auto}}
 @media(max-width:600px){.cmp-table th,.cmp-table td{padding:6px}.toolbar .field{min-width:100%}}
 @media (prefers-reduced-motion:reduce){svg.map path.area{transition:none}}
+.kpi-value.txt{font-size:19px;line-height:1.25}
+#m-level button{padding:0 6px;font-size:12px}

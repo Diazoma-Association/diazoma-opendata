@@ -29,6 +29,14 @@ jobs:
       - name: Check embedded census data matches the CSV sources
         run: python3 scripts/build_census_data.py --check
 
+      - name: Check agriculture tables and the figures in the ELSTAT press releases
+        run: |
+          pip install openpyxl xlrd
+          python3 scripts/verify_agriculture_data.py --reparse
+
+      - name: Check embedded agriculture data matches the CSV sources
+        run: python3 scripts/build_agriculture_data.py --check
+
       - name: Check embedded funding data matches the CSV sources
         run: python3 scripts/build_funding_data.py --check
 
@@ -60,6 +68,19 @@ jobs:
         run: |
           sed -n '/^<script>$/,/^<\/script>/p' demographics/census-2021/index.html | sed '1d;$d' > census.js
           node --check census.js
+
+      - name: Check plant production dashboard JavaScript syntax
+        run: |
+          sed -n '/^<script>$/,/^<\/script>/p' agrifood/plant-production/index.html | sed '1d;$d' > plant.js
+          node --check plant.js
+
+      - name: Check shared agriculture dashboard script and the inline scripts of the pages that use it
+        run: |
+          node --check assets/js/agri-dashboard.js
+          for page in holdings livestock economy employment prices regional-profile aquaculture; do
+            sed -n '/^<script>$/,/^<\/script>/p' agrifood/$page/index.html | sed '1d;$d' > agri-$page.js
+            node --check agri-$page.js
+          done
 
       - name: Check funding dashboards JavaScript syntax
         run: |

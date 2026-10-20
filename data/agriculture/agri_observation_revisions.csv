@@ -1,0 +1,6 @@
+dataset,table_key,ref_year,pub_year,geo_code,product_code,variable,qualifier,value,unit,status,stage,flags,source_doc,last_updated,superseded_on,superseded_by
+DKT33,ix_factors,2025,2026,EL,ix_factors.land,price_index,,119.1,index_2020,ok,unspecified,,114688,2026-10-20,2026-10-20,114690
+DKT33,ix_factors,2025,2026,EL,ix_factors.capital,price_index,,132.7,index_2020,ok,unspecified,,114688,2026-10-20,2026-10-20,114690
+DKT33,ix_factors,2025,2026,EL,ix_factors.interest,price_index,,125.5,index_2020,ok,unspecified,,114688,2026-10-20,2026-10-20,114690
+DKT33,ix_factors,2025,2026,EL,ix_factors.machinery,price_index,,137.6,index_2020,ok,unspecified,,114688,2026-10-20,2026-10-20,114690
+DKT33,ix_factors,2021,2026,EL,ix_factors.general,price_index,,104.133,index_2020,ok,unspecified,,114688,2026-10-20,2026-10-20,114690

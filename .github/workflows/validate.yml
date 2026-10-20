@@ -74,7 +74,7 @@ jobs:
       - name: Check shared agriculture dashboard script and the inline scripts of the pages that use it
         run: |
           node --check assets/js/agri-dashboard.js
-          for page in holdings livestock economy employment prices; do
+          for page in holdings livestock economy employment prices regional-profile; do
             sed -n '/^<script>$/,/^<\/script>/p' agrifood/$page/index.html | sed '1d;$d' > agri-$page.js
             node --check agri-$page.js
           done

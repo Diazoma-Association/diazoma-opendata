@@ -222,6 +222,135 @@ def build_prices():
     return json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
 
 
+PROFILE_HTML = ROOT / "agrifood" / "regional-profile" / "index.html"
+PROFILE_BLOCK = re.compile(r'(<script id="agri-profile" type="application/json">)(.*?)(</script>)', re.S)
+REGION_CODES = ["EL51", "EL52", "EL53", "EL54", "EL61", "EL62", "EL63", "EL64", "EL65", "EL30", "EL41", "EL42", "EL43"]
+# (group, label, table, product, variable, unit label, kind) kind: amount (additive across regions: share of the country is shown), ratio
+PROFILE_ROWS = [
+    ("land", "Γεωργική γη και αγρανάπαυση", "land_use", "land_use.synolo", "area", "στρέμματα", "amount"),
+    ("land", "Αρδευόμενες εκτάσεις", "irrigated", "irrigated.synolo", "area", "στρέμματα", "amount"),
+    ("land", "Ελιές (έκταση)", "tree_areas", "tree_areas.elies", "area", "στρέμματα", "amount"),
+    ("land", "Ελαιόλαδο (παραγωγή)", "secondary", "secondary.elaiolado", "production", "τόνοι", "amount"),
+    ("holdings", "Εκμεταλλεύσεις (σύνολο)", "fs_farm_types", "fs_farm_types.synolo", "holdings", "εκμεταλλεύσεις", "amount"),
+    ("holdings", "Χρησιμοποιούμενη γεωργική έκταση", "fs_land_use", "fs_land_use.chrisimopoioymeni_georgiki_ektasi", "area", "στρέμματα", "amount"),
+    ("holdings", "Εκμεταλλεύσεις με ζώα", "fs_livestock_units", "fs_livestock_units.synolo", "holdings", "εκμεταλλεύσεις", "amount"),
+    ("holdings", "Ζωικές μονάδες", "fs_livestock_units", "fs_livestock_units.synolo", "livestock_units", "ζωικές μονάδες", "amount"),
+    ("livestock", "Πρόβατα (σύνολο)", "lv_stock", "lv_stock.provata.synolo", "animals", "κεφάλια", "amount"),
+    ("livestock", "Αίγες (σύνολο)", "lv_stock", "lv_stock.aiges.synolo", "animals", "κεφάλια", "amount"),
+    ("livestock", "Χοίροι (σύνολο)", "lv_stock", "lv_stock.choiroi.synolo", "animals", "κεφάλια", "amount"),
+    ("livestock", "Βοοειδή (γενικό σύνολο)", "lv_stock", "lv_stock.moscharia_vodia_tayroi_damalia_kai_agelades.geniko_synolo", "animals", "κεφάλια", "amount"),
+    ("livestock", "Όρνιθες συστηματικών πτηνοτροφείων", "lv_stock", "lv_stock.ornithes.systimatikon_ptinotrofeion", "animals", "κεφάλια", "amount"),
+    ("livestock", "Κυψέλες μελισσών (ευρωπαϊκές)", "lv_stock", "lv_stock.kypseles_melisson.eyropaikes", "hives", "κυψέλες", "amount"),
+    ("livestock", "Γάλα (γενικό σύνολο)", "lv_milk", "lv_milk.geniko_synolo_galaktos", "production", "τόνοι", "amount"),
+    ("employment", "Απασχολούμενοι (σύνολο)", "fs_employment", "fs_employment.synolo", "persons", "πρόσωπα", "amount"),
+    ("employment", "Ημέρες εργασίας (σύνολο)", "fs_employment", "fs_employment.synolo", "workdays", "ημέρες εργασίας", "amount"),
+    ("economy", "Γεωργική παραγωγή (16)", "eaa_output", "eaa_output.i16", "amount", "εκατ. ευρώ", "amount"),
+    ("economy", "Φυτική παραγωγή (10)", "eaa_crops", "eaa_crops.i10", "amount", "εκατ. ευρώ", "amount"),
+    ("economy", "Ζωική παραγωγή (13)", "eaa_livestock", "eaa_livestock.i13", "amount", "εκατ. ευρώ", "amount"),
+    ("economy", "Καθαρή προστιθέμενη αξία (22)", "eaa_income", "eaa_income.i22", "amount", "εκατ. ευρώ", "amount"),
+    ("economy", "Επιχειρηματικό εισόδημα (31)", "eaa_income", "eaa_income.i31", "amount", "εκατ. ευρώ", "amount"),
+]
+# derived rows: (group, label, numerator row label, denominator row label, unit label, multiplier)
+PROFILE_RATIOS = [
+    ("holdings", "Μέση έκταση ανά εκμετάλλευση", "Χρησιμοποιούμενη γεωργική έκταση", "Εκμεταλλεύσεις (σύνολο)", "στρέμματα ανά εκμετάλλευση", 1),
+    ("land", "Αρδευόμενες εκτάσεις ως ποσοστό της γεωργικής γης", "Αρδευόμενες εκτάσεις", "Γεωργική γη και αγρανάπαυση", "%", 100),
+    ("economy", "Ζωική παραγωγή ως ποσοστό της γεωργικής παραγωγής", "Ζωική παραγωγή (13)", "Γεωργική παραγωγή (16)", "%", 100),
+]
+PROFILE_GROUPS = [
+    ("land", "Γη και καλλιέργειες", "SPG06"), ("holdings", "Εκμεταλλεύσεις", "SPG32"), ("livestock", "Κτηνοτροφία", "SPK33"),
+    ("employment", "Απασχόληση", "SPG12"), ("economy", "Οικονομικοί λογαριασμοί γεωργίας", "SEL61"),
+]
+
+
+def build_profile():
+    """Payload of the regional profile page: a snapshot per region from the latest year of every source, each row with its
+    own source, year and stage. Nothing is combined across sources except the explicit ratios, which stay inside one source."""
+    obs = {}
+    flagged = set()
+    for o in read("agri_observations.csv"):
+        if o["status"] == "ok" and o["geo_code"] in ["EL"] + REGION_CODES and o["qualifier"] == "":
+            k = (o["table_key"], o["ref_year"], o["geo_code"], o["product_code"], o["variable"])
+            obs[k] = float(o["value"])
+            if "total_differs_from_parts" in o["flags"].split(";") and o["geo_code"] == "EL":
+                flagged.add(k[:2] + k[3:])
+    pubs = {(p["table_key"], p["ref_year"]): p for p in read("agri_publications.csv")}
+    products = {p["product_code"]: p for p in read("agri_products.csv")}
+    geos = ["EL"] + REGION_CODES
+
+    def latest(table, product, variable):
+        years = sorted({k[1] for k in obs if k[0] == table and k[2] == "EL" and k[3] == product and k[4] == variable
+                        and (table, k[1], product, variable) not in flagged}, reverse=True)
+        return years[0] if years else None
+
+    rows, by_label = [], {}
+    for group, label, table, product, variable, unit, kind in PROFILE_ROWS:
+        year = latest(table, product, variable)
+        pub = pubs.get((table, year)) if year else None
+        row = {"group": group, "label": label, "unit": unit, "kind": kind, "year": int(year) if year else None,
+               "src": pub["dataset"] if pub else "", "stage": pub["stage"] if pub else "", "pub": pub["publication_date"] if pub else "", "table": table,
+               "code": product, "derived": False, "values": {g: obs.get((table, year, g, product, variable)) for g in geos} if year else {}}
+        rows.append(row)
+        by_label[label] = row
+    for group, label, num, den, unit, mult in PROFILE_RATIOS:
+        a, b = by_label[num], by_label[den]
+        if a["year"] != b["year"] or a["src"] != b["src"]:
+            continue
+        values = {g: (a["values"][g] / b["values"][g] * mult if a["values"].get(g) is not None and b["values"].get(g) else None) for g in geos}
+        rows.append({"group": group, "label": label, "unit": unit, "kind": "ratio", "year": a["year"], "src": a["src"], "stage": a["stage"], "pub": a["pub"],
+                     "table": a["table"], "code": "", "derived": True, "values": values})
+    # employment: women among the holders (the codes differ with the survey's wording, the holders do not)
+    for year in ("2023", "2016"):
+        root = "katochoi_kai_meli_tis_oikogeneias_toys" if year == "2023" else "katochoi_kai_meli_toy_noikokyrioy_toys"
+        w, t = f"fs_holder_sex.{root}.gynaikes.katochoi", f"fs_holder_sex.{root}.synolo.katochoi"
+        if all(("fs_holder_sex", year, "EL", c, "persons") in obs for c in (w, t)):
+            pub = pubs[("fs_holder_sex", year)]
+            rows.append({"group": "employment", "label": "Γυναίκες ανάμεσα στους κατόχους εκμεταλλεύσεων", "unit": "%", "kind": "ratio", "year": int(year),
+                         "src": pub["dataset"], "stage": pub["stage"], "pub": pub["publication_date"], "table": "fs_holder_sex", "code": "", "derived": True,
+                         "values": {g: (obs[("fs_holder_sex", year, g, w, "persons")] / obs[("fs_holder_sex", year, g, t, "persons")] * 100
+                                        if ("fs_holder_sex", year, g, w, "persons") in obs and obs.get(("fs_holder_sex", year, g, t, "persons")) else None) for g in geos}})
+            break
+    # crops: the largest non-total, non-residual areas of the country in the latest year of the annual survey
+    ay = max(y for (t, y, g, c, v) in obs if t == "land_use")
+    crop_tables = ("cereals", "pulses_edible", "industrial", "vegetables", "melons_potatoes", "vineyards", "tree_areas")
+    crops = []
+    for (t, y, g, c, v), x in obs.items():
+        if y == ay and g == "EL" and v == "area" and t in crop_tables and products[c]["is_total"] == "0" and products[c]["is_residual"] == "0" and x > 0:
+            crops.append((x, c))
+    crops = [c for _x, c in sorted(crops, reverse=True)[:18]]
+    crop_rows = [{"name": products[c]["name_el"], "values": {g: obs.get((c.split(".")[0], ay, g, c, "area")) for g in geos}} for c in crops]
+    land_codes = [("land_use.kalliergeies.arotraies", "Αροτραίες καλλιέργειες"), ("land_use.kalliergeies.dendrodeis", "Δενδρώδεις καλλιέργειες"),
+                  ("land_use.kalliergeies.ampelia_kai_stafidampela", "Αμπέλια και σταφιδάμπελα"), ("land_use.kalliergeies.kipeytiki_gi", "Κηπευτική γη"),
+                  ("land_use.agranapaysi", "Αγρανάπαυση")]
+    land = [{"name": n, "values": {g: obs.get(("land_use", ay, g, c, "area")) for g in geos}} for c, n in land_codes]
+    land_total = {g: obs.get(("land_use", ay, g, "land_use.synolo", "area")) for g in geos}
+    pub = pubs[("land_use", ay)]
+    # trend of the output of the agricultural industry
+    sy = sorted({k[1] for k in obs if k[0] == "eaa_output" and k[2] == "EL" and k[3] == "eaa_output.i16"})
+    trend = {"years": [int(y) for y in sy], "break": 2010, "unit": "εκατ. ευρώ", "label": "Γεωργική παραγωγή (16)",
+             "series": {g: [obs.get(("eaa_output", y, g, "eaa_output.i16", "amount")) for y in sy] for g in geos}}
+    # context from the other datasets of the platform (their own sources and definitions)
+    context = []
+    census = {r["nuts2"]: int(r["total"]) for r in csv.DictReader((ROOT / "data" / "census_2021_population_by_area.csv").open(encoding="utf-8")) if r["level"] == "region"}
+    census["EL"] = next(int(r["total"]) for r in csv.DictReader((ROOT / "data" / "census_2021_population_by_area.csv").open(encoding="utf-8")) if r["level"] == "country")
+    context.append({"label": "Πληθυσμός (Απογραφή 2021)", "unit": "κάτοικοι", "year": 2021, "src": "ΕΛΣΤΑΤ · Απογραφή Πληθυσμού 2021", "kind": "amount",
+                    "values": {g: census.get(g) for g in geos}})
+    gva = {}
+    for r in csv.DictReader((ROOT / "data" / "economy_eurostat_gva_by_sector.csv").open(encoding="utf-8")):
+        gva[(r["year"], r["nuts2"], r["sector_code"])] = float(r["gva_meur"])
+    gy = max(y for (y, _g, _s) in gva)
+    context.append({"label": "Ακαθάριστη προστιθέμενη αξία: γεωργία, δασοκομία, αλιεία", "unit": "εκατ. ευρώ", "year": int(gy), "src": "Eurostat · ΑΠΑ ανά κλάδο (NUTS 2)", "kind": "amount",
+                    "values": {g: gva.get((gy, g, "A")) for g in geos}})
+    context.append({"label": "Μερίδιο γεωργίας, δασοκομίας και αλιείας στη συνολική ΑΠΑ", "unit": "%", "year": int(gy), "src": "Eurostat · ΑΠΑ ανά κλάδο (NUTS 2)", "kind": "ratio",
+                    "values": {g: (gva[(gy, g, "A")] / gva[(gy, g, "TOTAL")] * 100 if (gy, g, "A") in gva and gva.get((gy, g, "TOTAL")) else None) for g in geos}})
+    names = {g[0]: g[2] for g in [(r["geo_code"], r["level"], r["name_el"]) for r in read("agri_geo.csv")]}
+    payload = {"meta": {"geos": geos},
+               "regions": [[g, names[g]] for g in REGION_CODES], "groups": [[g, t, d] for g, t, d in PROFILE_GROUPS],
+               "rows": rows, "crops": {"year": int(ay), "src": "SPG06", "stage": pub["stage"], "pub": pub["publication_date"], "rows": crop_rows},
+               "land": {"year": int(ay), "src": "SPG06", "stage": pub["stage"], "pub": pub["publication_date"], "rows": land, "total": land_total},
+               "trend": trend, "context": context}
+    return json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+
+
 def geometry(page):
     full = json.loads(GEO_JSON.read_text(encoding="utf-8"))
     return json.dumps({k: full[k] for k in page["map"]}, ensure_ascii=False, separators=(",", ":"))
@@ -250,6 +379,24 @@ def main():
             document = document[:match.start(2)] + generated + document[match.end(2):]
         html.write_text(document, encoding="utf-8")
         print(f"{name}: wrote {len(blocks[0][1]):,} + {len(blocks[1][1]):,} characters of data into {html.relative_to(ROOT)}")
+    if PROFILE_HTML.exists():
+        document = PROFILE_HTML.read_text(encoding="utf-8")
+        blocks = [(PROFILE_BLOCK, build_profile(), "agri-profile"), (GEO_BLOCK, geometry({"map": MAP_KEYS[:3]}), "agri-geo")]
+        for pattern, generated, block in blocks:
+            match = pattern.search(document)
+            if not match:
+                sys.exit(f"no {block} block found in {PROFILE_HTML}")
+            if check:
+                if match.group(2).strip() != generated:
+                    sys.exit(f"{block} in {PROFILE_HTML.relative_to(ROOT)} is out of date with the CSV files; run scripts/build_agriculture_data.py")
+            else:
+                document = document[:match.start(2)] + generated + document[match.end(2):]
+                match = None
+        if check:
+            print(f"OK: regional-profile: data in the page matches the CSVs ({len(blocks[0][1]):,} characters).")
+        else:
+            PROFILE_HTML.write_text(document, encoding="utf-8")
+            print(f"regional-profile: wrote {len(blocks[0][1]):,} characters of data into {PROFILE_HTML.relative_to(ROOT)}")
     if PRICES_HTML.exists():
         document = PRICES_HTML.read_text(encoding="utf-8")
         generated = build_prices()

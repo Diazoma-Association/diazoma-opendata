@@ -19,6 +19,8 @@ from agri_spg06 import (LayoutError, clean_label, dedupe, fold, greekness, parse
 from agri_xlsx import clean, load
 
 TABLE_KEYS = [
+    ("κατα φυλο", "fs_holder_sex"), ("ταξεισ ηλικιων", "fs_holder_age"), ("απασχοληση των κατοχων", "fs_employment_family"),
+    ("απασχολουμενοι στη γεωργια", "fs_employment"), ("αριθμοσ απασχολουμενων", "fs_employment"),
     ("διακριση σε μεικτεσ", "fs_farm_types"), ("βιολογικησ εκτροφησ", "fs_organic_livestock"),
     ("ζωικεσ μοναδεσ", "fs_livestock_units"), ("αριθμοσ ζωων", "fs_livestock"),
     ("βασικεσ κατηγοριεσ χρησησ", "fs_land_use"), ("αροτραιεσ καλλιεργειεσ", "fs_arable"), ("ετησιεσ καλλιεργειεσ", "fs_arable"), ("σιτηρα", "fs_cereals"),
@@ -29,8 +31,11 @@ CATEGORIES = {
     "fs_arable": "Αροτραίες καλλιέργειες", "fs_cereals": "Σιτηρά για καρπό", "fs_tree_crops": "Δενδρώδεις καλλιέργειες",
     "fs_vineyards": "Αμπέλια", "fs_irrigation": "Αρδευθείσες εκτάσεις", "fs_livestock": "Εκμεταλλεύσεις και ζώα ανά είδος",
     "fs_livestock_units": "Εκμεταλλεύσεις και ζωικές μονάδες ανά είδος", "fs_organic_livestock": "Βιολογική κτηνοτροφία",
+    "fs_employment": "Απασχολούμενοι στη γεωργία και την κτηνοτροφία", "fs_employment_family": "Απασχόληση κατόχων και μελών του νοικοκυριού ή της οικογένειάς τους",
+    "fs_holder_age": "Κάτοχοι εκμεταλλεύσεων ανά ηλικία", "fs_holder_sex": "Κάτοχοι και μέλη νοικοκυριού ή οικογένειας ανά φύλο",
 }
-UNIT_OF = {"holdings": "holding", "area": "stremma", "animals": "head", "livestock_units": "livestock_unit", "hives": "hive"}
+UNIT_OF = {"holdings": "holding", "area": "stremma", "animals": "head", "livestock_units": "livestock_unit", "hives": "hive",
+           "persons": "person", "workdays": "workday"}
 
 # Display names of the (upper case, unaccented, often letter-spaced) labels of the tables. Keys are the Greek letters of
 # the label only, so spacing, hyphens and the English text that shares the cell do not matter.
@@ -57,6 +62,17 @@ NAMES = {
     "ΛΟΙΠΕΣ ΚΑΛΛΙΕΡΓΟΥΜΕΝΕΣ ΕΚΤΑΣΕΙΣ": "Λοιπές καλλιεργούμενες εκτάσεις", "ΟΙΚΟΓΕΝΕΙΑΚΟΙ ΛΑΧΑΝΟΚΗΠΟΙ": "Οικογενειακοί λαχανόκηποι",
     "ΦΥΤΩΡΙΑ ΥΠΑΙΘΡΙΑ ΚΑΙ ΑΛΛΕΣ ΠΟΛΥΕΤΕΙΣ ΦΥΤΕΙΕΣ": "Φυτώρια υπαίθρια και άλλες πολυετείς φυτείες",
     "ΜΕΙΚΤΕΣ": "Μεικτές εκμεταλλεύσεις",
+    # employment tables (SPG12). 2016 speaks of the household (νοικοκυριό), 2023 of the family (οικογένεια): different definitions
+    "ΕΚΜΕΤΑΛΛΕΥΣΕΙΣ": "", "ΤΑΞΕΙΣ ΗΛΙΚΙΩΝ ΚΑΤΟΧΩΝ ΕΚΜΕΤΑΛΛΕΥΣΕΩΝ": "", "ΦΥΣΙΚΑ ΠΡΟΣΩΠΑ": "Φυσικά πρόσωπα",
+    "ΚΑΤΟΧΟΙ ΚΑΙ ΜΕΛΗ ΤΟΥ ΝΟΙΚΟΚΥΡΙΟΥ ΤΟΥΣ ΠΟΥ ΕΡΓΑΣΤΗΚΑΝ ΣΤΗΝ ΕΚΜΕΤΑΛΛΕΥΣΗ": "Κάτοχοι και μέλη του νοικοκυριού τους που εργάστηκαν στην εκμετάλλευση",
+    "ΚΑΤΟΧΟΙ ΚΑΙ ΜΕΛΗ ΤΗΣ ΟΙΚΟΓΕΝΕΙΑΣ ΤΟΥΣ ΠΟΥ ΑΠΑΣΧΟΛΗΘΗΚΑΝ ΣΤΗΝ ΕΚΜΕΤΑΛΛΕΥΣΗ": "Κάτοχοι και μέλη της οικογένειάς τους που απασχολήθηκαν στην εκμετάλλευση",
+    "ΚΑΤΟΧΟΙ ΚΑΙ ΜΕΛΗ ΤΟΥ ΝΟΙΚΟΚΥΡΙΟΥ ΤΟΥΣ": "Κάτοχοι και μέλη του νοικοκυριού τους", "ΚΑΤΟΧΟΙ ΚΑΙ ΜΕΛΗ ΤΗΣ ΟΙΚΟΓΕΝΕΙΑΣ ΤΟΥΣ": "Κάτοχοι και μέλη της οικογένειάς τους",
+    "ΤΑΚΤΙΚΑ ΑΠΑΣΧΟΛΟΥΜΕΝΟΙ": "Τακτικά απασχολούμενοι", "ΕΠΟΧΙΚΟΙ ΕΡΓΑΤΕΣ": "Εποχικοί εργάτες",
+    "ΑΠΑΣΧΟΛΗΣΗ ΣΤΑ ΠΛΑΙΣΙΑ ΑΛΛΗΛΟΒΟΗΘΕΙΑΣ ΤΩΝ ΓΕΩΡΓΩΝ": "Απασχόληση στο πλαίσιο αλληλοβοήθειας των γεωργών",
+    "ΑΠΑΣΧΟΛΗΣΗ ΛΟΙΠΩΝ ΕΡΓΑΤΩΝ (ΚΑΤ΄ΑΠΟΚΟΠΗ)": "Απασχόληση λοιπών εργατών (κατ᾽ αποκοπή)",
+    "ΑΠΑΣΧΟΛΟΥΜΕΝΟΙ ΑΠΟΚΛΕΙΣΤΙΚΑ ΣΤΗΝ ΕΚΜΕΤΑΛΛΕΥΣΗ": "Απασχολούμενοι αποκλειστικά στην εκμετάλλευση",
+    "ΑΠΑΣΧΟΛΟΥΜΕΝΟΙ ΚΥΡΙΩΣ ΣΤΗΝ ΕΚΜΕΤΑΛΛΕΥΣΗ": "Απασχολούμενοι κυρίως στην εκμετάλλευση", "ΑΠΑΣΧΟΛΟΥΜΕΝΟΙ ΔΕΥΤΕΡΕΥΟΝΤΩΣ ΣΤΗΝ ΕΚΜΕΤΑΛΛΕΥΣΗ": "Απασχολούμενοι δευτερευόντως στην εκμετάλλευση",
+    "ΑΝΔΡΕΣ": "Άνδρες", "ΓΥΝΑΙΚΕΣ": "Γυναίκες", "ΚΑΤΟΧΟΙ": "Κάτοχοι", "ΣΥΖΥΓΟΙ ΚΑΙ ΛΟΙΠΑ ΜΕΛΗ": "Σύζυγοι και λοιπά μέλη",
     # 2016 survey: other classification of land use, quality wines and tree crops than 2023; kept under its own names
     "ΕΤΗΣΙΕΣ ΚΑΛΛΙΕΡΓΕΙΕΣ": "Ετήσιες καλλιέργειες", "ΔΕΝΔΡΩΔΕΙΣ ΚΑΛΛΙΕΡΓΕΙΕΣ": "Δενδρώδεις καλλιέργειες",
     "ΦΥΤΩΡΙΑ ΚΑΡΠΟΦΟΡΩΝ ΔΕΝΔΡΩΝ": "Φυτώρια καρποφόρων δένδρων", "ΟΙΝΟΙ ΠΟΙΟΤΗΤΑΣ": "Οίνοι ποιότητας", "ΛΟΙΠΟΙ ΟΙΝΟΙ": "Λοιποί οίνοι",
@@ -88,7 +104,10 @@ def display_path(table_key, path):
         path = path[1:]  # the first header level only repeats the category of the table
     for element in path:
         key = gkey(element)
-        if fold(element).startswith("συνολο"):
+        age = re.match(r"^(\d+)\s*-\s*(\d+)\s+ΕΤΩΝ", element) or re.match(r"^(\d+)\s+ΕΤΩΝ ΚΑΙ ΑΝΩ", element)
+        if age:
+            out.append(f"{age.group(1)} - {age.group(2)} ετών" if age.lastindex == 2 else f"{age.group(1)} ετών και άνω")
+        elif fold(element).startswith("συνολο"):
             out.append("Σύνολο")
         elif key in _NAMES:
             if _NAMES[key]:
@@ -125,14 +144,16 @@ def tidy(label):
 
 
 def measure_of(path):
-    """(variable, remaining path) from the header path of a column."""
-    folded = [fold(p) for p in path]
-    if folded and folded[0].startswith("εκμεταλλευσεισ") and not folded[0].startswith("εκμεταλλευσεισ με"):
-        return "holdings", [p for p in path[1:] if not fold(p).startswith("συνολο") or len(path) > 2] or ["Σύνολο"]
-    for i in range(len(path) - 1, -1, -1):
+    """(variable, remaining path) from the header path of a column. The measure is the last level of the header;
+    the first level only names it when nothing below does (the 2016 land tables head every column "ΕΚΜΕΤΑΛΛΕΥΣΕΙΣ")."""
+    folded = [fold(p).replace(". ", ".") for p in path]
+    last = len(path) - 1
+    for i in range(last, -1, -1):
         f = folded[i]
         rest = path[:i] + path[i + 1:]
-        if f.startswith("εκμεταλλευσεισ") or f.startswith("εκμ/σεισ") or f.startswith("εκμ/σεισ"):
+        if f.startswith("εκμεταλλευσεισ") or f.startswith("εκμ/σεισ") or (i == last and f.startswith("συνολο εκμεταλλευσεων")):
+            if i == 0 and not f.startswith("εκμεταλλευσεισ με"):
+                rest = [p for p in path[1:] if not fold(p).startswith("συνολο") or len(path) > 2] or ["Σύνολο"]
             return "holdings", rest
         if f.startswith("αριθμοσ ζωων"):
             return "animals", rest
@@ -140,11 +161,19 @@ def measure_of(path):
             return "livestock_units", rest
         if f.startswith("αριθμοσ κυψελων"):
             return "hives", rest
-        if f == "αρδευθεισεσ εκτασεισ" and i == len(path) - 1 and i > 0:
+        if i == last and f.startswith("απασχ/"):
+            return "persons", rest
+        if i == last and (f.startswith("κατοχοι") or f.startswith("συζυγοι")):
+            return "persons", path  # the holders and the spouses are categories of one table: they stay in the name
+        if f.startswith("ημ.εργασιασ") or f.startswith("ημερεσ εργασιασ"):
+            return "workdays", rest
+        if f.startswith("χ.γ.ε"):
+            return "area", rest
+        if f == "αρδευθεισεσ εκτασεισ" and i == last and i > 0:
             return "area", path[:i]  # 2016 irrigation table: the second column under "holdings with irrigated area"
         if f == "εκτασησ" or f == "εκτασι" or f.startswith("εκτασησ") or f == "εκτασε" or f == "εκτασι":
             return "area", rest
-        if f.startswith("εκτασ") and i == len(path) - 1 and len(f) <= 7:
+        if f.startswith("εκτασ") and i == last and len(f) <= 7:
             return "area", rest
     if len(path) == 1 and folded[0].startswith("χρησιμουμενη γεωργικη εκτασ"):
         return "area", ["Χρησιμοποιούμενη γεωργική έκταση"]
@@ -255,6 +284,12 @@ def parse_sheet(sheet, edition):
             level, code = "prefecture", "NO" + pref
         rows.append({"level": level, "geo_code": code, "label": label, "cells": cells})
     keep = [i for i, s in enumerate(specs) if s]
+    seen = {}
+    for i in keep:
+        k = (specs[i]["product_code"], specs[i]["measure"])
+        if k in seen:
+            raise LayoutError(f"two columns ({seen[k]} and {specs[i]['col']}) have the same product and measure {k}: {specs[i]['path']}")
+        seen[k] = specs[i]["col"]
     for row in rows:
         row["cells"] = [row["cells"][i] for i in keep]
     return {"sheet": sheet.name, "source_table": source_table, "title": title, "title_en": "", "ref_year": ref_year,

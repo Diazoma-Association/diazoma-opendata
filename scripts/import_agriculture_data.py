@@ -66,11 +66,20 @@ VARIABLES = [
     ("livestock_units", "Ζωικές μονάδες", "livestock_unit", "ζωικές μονάδες",
      "Ζώα εκφρασμένα σε ζωικές μονάδες με συντελεστές της ΕΛΣΤΑΤ· δεν είναι αριθμός ζώων."),
     ("hives", "Κυψέλες μελισσών", "hive", "κυψέλες", "Αριθμός κυψελών."),
+    ("price_index", "Αριθμοδείκτης", "index_2020", "δείκτης (2020=100)",
+     "Αριθμοδείκτης με έτος βάσης 2020=100· η μονάδα index_2020 περιέχει το έτος βάσης, ώστε σειρές με άλλη βάση να μη συγκρίνονται. Δεν είναι χρηματικό ποσό."),
+    ("annual_change", "Ετήσια μεταβολή", "percent", "%", "Ετήσια ποσοστιαία μεταβολή του δείκτη όπως τη δημοσιεύει η πηγή."),
+    ("weight", "Συντελεστής στάθμισης", "weight", "συντελεστής στάθμισης", "Στάθμιση του δείκτη στη μονάδα της πηγής (άθροισμα 10.000 στους ετήσιους δείκτες αμοιβής, 100.000 στους μηνιαίους)."),
+    ("persons", "Πρόσωπα", "person", "πρόσωπα",
+     "Απασχολούμενοι ή κάτοχοι εκμεταλλεύσεων (αριθμός προσώπων). Ένα πρόσωπο μπορεί να εμφανίζεται σε περισσότερες κατηγορίες απασχόλησης στην ίδια ή σε άλλη εκμετάλλευση, γι' αυτό οι αριθμοί των γραμμών δεν αθροίζονται πάντα."),
+    ("workdays", "Ημέρες εργασίας", "workday", "ημέρες εργασίας", "Αριθμός ημερών εργασίας στη μονάδα της πηγής· δεν είναι ισοδύναμο πλήρους απασχόλησης."),
     ("births", "Ζώα που γεννήθηκαν", "head", "κεφάλια", "Ζώα που γεννήθηκαν κατά το έτος αναφοράς."),
     ("breeding", "Ζώα που γέννησαν", "head", "κεφάλια", "Θηλυκά ζώα που γέννησαν κατά το έτος αναφοράς."),
     ("milked", "Ζώα που αρμέχτηκαν", "head", "κεφάλια", "Ζώα που αρμέχτηκαν όλο το έτος αναφοράς."),
     ("slaughtered", "Ζώα που σφάχτηκαν", "head", "κεφάλια", "Αριθμός ζώων που σφάχτηκαν (παραγωγή κρέατος)."),
     ("carcass_weight", "Βάρος σφαγίων", "tonne", "τόνοι", "Βάρος σφαγίων σε τόνους."),
+    ("amount", "Αξία", "eur_million", "εκατ. ευρώ",
+     "Χρηματικό ποσό σε εκατομμύρια ευρώ όπως το δημοσιεύει η πηγή (φύλλο «Βασικές τιμές»)· δεν είναι δείκτης και δεν συγκρίνεται με αριθμοδείκτες."),
     ("production_kpieces", "Παραγωγή (χιλιάδες τεμάχια)", "thousand_pieces", "χιλιάδες τεμάχια",
      "Αυγά και δέρματα (από το 2022), σε χιλιάδες τεμάχια όπως τα δημοσιεύει η πηγή."),
 ]
@@ -194,6 +203,7 @@ class Store:
         self.rows = {} if rebuild else {key_of(r): r for r in read_csv(OUT / "agri_observations.csv")}
         self.revisions = [] if rebuild else read_csv(OUT / "agri_observation_revisions.csv")
         self.counts = Counter()
+        self.known = {(key_of(r), r["source_doc"], r["value"], r["status"]) for r in self.revisions}  # revisions already on file
 
     def merge(self, incoming, today):
         """Merge the observations of one table; returns the number of conflicts inside the table."""
@@ -224,10 +234,14 @@ class Store:
                 self.counts["unit_mismatch"] += 1  # e.g. the same table in kilograms: never stored
             elif self.rank(row) >= self.rank(old):
                 self.revisions.append(dict(old, superseded_on=today, superseded_by=row["source_doc"]))
+                self.known.add((k, old["source_doc"], old["value"], old["status"]))
                 self.rows[k] = dict(row, last_updated=today)
                 self.counts["updated"] += 1
+            elif (k, row["source_doc"], row["value"], row["status"]) in self.known:
+                self.counts["unchanged"] += 1  # this earlier figure is already kept as a revision: nothing new
             else:  # an earlier publication disagrees with the stored (later) figure
                 self.revisions.append(dict(row, last_updated=today, superseded_on=today, superseded_by=old["source_doc"]))
+                self.known.add((k, row["source_doc"], row["value"], row["status"]))
                 self.counts["kept_as_revision"] += 1
         return 0
 
@@ -238,6 +252,10 @@ class Store:
         order = {code: n for n, (code, *_rest) in enumerate(agri_geo.geography_with_prefectures())}
         return sorted(self.rows.values(), key=lambda r: (
             r["table_key"], int(r["ref_year"]), r["product_code"], r["variable"], r["qualifier"], order.get(r["geo_code"], 999)))
+
+
+# Years in which a whole publication changes basis: SEL61 2010-2022 were revised to the new national accounts base, 2000-2009 were not.
+DATASET_BREAKS = {"SEL61": [2010]}
 
 
 def year_jumps(rows, factor=8, floor=100):
@@ -284,7 +302,7 @@ def build_products(store_rows, meta):
             "product_code": code, "dataset": m["dataset"], "table_key": m["table_key"], "category": CATEGORIES[m["table_key"]],
             "subcategory": path[0] if len(path) > 1 else "", "name_el": " – ".join(path), "name_en": m["name_en"],
             "path": " > ".join(path), "is_total": int(m["is_total"]), "is_residual": int(is_residual(path)),
-            "continues": agri_products.CONTINUES.get(code, ""), "series_breaks": ";".join(str(y) for y in sorted(breaks.get(code, []))),
+            "continues": agri_products.CONTINUES.get(code, ""), "series_breaks": ";".join(str(y) for y in sorted(breaks.get(code, []) or DATASET_BREAKS.get(m["dataset"], []))),
             "first_year": min(years[code]), "last_year": max(years[code]), "source_labels": " | ".join(sorted(m["labels"]))})
     return rows
 
@@ -378,11 +396,16 @@ def main():
                     else "skipped_sheet" if note["severity"] == "warning" else "unreadable_sheet")
             issues.append(issue(entry, note["sheet"], note["severity"], code, note["message"]))
         for table in parsed:
+            te = dict(entry)  # a table may know more than the manifest: the stage (asterisk) or the update date printed on the sheet
+            if te["stage"] == "unspecified" and table.get("stage"):
+                te["stage"] = table["stage"]
+            if not te["publication_date"] and table.get("update_date"):
+                te["publication_date"] = table["update_date"]
             flags_by_cell = defaultdict(list)
             sums = check_sums(table)
             for s in sums:
                 flags_by_cell[(s["geo"], s["col"])].append("total_differs_from_parts")
-            conflicts = store.merge(observations_of(table, entry, flags_by_cell), args.today)
+            conflicts = store.merge(observations_of(table, te, flags_by_cell), args.today)
             if conflicts:
                 issues.append(issue(entry, table["sheet"], "error", "conflict",
                                     f"{conflicts} statistics appear twice in the sheet with different values; the sheet was not imported"))
@@ -391,16 +414,18 @@ def main():
             n_rows = len(table["rows"]) * len(table["columns"])
             previous = publications.get((entry["edition"], entry["doc_id"], table["sheet"]))
             publications[(entry["edition"], entry["doc_id"], table["sheet"])] = {
-                "dataset": entry["dataset"], "edition": entry["edition"], "pub_year": entry["publication_date"][:4], "doc_id": entry["doc_id"], "sheet": table["sheet"],
+                "dataset": entry["dataset"], "edition": entry["edition"], "pub_year": te["publication_date"][:4], "doc_id": entry["doc_id"], "sheet": table["sheet"],
                 "source_table": table["source_table"], "table_key": table["table_key"], "ref_year": table["ref_year"],
-                "title": table["title"], "unit_line": table["units"], "stage": entry["stage"],
-                "publication_date": entry["publication_date"], "sha256": entry["sha256"], "imported_at": imported_at,
+                "title": table["title"], "unit_line": table["units"], "stage": te["stage"],
+                "publication_date": te["publication_date"], "sha256": entry["sha256"], "imported_at": imported_at,
                 "columns": len(table["columns"]), "rows": n_rows, "note": table["fix"]}
             if previous and all(str(previous[k]) == str(publications[(entry["edition"], entry["doc_id"], table["sheet"])][k])
                                 for k in ("sha256", "table_key", "ref_year", "columns", "rows", "stage", "publication_date", "note")):
                 publications[(entry["edition"], entry["doc_id"], table["sheet"])]["imported_at"] = previous["imported_at"]  # nothing changed
             if table["fix"]:
                 issues.append(issue(entry, table["sheet"], "info", "source_correction", table["fix"]))
+            for text in table.get("notes", []):
+                issues.append(issue(entry, table["sheet"], "info", "source_note", text))
             for column in table["skipped_columns"]:
                 issues.append(issue(entry, table["sheet"], "warning", "skipped_column",
                                     f"column {column['col']} ({' > '.join(column['path'])}) not imported: {column['reason']}"))

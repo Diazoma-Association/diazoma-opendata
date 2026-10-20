@@ -13,6 +13,9 @@ EL30,region,Αττική,EL,EL30,
 EL41,region,Βόρειο Αιγαίο,EL,EL41,
 EL42,region,Νότιο Αιγαίο,EL,EL42,
 EL43,region,Κρήτη,EL,EL43,
+EL4,zone,"Νησιά Αιγαίου, Κρήτη",EL,,
+EL5,zone,Βόρεια Ελλάδα,EL,,
+EL6,zone,Κεντρική Ελλάδα,EL,,
 PE01,unit,Ροδόπης,EL51,EL51,11101
 PE02,unit,Δράμας,EL51,EL51,11102
 PE03,unit,Έβρου,EL51,EL51,11103

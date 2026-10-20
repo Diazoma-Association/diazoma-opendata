@@ -46,6 +46,12 @@ ANCHORS = [
     ("fs_farm_types", 2016, "EL", "fs_farm_types.amigos_georgikes_ekmetalleyseis", "holdings", "", 562965, 0, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2016: 562.965 αμιγώς γεωργικές"),
     ("fs_farm_types", 2016, "EL", "fs_farm_types.meiktes_ekmetalleyseis", "holdings", "", 105709, 0, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2016: 105.709 μεικτές"),
     ("fs_irrigation", 2016, "EL", "fs_irrigation.synolo", "area", "", 10749000, 500, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2016: αρδευθείσα έκταση 10.749 χιλ. στρέμματα"),
+    ("ix_factors", 2025, "EL", "ix_factors.general", "annual_change", "", 4.5, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου ΑΣΠ 2025: Γενικός Δείκτης +4,5%"),
+    ("ix_factors", 2024, "EL", "ix_factors.general", "annual_change", "", 5.7, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου ΑΣΠ 2025: Γενικός Δείκτης 2024 +5,7%"),
+    ("ix_factors", 2025, "EL", "ix_factors.labour", "annual_change", "", 7.6, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου ΑΣΠ 2025: Δείκτης Αμοιβής Εργασίας +7,6%"),
+    ("ix_factors", 2025, "EL", "ix_factors.land", "annual_change", "", 2.6, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου ΑΣΠ 2025: Δείκτης Ενοικίων Γης +2,6%"),
+    ("ix_factors", 2025, "EL", "ix_factors.capital", "annual_change", "", 1.5, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου ΑΣΠ 2025: Δείκτης Αμοιβής Κεφαλαίου +1,5%"),
+    ("ix_factors", 2025, "EL", "ix_factors.interest", "annual_change", "", -1.6, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου ΑΣΠ 2025: δείκτης τόκων δανείων −1,6%"),
     ("fs_livestock", 2023, "EL43", "fs_livestock.provatoeidi", "animals", "", 2379775, 0, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: Κρήτη, 2.379.775 προβατοειδή"),
     ("fs_livestock", 2023, "EL63", "fs_livestock.provatoeidi", "animals", "", 1526053, 0, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: Δυτική Ελλάδα, 1.526.053 προβατοειδή"),
     ("fs_livestock", 2023, "EL43", "fs_livestock.aiges", "animals", "", 553066, 0, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: Κρήτη, 553.066 αιγοειδή"),
@@ -55,6 +61,32 @@ ANCHORS = [
     ("fs_livestock_units", 2023, "EL43", "fs_livestock_units.synolo", "livestock_units", "", 312008, 0, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: Κρήτη, 312.008 ζωικές μονάδες"),
     ("fs_livestock_units", 2023, "EL63", "fs_livestock_units.synolo", "livestock_units", "", 276615, 0, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: Δυτική Ελλάδα, 276.615 ζωικές μονάδες"),
     ("fs_livestock_units", 2023, "EL52", "fs_livestock_units.synolo", "livestock_units", "", 267609, 0, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: Κεντρική Μακεδονία, 267.609 ζωικές μονάδες"),
+]
+
+# Shares printed in the press releases of the farm structure survey (SPG12 employment): numerator, denominator (a total
+# minus the listed parts), expected percent, tolerance in percentage points. In 2023 the press release leaves the
+# mutual-aid category out of its total, which the table includes.
+T = "fs_employment"
+FAMILY16 = "fs_employment.katochoi_kai_meli_toy_noikokyrioy_toys_poy_ergastikan_stin_ekmetalleysi"
+FAMILY23 = "fs_employment.katochoi_kai_meli_tis_oikogeneias_toys_poy_apascholithikan_stin_ekmetalleysi"
+AID = "fs_employment.apascholisi_sto_plaisio_allilovoitheias_ton_georgon"
+SEASONAL, PERMANENT = "fs_employment.epochikoi_ergates", "fs_employment.taktika_apascholoymenoi"
+RATIO_ANCHORS = [
+    (2016, "persons", SEASONAL, [], 30.9, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2016: οι εποχικοί εργάτες είναι το 30,9% των απασχολουμένων"),
+    (2016, "persons", PERMANENT, [], 1.2, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2016: οι μόνιμοι εργάτες είναι το 1,2% των απασχολουμένων"),
+    (2016, "workdays", SEASONAL, [], 10.2, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2016: οι εποχικοί εργάτες κάνουν το 10,2% των ημερών εργασίας"),
+    (2016, "workdays", PERMANENT, [], 5.6, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2016: οι μόνιμοι εργάτες κάνουν το 5,6% των ημερών εργασίας"),
+    (2023, "persons", FAMILY23, [AID], 37.1, 0.1, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: το οικογενειακό εργατικό δυναμικό είναι το 37,1% των απασχολουμένων"),
+    (2023, "persons", SEASONAL, [AID], 39.7, 0.1, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: οι εποχικοί εργάτες είναι το 39,7% των απασχολουμένων"),
+    (2023, "workdays", FAMILY23, [AID], 78.1, 0.1, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: το οικογενειακό εργατικό δυναμικό κάνει το 78,1% των ημερών εργασίας"),
+]
+
+
+# Year-on-year changes of a monthly index printed in the press release of the month (table, product, month, year, expected %, tolerance).
+# Only the input index is used: the output index of the same month has been revised since the release (-8,0% then, -7,5% now).
+YEAR_ON_YEAR = [
+    ("ix_input", "ix_input.c220000", "M08", 2025, -0.8, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου Δεικτών Τιμών Εισροών και Εκροών Αυγούστου 2025: Γενικός Δείκτης Εισροών −0,8%"),
+    ("ix_input", "ix_input.c220000", "M08", 2024, -1.9, 0.05, "ΕΛΣΤΑΤ, δελτίο τύπου Δεικτών Τιμών Εισροών και Εκροών Αυγούστου 2025: Γενικός Δείκτης Εισροών Αυγούστου 2024 −1,9%"),
 ]
 
 
@@ -112,8 +144,12 @@ def main():
             fail(f"unknown status {o['status']}")
         if (o["value"] != "") != (o["status"] in ("ok", "combined")):
             fail(f"value {o['value']!r} with status {o['status']} ({key})")
-        if o["value"] != "" and float(o["value"]) < 0:
+        if o["value"] != "" and float(o["value"]) < 0 and o["unit"] != "percent":
             fail(f"negative value ({key})")
+        if o["table_key"] in ("ix_output", "ix_input", "ix_products") and not re.fullmatch(r"|M(0[1-9]|1[0-2])", o["qualifier"]):
+            fail(f"qualifier {o['qualifier']!r} is not a month ({key})")
+        if o["variable"] == "price_index" and o["status"] == "ok" and float(o["value"]) <= 0:
+            fail(f"an index of {o['value']} ({key}): a zero of the source means missing")
         if not re.fullmatch(r"20\d\d-\d\d-\d\d", o["last_updated"]):
             fail(f"bad last_updated {o['last_updated']!r}")
     duplicates = [k for k, n in keys.items() if n > 1]
@@ -128,6 +164,30 @@ def main():
         if not values or abs(got - expected) > tolerance:
             fail(f"{product} {year}: found {got:g}, expected {expected:g} ({source})")
 
+    for year, variable, part, minus, expected, tolerance, source in RATIO_ANCHORS:
+        def one(product):
+            o = by_key.get(("fs_employment", str(year), "EL", product, variable, ""))
+            return float(o["value"]) if o and o["status"] == "ok" else None
+        whole = one("fs_employment.synolo")
+        numerator = one(part)
+        parts = [one(m) for m in minus]
+        if whole is None or numerator is None or None in parts:
+            fail(f"{part} {year}: the figures for the ratio are missing ({source})")
+        else:
+            got = numerator / (whole - sum(parts)) * 100
+            if abs(got - expected) > tolerance:
+                fail(f"{part} {year} {variable}: found {got:.2f}%, expected {expected}% ({source})")
+
+    for table, product, month, year, expected, tolerance, source in YEAR_ON_YEAR:
+        now = by_key.get((table, str(year), "EL", product, "price_index", month))
+        before = by_key.get((table, str(year - 1), "EL", product, "price_index", month))
+        if not now or not before or now["status"] != "ok" or before["status"] != "ok":
+            fail(f"{product} {month} {year}: the index values are missing ({source})")
+        else:
+            got = (float(now["value"]) / float(before["value"]) - 1) * 100
+            if abs(got - expected) > tolerance:
+                fail(f"{product} {month} {year}: found {got:.2f}%, expected {expected}% ({source})")
+
     if "--reparse" in sys.argv:
         out = subprocess.run([sys.executable, str(ROOT / "scripts" / "import_agriculture_data.py"), "--dry-run"],
                              capture_output=True, text=True)
@@ -141,7 +201,7 @@ def main():
             print("FAIL", message)
         sys.exit(f"{len(problems)} problems")
     print(f"OK: {len(observations):,} statistics, {len(products)} products, {len(publications)} source tables, "
-          f"{len(ANCHORS)} anchor values agree with the ELSTAT press releases.")
+          f"{len(ANCHORS) + len(RATIO_ANCHORS) + len(YEAR_ON_YEAR)} anchor values agree with the ELSTAT press releases.")
 
 
 if __name__ == "__main__":

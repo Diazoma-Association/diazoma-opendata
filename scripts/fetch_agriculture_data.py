@@ -103,10 +103,13 @@ def write_manifest(dataset, rows):
             writer.writerow(rows[key])
 
 
-def fetch_year(dataset, year, rows, force):
+def fetch_year(dataset, year, rows, force, page_id=None):
+    """One publication page. A publication with "latest_only" overwrites its files at every release (the workbook holds
+    the whole history), so only its newest page is read and its files are downloaded again to compare checksums."""
     source = agri_sources.SOURCES[dataset]
     raw = agri_sources.raw_dir(dataset)
-    page_url = f"{agri_sources.PAGE.format(code=dataset)}/{year}"
+    refresh = source.get("latest_only", False)
+    page_url = f"{agri_sources.PAGE.format(code=dataset)}/{page_id or year}"
     docs = documents(get(page_url).decode("utf-8", "ignore"))
     release = source["release"]
     releases = [d for d in docs if d[1] == "pdf" and release and release(d[2])]
@@ -120,10 +123,13 @@ def fetch_year(dataset, year, rows, force):
         print(f"{dataset} {year}: no spreadsheets on the publication page")
     for doc_id, _, title, url in tables:
         old = rows.get((str(year), doc_id))
-        if old and not force and (raw / str(year) / old["filename"]).exists():
+        if old and not force and not refresh and (raw / str(year) / old["filename"]).exists():
             old.update(stage=stage, publication_date=pub_date or old["publication_date"])
             continue
         data = get(url)
+        if old and refresh and old["sha256"] == hashlib.sha256(data).hexdigest() and (raw / str(year) / old["filename"]).exists():
+            old.update(stage=stage, publication_date=pub_date or old["publication_date"], source_page=page_url)
+            continue
         ext = "xlsx" if data[:2] == b"PK" else "xls"  # ELSTAT names both formats .xls
         target = raw / str(year) / f"{doc_id}.{ext}"
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -143,9 +149,13 @@ def main():
     args = parser.parse_args()
     for dataset in args.dataset or agri_sources.SOURCES:
         source = agri_sources.SOURCES[dataset]
-        years = args.years
+        years, page_ids = args.years, {}
         if not years:
-            if source["editions"]:
+            if source.get("latest_only"):
+                index = get(agri_sources.PAGE.format(code=dataset)).decode("utf-8", "ignore")
+                latest = max(set(re.findall(rf"publication/{dataset}/([\w-]+)", index)))  # 2025 or 2026-M08: the newest sorts last
+                years, page_ids = [int(latest[:4])], {int(latest[:4]): latest}
+            elif source["editions"]:
                 years = source["editions"]
             else:
                 index = get(agri_sources.PAGE.format(code=dataset)).decode("utf-8", "ignore")
@@ -153,7 +163,7 @@ def main():
         rows = read_manifest(dataset)
         for year in years:
             try:
-                fetch_year(dataset, year, rows, args.force)
+                fetch_year(dataset, year, rows, args.force, page_ids.get(year))
             except RuntimeError as error:
                 print(f"{dataset} {year}: {error}", file=sys.stderr)
         write_manifest(dataset, rows)

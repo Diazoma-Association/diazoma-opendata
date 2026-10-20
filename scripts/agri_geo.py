@@ -212,9 +212,22 @@ def prefecture_units():
     return {code: members for code, _name, members in PREFECTURES}
 
 
+# Geographic zones (NUTS 1) of the regional agricultural accounts (SEL61): groups of whole regions. Attica is a NUTS 1
+# zone and a NUTS 2 region at once and is published once, as the region EL30.
+ZONES = {"EL4": ("Νησιά Αιγαίου, Κρήτη", ["EL41", "EL42", "EL43"]),
+         "EL5": ("Βόρεια Ελλάδα", ["EL51", "EL52", "EL53", "EL54"]),
+         "EL6": ("Κεντρική Ελλάδα", ["EL61", "EL62", "EL63", "EL64", "EL65"])}
+
+
+def zone_regions():
+    return {code: members for code, (_name, members) in ZONES.items()}
+
+
 def geography_with_prefectures():
-    """geography() plus the prefectures: (geo_code, level, name_el, parent_code, nuts2, census_unit_code)."""
+    """geography() plus the zones and the prefectures: (geo_code, level, name_el, parent_code, nuts2, census_unit_code)."""
     rows = geography()
+    index = max(i for i, r in enumerate(rows) if r[1] == "region") + 1
+    rows[index:index] = [(code, "zone", name, COUNTRY[0], "", "") for code, (name, _members) in ZONES.items()]
     rows += [("NO" + code, "prefecture", name, prefecture_region(code), prefecture_region(code), "")
              for code, name, _members in PREFECTURES]
     return rows

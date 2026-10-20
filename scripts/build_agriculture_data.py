@@ -33,6 +33,7 @@ from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import agri_accounts  # noqa: E402
 import agri_livestock  # noqa: E402
 import agri_survey  # noqa: E402
 
@@ -63,6 +64,16 @@ PAGES = {
         "html": ROOT / "agrifood" / "holdings" / "index.html", "datasets": ["SPG32", "SPK12"],
         "levels": ("country", "region", "unit", "prefecture"), "map": MAP_KEYS + ("prefectures",),
         "categories": [(t, agri_survey.CATEGORIES[t]) for t in SURVEY_TABLES], "variables": None,
+    },
+    "economy": {
+        "html": ROOT / "agrifood" / "economy" / "index.html", "datasets": ["SEL61"],
+        "levels": ("country", "region", "zone"), "map": MAP_KEYS[:3] + ("zones",),
+        "categories": [(t, agri_accounts.CATEGORIES[t]) for t in ("eaa_output", "eaa_income", "eaa_crops", "eaa_livestock")], "variables": None,
+    },
+    "employment": {
+        "html": ROOT / "agrifood" / "employment" / "index.html", "datasets": ["SPG12"],
+        "levels": ("country", "region", "unit", "prefecture"), "map": MAP_KEYS + ("prefectures",),
+        "categories": [(t, agri_survey.CATEGORIES[t]) for t in ("fs_employment", "fs_employment_family", "fs_holder_age", "fs_holder_sex")], "variables": None,
     },
     "livestock": {
         "html": ROOT / "agrifood" / "livestock" / "index.html", "datasets": ["SPK33"],
@@ -159,6 +170,58 @@ def build(page):
     return json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
 
 
+PRICES_HTML = ROOT / "agrifood" / "prices" / "index.html"
+PRICES_BLOCK = re.compile(r'(<script id="agri-prices" type="application/json">)(.*?)(</script>)', re.S)
+PRICE_TABLES = ["ix_output", "ix_input", "ix_products", "ix_factors"]
+
+
+def build_prices():
+    """Payload of the national price index page (no geography): items with their annual, monthly, change and weight values.
+
+    tables  [[table_key, name, monthly?], …]
+    items   [[product code, table index, name, total?], …]
+    data    per item: {"a": {year: annual value}, "m": {year: [12 months, null where missing]}, "c": {year: annual change %}, "w": {year: weight}}
+    tab     {table_key: {year: [edition, document id, stage, publication date, "", last update]}}
+    """
+    datasets = {"DKT30", "DKT33"}
+    products = [p for p in read("agri_products.csv") if p["dataset"] in datasets]
+    names = {"ix_output": "Εκροές (μηνιαίοι δείκτες)", "ix_input": "Εισροές (μηνιαίοι δείκτες)",
+             "ix_products": "Μερικά προϊόντα εκροών (ετήσιοι δείκτες)", "ix_factors": "Αμοιβή συντελεστών παραγωγής (ετήσιοι δείκτες)"}
+    tables = [t for t in PRICE_TABLES if any(p["table_key"] == t for p in products)]
+    products.sort(key=lambda p: (tables.index(p["table_key"]), -int(p["is_total"]), p["product_code"] if p["table_key"] != "ix_factors" else str(["general", "labour", "land", "capital", "interest", "machinery"].index(p["product_code"].split(".")[1]))))
+    index = {p["product_code"]: i for i, p in enumerate(products)}
+    data = [{"a": {}, "m": {}, "c": {}, "w": {}} for _ in products]
+    updated, units = {}, set()
+    observations = [o for o in read("agri_observations.csv") if o["dataset"] in datasets]
+    for o in observations:
+        item = data[index[o["product_code"]]]
+        y = o["ref_year"]
+        units.add(o["unit"])
+        value = number(o["value"]) if o["status"] == "ok" else None
+        if o["variable"] == "price_index" and o["qualifier"]:
+            item["m"].setdefault(y, [None] * 12)[int(o["qualifier"][1:]) - 1] = value
+        else:
+            item[{"price_index": "a", "annual_change": "c", "weight": "w"}[o["variable"]]][y] = value
+        updated[(o["table_key"], y)] = max(updated.get((o["table_key"], y), ""), o["last_updated"])
+    tab = defaultdict(dict)
+    for p in read("agri_publications.csv"):
+        if p["dataset"] in datasets:
+            tab[p["table_key"]][p["ref_year"]] = [int(p["edition"]), p["doc_id"], p["stage"], p["publication_date"], p["dataset"], updated.get((p["table_key"], p["ref_year"]), "")]
+    issues = sorted([i["dataset"], i["severity"], i["code"], i["message"]] for i in read("agri_import_issues.csv")
+                    if i["dataset"] in datasets and i["code"] in ("skipped_sheet", "source_note"))
+    seen, notes = set(), []
+    for row in issues:
+        if row[3] not in seen and re.search("[Ͱ-Ͽ]", row[3]):  # the notes of the ELSTAT sheets; the importer's own notes are in English
+            seen.add(row[3])
+            notes.append(row)
+    payload = {"meta": {"datasets": sorted(datasets), "statistics": len(observations), "updated": max(updated.values()),
+                        "units": sorted(units)},
+               "tables": [[t, names[t], int(t in ("ix_output", "ix_input"))] for t in tables],
+               "items": [[p["product_code"], tables.index(p["table_key"]), p["name_el"], int(p["is_total"] == "1")] for p in products],
+               "data": data, "tab": tab, "notes": notes}
+    return json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+
+
 def geometry(page):
     full = json.loads(GEO_JSON.read_text(encoding="utf-8"))
     return json.dumps({k: full[k] for k in page["map"]}, ensure_ascii=False, separators=(",", ":"))
@@ -187,6 +250,19 @@ def main():
             document = document[:match.start(2)] + generated + document[match.end(2):]
         html.write_text(document, encoding="utf-8")
         print(f"{name}: wrote {len(blocks[0][1]):,} + {len(blocks[1][1]):,} characters of data into {html.relative_to(ROOT)}")
+    if PRICES_HTML.exists():
+        document = PRICES_HTML.read_text(encoding="utf-8")
+        generated = build_prices()
+        match = PRICES_BLOCK.search(document)
+        if not match:
+            sys.exit(f"no agri-prices block found in {PRICES_HTML}")
+        if check:
+            if match.group(2).strip() != generated:
+                sys.exit(f"agri-prices in {PRICES_HTML.relative_to(ROOT)} is out of date with the CSV files; run scripts/build_agriculture_data.py")
+            print(f"OK: prices: data in the dashboard matches the CSVs ({len(generated):,} characters).")
+        else:
+            PRICES_HTML.write_text(document[:match.start(2)] + generated + document[match.end(2):], encoding="utf-8")
+            print(f"prices: wrote {len(generated):,} characters of data into {PRICES_HTML.relative_to(ROOT)}")
     sys.exit(status)
 
 

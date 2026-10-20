@@ -87,12 +87,12 @@
 
 # Αγροδιατροφή και παραγωγικό δυναμικό
 
-Τα αρχεία βρίσκονται στο `data/agriculture/` και τροφοδοτούν τα dashboards `../agrifood/plant-production/`, `../agrifood/holdings/` και `../agrifood/livestock/`. Αναλυτική τεκμηρίωση (σχήμα πινάκων, κανόνες εισαγωγής, γνωστές ανωμαλίες της πηγής, σχέδιο φάσεων): [`agriculture/README.md`](agriculture/README.md).
+Τα αρχεία βρίσκονται στο `data/agriculture/` και τροφοδοτούν τα dashboards `../agrifood/plant-production/`, `holdings/`, `livestock/`, `employment/`, `economy/` και `prices/` του φακέλου `../agrifood/`. Αναλυτική τεκμηρίωση (σχήμα πινάκων, κανόνες εισαγωγής, γνωστές ανωμαλίες της πηγής, σχέδιο φάσεων): [`agriculture/README.md`](agriculture/README.md).
 
-- agriculture/spg06/, spg32/, spk12/, spk33/: τα πρωτογενή αρχεία XLS(X) της ΕΛΣΤΑΤ (SPG06 Ετήσια Γεωργική Έρευνα 2011–2024· SPG32 και SPK12 Έρευνα Διάρθρωσης 2016, 2023· SPK33 Ετήσια έρευνα κτηνοτροφίας 2011–2024), αυτούσια, και `manifest.csv` με το έγγραφο, το άθροισμα ελέγχου, το στάδιο (οριστικά/προσωρινά) και την ημερομηνία δημοσίευσης.
+- agriculture/spg06/, spg32/, spk12/, spg12/, spk33/, sel61/, dkt33/, dkt30/: τα πρωτογενή αρχεία XLS(X) της ΕΛΣΤΑΤ (SPG06 Ετήσια Γεωργική Έρευνα 2011–2024· SPG32 και SPK12 Έρευνα Διάρθρωσης 2016, 2023· SPG12 Έρευνα Διάρθρωσης, απασχόληση 2016, 2023· SPK33 Ετήσια έρευνα κτηνοτροφίας 2011–2024· SEL61 Οικονομικοί Λογαριασμοί Γεωργίας 1995–2023· DKT33 και DKT30 δείκτες τιμών, τελευταία έκδοση), αυτούσια, και `manifest.csv` με το έγγραφο, το άθροισμα ελέγχου, το στάδιο (οριστικά/προσωρινά) και την ημερομηνία δημοσίευσης.
 - agriculture/agri_observations.csv: μία γραμμή ανά στατιστικό μέγεθος (έτος αναφοράς, περιοχή, προϊόν, μέγεθος, τιμή, μονάδα, κατάσταση, πηγή, ημερομηνία ενημέρωσης).
 - agriculture/agri_geo.csv, agri_products.csv, agri_variables.csv, agri_datasets.csv, agri_publications.csv: πίνακες διαστάσεων (γεωγραφία, ταξινόμηση προϊόντων, μεγέθη, πηγές, δημοσιευμένοι πίνακες).
 - agriculture/agri_observation_revisions.csv, agri_import_log.csv, agri_import_issues.csv: ιστορικό αναθεωρήσεων, αναφορά εισαγωγών και σφάλματα/παρατηρήσεις ανά αρχείο.
-- agriculture/geo/greece_units.json: γεωμετρίες περιφερειών, περιφερειακών ενοτήτων και νομών για τον χάρτη.
+- agriculture/geo/greece_units.json: γεωμετρίες περιφερειών, γεωγραφικών ζωνών, περιφερειακών ενοτήτων και νομών για τον χάρτη.
 
 Δημιουργούνται με `python3 scripts/fetch_agriculture_data.py` (λήψη), `python3 scripts/import_agriculture_data.py` (εισαγωγή, απαιτεί `openpyxl` και `xlrd`) και ενσωματώνονται στη σελίδα με `python3 scripts/build_agriculture_data.py`. Οι έλεγχοι τρέχουν με `python3 scripts/verify_agriculture_data.py [--reparse]`.

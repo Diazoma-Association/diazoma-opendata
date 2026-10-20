@@ -26,14 +26,17 @@ const geo = D.geo.map(([code, level, name, parent], i) => ({i, code, level, name
 const geoBy = Object.fromEntries(geo.map(g => [g.code, g]));
 const COUNTRY = geoBy.EL;
 const regions = geo.filter(g => g.level === 'region').sort((a, b) => collator.compare(a.name, b.name));
+const zones = geo.filter(g => g.level === 'zone').sort((a, b) => collator.compare(a.name, b.name));
 const SUB_LEVELS = ['unit', 'prefecture'].filter(l => geo.some(g => g.level === l));
+const MAP_LEVELS = ['region', ...(zones.length ? ['zone'] : []), ...SUB_LEVELS];
+const isTop = g => g.level === 'region' || g.level === 'zone';
 const subs = geo.filter(g => SUB_LEVELS.includes(g.level));
 const subsOf = (region, level) => subs.filter(u => u.parent === region && (!level || u.level === level)).sort((a, b) => collator.compare(a.name, b.name));
-const gname = g => g.level === 'unit' ? 'Π.Ε. ' + g.name : g.level === 'prefecture' ? (/^Νομαρχία/.test(g.name) ? g.name : 'Νομός ' + g.name) : g.name;
-const LEVEL = {country: 'Χώρα', region: 'Περιφέρεια', unit: 'Περιφερειακή ενότητα', prefecture: 'Νομός'};
-const MAP_LEVEL = {region: 'Περιφέρειες', unit: 'Περιφερειακές ενότητες', prefecture: 'Νομοί'};
-const BTN_LEVEL = {region: 'Περιφέρειες', unit: 'Ενότητες', prefecture: 'Νομοί'};
-const GEO_KEY = {region: 'regions', unit: 'units', prefecture: 'prefectures'};
+const gname = g => g.level === 'zone' ? 'Ζώνη ' + g.name : g.level === 'unit' ? 'Π.Ε. ' + g.name : g.level === 'prefecture' ? (/^Νομαρχία/.test(g.name) ? g.name : 'Νομός ' + g.name) : g.name;
+const LEVEL = {country: 'Χώρα', region: 'Περιφέρεια', zone: 'Γεωγραφική ζώνη', unit: 'Περιφερειακή ενότητα', prefecture: 'Νομός'};
+const MAP_LEVEL = {region: 'Περιφέρειες', zone: 'Γεωγραφικές ζώνες', unit: 'Περιφερειακές ενότητες', prefecture: 'Νομοί'};
+const BTN_LEVEL = {region: 'Περιφέρειες', zone: 'Ζώνες', unit: 'Ενότητες', prefecture: 'Νομοί'};
+const GEO_KEY = {region: 'regions', zone: 'zones', unit: 'units', prefecture: 'prefectures'};
 const cats = D.cats.map(([key, name], i) => ({i, key, name}));
 const prods = D.prods.map(([code, cat, name, sub, kind, cont, breaks, en], i) => ({i, code, cat, name, sub, kind, cont, breaks, en}));
 const prodBy = Object.fromEntries(prods.map(p => [p.code, p]));
@@ -97,7 +100,7 @@ function levelHasData(level, s, yi) {
   const row = D.vals[s][yi];
   return !!row && geo.some(g => g.level === level && hasValue(row[g.i]));
 }
-const availLevels = () => ['region', ...SUB_LEVELS].filter(l => levelHasData(l, state.ser, yIdx[state.year]));
+const availLevels = () => MAP_LEVELS.filter(l => levelHasData(l, state.ser, yIdx[state.year]));
 const subLevel = () => availLevels().find(l => l !== 'region') || null;
 function fixLevel() {
   const have = availLevels();
@@ -141,17 +144,19 @@ function renderFilters() {
   fillSelect($('f-ser'), serByProd[state.prod].map(x => [x.s, serLabel(x)]), state.ser);
   const avail = yearsOf(state.ser);
   fillSelect($('f-year'), [...avail].reverse().map(i => [years[i], years[i] + (hasValue(cell(state.ser, i, COUNTRY.i)) ? '' : ' (χωρίς σύνολο χώρας)')]), state.year);
-  fillSelect($('f-region'), [['', 'Όλη η χώρα'], ...regions.map(r => [r.code, r.name])], state.region);
+  fillSelect($('f-region'), [['', 'Όλη η χώρα'], ...regions.map(r => [r.code, r.name]), ...zones.map(z => [z.code, gname(z)])], state.region);
+  $('f-unit-field').hidden = !SUB_LEVELS.length;
+  $('unitCard').hidden = !SUB_LEVELS.length;
   const lvl = subLevel();
   $('f-unit-label').textContent = lvl === 'prefecture' ? 'Νομός' : lvl === 'unit' ? 'Περιφερειακή ενότητα' : SUB_LEVELS.length > 1 ? 'Νομός / περιφερειακή ενότητα' : 'Περιφερειακή ενότητα';
   const us = state.region && lvl ? subsOf(state.region, lvl).filter(u => hasValue(cell(state.ser, yIdx[state.year], u.i)) || u.code === state.unit) : [];
   const allText = !lvl ? 'Δεν δημοσιεύονται στοιχεία κάτω από την περιφέρεια' : state.region ? (lvl === 'prefecture' ? 'Όλοι οι νομοί της περιφέρειας' : 'Όλες οι ενότητες της περιφέρειας') : 'Επιλέξτε πρώτα περιφέρεια';
   fillSelect($('f-unit'), [['', allText]].concat(us.map(u => [u.code, u.name])), state.unit);
   $('f-unit').disabled = !state.region || !lvl;
-  const cmpItems = [['', 'Χωρίς σύγκριση'], ['EL', COUNTRY.name], ...regions.map(r => [r.code, r.name]), ...subs.slice().sort((a, b) => collator.compare(a.name, b.name)).map(u => [u.code, gname(u)])];
+  const cmpItems = [['', 'Χωρίς σύγκριση'], ['EL', COUNTRY.name], ...regions.map(r => [r.code, r.name]), ...zones.map(z => [z.code, gname(z)]), ...subs.slice().sort((a, b) => collator.compare(a.name, b.name)).map(u => [u.code, gname(u)])];
   fillSelect($('f-cmp'), cmpItems, state.cmp);
   const have = availLevels();
-  $('m-level').innerHTML = ['region', ...SUB_LEVELS].map(l => `<button type="button" data-v="${l}" aria-pressed="${l === state.level}"${have.includes(l) ? '' : ' disabled title="Η πηγή δεν δίνει στοιχεία σε αυτό το επίπεδο για το επιλεγμένο μέγεθος και έτος"'}>${BTN_LEVEL[l]}</button>`).join('');
+  $('m-level').innerHTML = MAP_LEVELS.map(l => `<button type="button" data-v="${l}" aria-pressed="${l === state.level}"${have.includes(l) ? '' : ' disabled title="Η πηγή δεν δίνει στοιχεία σε αυτό το επίπεδο για το επιλεγμένο μέγεθος και έτος"'}>${BTN_LEVEL[l]}</button>`).join('');
   $('m-level').querySelectorAll('button').forEach(b => b.onclick = () => { state.level = b.dataset.v; update(false); });
 }
 
@@ -174,9 +179,11 @@ function renderKpis() {
   if (g.code !== 'EL') {
     items.push(['Μερίδιο στη χώρα', share(v, nat) == null ? '—' : pct(share(v, nat)), `${src} · ως προς την τιμή της χώρας (${hasValue(nat) ? fmt(nat) + ' ' + unitLabel(x) : 'δεν δημοσιεύεται'})`]);
     const ranked = regions.map(r => ({r, v: cell(x.s, yi, r.i)})).filter(o => hasValue(o.v)).sort((a, b) => b.v - a.v);
-    const reg = g.level === 'region' ? g : geoBy[g.parent];
-    const pos = ranked.findIndex(o => o.r.code === reg.code);
-    items.push([`Θέση της περιφέρειας ${reg.name}`, pos >= 0 ? (pos + 1) + 'η από ' + ranked.length : '—', `${src} · κατάταξη περιφερειών ως προς το επιλεγμένο μέγεθος`]);
+    if (g.level !== 'zone') {
+      const reg = g.level === 'region' ? g : geoBy[g.parent];
+      const pos = ranked.findIndex(o => o.r.code === reg.code);
+      items.push([`Θέση της περιφέρειας ${reg.name}`, pos >= 0 ? (pos + 1) + 'η από ' + ranked.length : '—', `${src} · κατάταξη περιφερειών ως προς το επιλεγμένο μέγεθος`]);
+    }
   } else {
     const top = regions.map(r => ({r, v: cell(x.s, yi, r.i)})).filter(o => hasValue(o.v)).sort((a, b) => b.v - a.v)[0];
     items.push(['Περιφέρεια με τη μεγαλύτερη τιμή', top ? top.r.name : '—', `${src} · ${unitLabel(x)}`]);
@@ -235,11 +242,11 @@ function renderMap() {
     const o = byCode[code];
     if (!o) continue;
     const fill = hasValue(o.v) ? (o.v === 0 ? '#f1f4ee' : cls.color(o.v)) : o.raw === -1 ? '#f4eddc' : 'url(#hatch)';
-    const outside = level !== 'region' && state.region && o.g.parent !== state.region;
+    const outside = SUB_LEVELS.includes(level) && state.region && o.g.parent !== state.region;
     const classes = ['area', code === sel ? 'sel' : '', code === state.cmp ? 'cmp' : '', outside ? 'dim' : ''].filter(Boolean).join(' ');
     paths += `<path class="${classes}" data-code="${code}" d="${list[code].path}" fill="${fill}" tabindex="0" role="button" aria-label="${esc(gname(o.g))}: ${esc(hasValue(o.raw) ? fmt(o.raw) + ' ' + unitLabel(x) : noValueText(x.s, yi, o.g, o.raw))}"/>`;
   }
-  if (level !== 'region') for (const code in G.regions) paths += `<path class="outline" d="${G.regions[code].path}"/>`;
+  if (level !== 'region' && G.regions) for (const code in G.regions) paths += `<path class="outline" d="${G.regions[code].path}"/>`;
   svg.innerHTML = paths;
   const fmtV = v => state.mode === 'share' ? pct(v) : fmt(v);
   const ranges = cls.classes.map(c => `<span><i style="background:${c.color}"></i>${fmtV(c.lo)} – ${fmtV(c.hi)}</span>`);
@@ -281,7 +288,7 @@ function placeTip(ev) {
 function hideTip() { $('tip').hidden = true; }
 function chooseArea(g, asCompare) {
   if (asCompare || state.pick === 'cmp') { state.cmp = state.cmp === g.code ? '' : g.code; }
-  else if (g.level !== 'region') { state.region = g.parent; state.unit = g.code; }
+  else if (!isTop(g)) { state.region = g.parent; state.unit = g.code; }
   else { state.region = state.region === g.code && !state.unit ? '' : g.code; state.unit = ''; }
   update();
 }
@@ -368,6 +375,7 @@ function renderProducts() {
 // ---- line charts ----------------------------------------------------------------------------------------------
 function niceStep(range, ticks) { const raw = range / ticks, mag = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / mag; return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 5 ? 5 : 10) * mag; }
 function lineChart(el, lines, opts = {}) {
+  const breaks = opts.breaks || [];
   const pts = lines.map(l => ({...l, points: years.map((y, i) => [y, l.values[i]]).filter(([, v]) => hasValue(v))}));
   const all = pts.flatMap(l => l.points);
   if (!all.length) { el.innerHTML = '<p class="empty">Δεν υπάρχουν στοιχεία για τα επιλεγμένα φίλτρα.</p>'; return; }
@@ -380,10 +388,11 @@ function lineChart(el, lines, opts = {}) {
   let g = '';
   for (let v = lo; v <= hi + step / 1000; v += step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="#e2e7dd"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${esc(fmt(v))}</text>`;
   years.forEach(yr => { if (years.length <= 8 || yr % 2 === 1 || yr === y1) g += `<text x="${x(yr)}" y="${H - 8}" text-anchor="middle">${yr}</text>`; });
+  for (const yr of breaks) g += `<line x1="${x(yr - .5)}" x2="${x(yr - .5)}" y1="${T}" y2="${H - B}" stroke="#8a5f22" stroke-dasharray="3 4"/><text x="${x(yr - .5) + 3}" y="${T + 10}" style="fill:#8a5f22">διακοπή σειράς</text>`;
   for (const l of pts) {
     let path = '', prev = null;
     for (const [yr, v] of l.points) {
-      const gap = prev == null || (!opts.connect && yr - prev > 1);
+      const gap = prev == null || (!opts.connect && yr - prev > 1) || breaks.some(b => prev < b && yr >= b);
       path += `${gap ? 'M' : 'L'}${x(yr).toFixed(1)} ${y(v).toFixed(1)}`;
       prev = yr;
     }
@@ -402,7 +411,7 @@ function renderTrends() {
     const lines = geos.map((g, k) => ({label: gname(g), values: seriesValues(s.s, g.i), color: COLORS[k], dash: k === 1}));
     $(prefix + 'Sub').textContent = `${p.name} · ${s.vr[1]}${s.q ? ' – ' + s.q : ''} (${unitLabel(s)}) · ${where}. ${cfg.periodic ? 'Η έρευνα δεν είναι ετήσια: τα σημεία είναι οι εκδόσεις της, η διακεκομμένη γραμμή μόνο τα ενώνει και δεν δείχνει τις ενδιάμεσες χρονιές.' : 'Τα έτη με «—» ή χωρίς τιμή δεν σχεδιάζονται· δεν θεωρούνται μηδενικά.'}`;
     $(prefix + 'Legend').innerHTML = lines.map(l => `<span><i style="background:${l.color}"></i>${esc(l.label)}</span>`).join('');
-    lineChart($(prefix + 'Chart'), lines, {unit: unitLabel(s), label: label + ' ' + s.vr[1], connect});
+    lineChart($(prefix + 'Chart'), lines, {unit: unitLabel(s), label: label + ' ' + s.vr[1], connect, breaks: p.breaks});
     const first = lines[0].values.map((v, i) => [years[i], v]).filter(([, v]) => v != null);
     $(prefix + 'Insight').textContent = first.length > 1 ? `${gname(geos[0])}: ${fmt(first[0][1])} ${unitLabel(s)} το ${first[0][0]} και ${fmt(first[first.length - 1][1])} ${unitLabel(s)} το ${first[first.length - 1][0]}.` : first.length === 1 ? `Μία μόνο τιμή για την περιοχή: ${fmt(first[0][1])} ${unitLabel(s)} το ${first[0][0]}.` : '';
   };
@@ -482,7 +491,7 @@ function renderNotes() {
   const list = D.issues.filter(i => i[0] === key && i[1] === yr && ['warning', 'info'].includes(i[2]) && !['stale_sheet', 'continuation_sheet'].includes(i[3]));
   const prov = provenance(state.ser, yIdx[yr]);
   const lines = list.map(i => `<li>${esc(i[4])}</li>`);
-  const own = cfg.tableNotes ? cfg.tableNotes(api, key, yr) : [];
+  const own = (cfg.tableNotes ? cfg.tableNotes(api, key, yr) : []).concat(curProd().breaks.length ? [cfg.breakNote ? cfg.breakNote(curProd().breaks) : 'Η σειρά έχει διακοπή το ' + curProd().breaks.join(', ') + ': οι τιμές πριν και μετά δεν είναι συγκρίσιμες.'] : []);
   const extra = own.map(t => `<li>${esc(t)}</li>`);
   $('tableNotes').innerHTML = (lines.length || extra.length) ? `<div class="notice-box"><p><strong>Παρατηρήσεις για τον πίνακα της πηγής (${esc(key)}, έτος αναφοράς ${yr}${prov ? ', ' + provText(prov) : ''}):</strong></p><ul>${extra.join('')}${lines.join('')}</ul></div>` : '';
 }
@@ -502,11 +511,11 @@ function readHash() {
       state.ser = (serByProd[prod.i].find(x => x.variable === variable && x.q === q) || serByProd[prod.i][0]).s;
     }
     const y = +p.get('y'); if (yIdx[y] != null) state.year = y;
-    if (geoBy[p.get('r')] && geoBy[p.get('r')].level === 'region') state.region = p.get('r');
+    if (geoBy[p.get('r')] && isTop(geoBy[p.get('r')])) state.region = p.get('r');
     const u = geoBy[p.get('u')];
     if (u && SUB_LEVELS.includes(u.level) && u.parent === state.region) state.unit = u.code;
     if (geoBy[p.get('c')]) state.cmp = p.get('c');
-    if (['region', ...SUB_LEVELS].includes(p.get('l'))) state.level = p.get('l');
+    if (MAP_LEVELS.includes(p.get('l'))) state.level = p.get('l');
     if (['value', 'share'].includes(p.get('m'))) state.mode = p.get('m');
   } catch (e) { /* ignore a malformed address */ }
 }

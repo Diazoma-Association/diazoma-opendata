@@ -1,0 +1,491 @@
+row_key,cci,programme_title,programme_title_local,nuts_code,territory,nuts_level,first_seen,last_seen,last_changed
+0040eaf4a90fd356,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL611,"Καρδίτσα, Τρίκαλα",3,2026-10-19,2026-10-19,2026-10-19
+01f1ebac27a3fc41,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL6,Κεντρική Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+01f33cdd23a226a1,2021TC16FFIR001,Urbact IV,Urbact IV,EL643,Ευρυτανία,3,2026-10-19,2026-10-19,2026-10-19
+01fbb4990fdc2d6c,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL632,Αχαΐα,3,2026-10-19,2026-10-19,2026-10-19
+0278ca9e7366b2d0,2021TC16FFIR001,Urbact IV,Urbact IV,EL524,Πέλλα,3,2026-10-19,2026-10-19,2026-10-19
+02f67302ad8159e0,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL30,Aττική,2,2026-10-19,2026-10-19,2026-10-19
+0305f1b7fa74676b,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL531,"Γρεβενά, Κοζάνη",3,2026-10-19,2026-10-19,2026-10-19
+0308689ec037cb70,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL412,"Ικαρία, Σάμος",3,2026-10-19,2026-10-19,2026-10-19
+03f79e493c5fdb46,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL3,Αττική,1,2026-10-19,2026-10-19,2026-10-19
+04b3c65e69c33109,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL41,Βόρειο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+04c479656dcac519,2021TC16FFIR001,Urbact IV,Urbact IV,EL65,Πελοπόννησος,2,2026-10-19,2026-10-19,2026-10-19
+05a15d634e056f04,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL411,"Λέσβος, Λήμνος",3,2026-10-19,2026-10-19,2026-10-19
+05a922be3cd12ab2,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL41,Βόρειο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+05f2bd599912c913,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL523,Κιλκίς,3,2026-10-19,2026-10-19,2026-10-19
+071efb1d258b062c,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL621,Ζάκυνθος,3,2026-10-19,2026-10-19,2026-10-19
+072a2bcd5ee4db76,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL412,"Ικαρία, Σάμος",3,2026-10-19,2026-10-19,2026-10-19
+07544ad43f3a3e0b,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL53,Δυτική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+07d310f472369513,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL611,"Καρδίτσα, Τρίκαλα",3,2026-10-19,2026-10-19,2026-10-19
+080cb4a5ba79b54b,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL307,"Πειραιάς, Νήσοι",3,2026-10-19,2026-10-19,2026-10-19
+08ae4fcb077ac15c,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL431,Ηράκλειο,3,2026-10-19,2026-10-19,2026-10-19
+0932667070079feb,2021TC16FFIR001,Urbact IV,Urbact IV,EL512,Ξάνθη,3,2026-10-19,2026-10-19,2026-10-19
+09669edb290e9ec8,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL521,Ημαθία,3,2026-10-19,2026-10-19,2026-10-19
+0a467400ab9bfc8c,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL63,Δυτική Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+0a4cc27e70c65d5d,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL52,Κεντρική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+0c4720186c59661d,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL6,Κεντρική Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+0d358d6326029893,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL413,Χίος,3,2026-10-19,2026-10-19,2026-10-19
+0e618efb68d0def6,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL431,Ηράκλειο,3,2026-10-19,2026-10-19,2026-10-19
+0e8c29bf49edee8c,2021TC16FFIR001,Urbact IV,Urbact IV,EL3,Αττική,1,2026-10-19,2026-10-19,2026-10-19
+0ea1d30cc0458a98,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL633,Ηλεία,3,2026-10-19,2026-10-19,2026-10-19
+0ef41b935240bef3,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL623,"Ιθάκη, Κεφαλληνία",3,2026-10-19,2026-10-19,2026-10-19
+0fdafbce0fa04876,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL4,"Νησιά Αιγαίου, Κρήτη",1,2026-10-19,2026-10-19,2026-10-19
+1032c97ea0109d3a,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL307,"Πειραιάς, Νήσοι",3,2026-10-19,2026-10-19,2026-10-19
+1064dcfa6b800699,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL43,Κρήτη,2,2026-10-19,2026-10-19,2026-10-19
+107eaa2512e12e86,2021TC16FFIR001,Urbact IV,Urbact IV,EL532,Καστοριά,3,2026-10-19,2026-10-19,2026-10-19
+11a82ee410dc3ae4,2021TC16FFIR001,Urbact IV,Urbact IV,EL621,Ζάκυνθος,3,2026-10-19,2026-10-19,2026-10-19
+1245c448a9d6d537,2021TC16FFIR001,Urbact IV,Urbact IV,EL52,Κεντρική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+12eb73e97408a24c,2021TC16RFIR004,ESPON 2030,ESPON 2030 Cooperation Programme,EL,Ελλάδα,0,2026-10-19,2026-10-19,2026-10-19
+13ceb8bca30682e4,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL541,"Άρτα, Πρέβεζα",3,2026-10-19,2026-10-19,2026-10-19
+14a6df0d92e86f75,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL624,Λευκάδα,3,2026-10-19,2026-10-19,2026-10-19
+1548b490374dddd5,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL643,Ευρυτανία,3,2026-10-19,2026-10-19,2026-10-19
+1667abfdf833e7c6,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL624,Λευκάδα,3,2026-10-19,2026-10-19,2026-10-19
+167b3e407c639c7e,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL64,Στερεά Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+16f46bbcbd3b945e,2021TC16FFIR001,Urbact IV,Urbact IV,ELZ,Extra-Regio NUTS 1,1,2026-10-19,2026-10-19,2026-10-19
+16f7d180b410bfab,2021TC16RFCB021,Interreg VI-A - Greece-Bulgaria,(Interreg VI-A) Greece-Bulgaria,EL513,Ροδόπη,3,2026-10-19,2026-10-19,2026-10-19
+181d3e957c101d83,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL421,"Κάλυμνος, Κάρπαθος – Ηρωική Νήσος Κάσος, Κως, Ρόδος",3,2026-10-19,2026-10-19,2026-10-19
+187b1ff3cab7e23a,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL543,Ιωάννινα,3,2026-10-19,2026-10-19,2026-10-19
+18e1654b627a41e7,2021TC16FFIR001,Urbact IV,Urbact IV,EL624,Λευκάδα,3,2026-10-19,2026-10-19,2026-10-19
+197f1b104f70ed75,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL302,Δυτικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+19aa6717f6c4a31b,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL645,Φωκίδα,3,2026-10-19,2026-10-19,2026-10-19
+1a175721241bbe03,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL413,Χίος,3,2026-10-19,2026-10-19,2026-10-19
+1a36afa5cc809fc2,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL521,Ημαθία,3,2026-10-19,2026-10-19,2026-10-19
+1ac41890f872db4a,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL433,Ρέθυμνο,3,2026-10-19,2026-10-19,2026-10-19
+1bf8429a44b4d847,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL623,"Ιθάκη, Κεφαλληνία",3,2026-10-19,2026-10-19,2026-10-19
+1c0296597b174755,2021TC16IPCB009,Interreg VI-A - IPA Greece-North Macedonia,(Interreg VI-A) IPA CBC Greece North Macedonia,EL531,"Γρεβενά, Κοζάνη",3,2026-10-19,2026-10-19,2026-10-19
+1cf1c1a3cc42e254,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL643,Ευρυτανία,3,2026-10-19,2026-10-19,2026-10-19
+1d07481773b25490,2021TC16FFIR001,Urbact IV,Urbact IV,EL434,Χανιά,3,2026-10-19,2026-10-19,2026-10-19
+1e3459de80e42efc,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL521,Ημαθία,3,2026-10-19,2026-10-19,2026-10-19
+1ea1b8fe3e946d91,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL641,Βοιωτία,3,2026-10-19,2026-10-19,2026-10-19
+1f25c4b8f65e77a1,2021TC16FFIR001,Urbact IV,Urbact IV,EL42,Νότιο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+1f5daea7657a5777,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL653,"Λακωνία, Μεσσηνία",3,2026-10-19,2026-10-19,2026-10-19
+1fdde322be6917f8,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL542,Θεσπρωτία,3,2026-10-19,2026-10-19,2026-10-19
+1fe429194941fcd2,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL6,Κεντρική Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+2035afa94f4e2c1d,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL543,Ιωάννινα,3,2026-10-19,2026-10-19,2026-10-19
+2054d8d62512ed9b,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL4,"Νησιά Αιγαίου, Κρήτη",1,2026-10-19,2026-10-19,2026-10-19
+212c2df60381cd0d,2021TC16FFIR001,Urbact IV,Urbact IV,EL413,Χίος,3,2026-10-19,2026-10-19,2026-10-19
+2148c9f2c05238d3,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL524,Πέλλα,3,2026-10-19,2026-10-19,2026-10-19
+215db5707eeaf36e,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL62,Ιόνια Νησιά,2,2026-10-19,2026-10-19,2026-10-19
+229f455f070f7410,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL304,Νότιος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+22beb9fd70a20575,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL642,Εύβοια,3,2026-10-19,2026-10-19,2026-10-19
+23f37bde543bc359,2021TC16FFIR001,Urbact IV,Urbact IV,EL307,"Πειραιάς, Νήσοι",3,2026-10-19,2026-10-19,2026-10-19
+243473b294357ff8,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL541,"Άρτα, Πρέβεζα",3,2026-10-19,2026-10-19,2026-10-19
+2553e3a3c25ac8b1,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL527,Χαλκιδική,3,2026-10-19,2026-10-19,2026-10-19
+262e4b0d29428d29,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL543,Ιωάννινα,3,2026-10-19,2026-10-19,2026-10-19
+26e9ef447267aa62,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL613,"Μαγνησία, Σποράδες",3,2026-10-19,2026-10-19,2026-10-19
+274dc36f0003bb04,2021TC16RFCB021,Interreg VI-A - Greece-Bulgaria,(Interreg VI-A) Greece-Bulgaria,EL526,Σέρρες,3,2026-10-19,2026-10-19,2026-10-19
+28175e6e5871f0ec,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL515,"Θάσος, Καβάλα",3,2026-10-19,2026-10-19,2026-10-19
+28dfd59f15dd5138,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL431,Ηράκλειο,3,2026-10-19,2026-10-19,2026-10-19
+28fbe1da3f28ba28,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL622,Κέρκυρα,3,2026-10-19,2026-10-19,2026-10-19
+29290499c3a176a3,2021TC16FFIR001,Urbact IV,Urbact IV,EL642,Εύβοια,3,2026-10-19,2026-10-19,2026-10-19
+299e70b5958bf52b,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL527,Χαλκιδική,3,2026-10-19,2026-10-19,2026-10-19
+29a2628990cbb980,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL612,Λάρισα,3,2026-10-19,2026-10-19,2026-10-19
+29e1d1a5add40449,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL612,Λάρισα,3,2026-10-19,2026-10-19,2026-10-19
+2a183729e903e45b,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL413,Χίος,3,2026-10-19,2026-10-19,2026-10-19
+2a18e5f534ab779a,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL412,"Ικαρία, Σάμος",3,2026-10-19,2026-10-19,2026-10-19
+2b7c7e3e51f587aa,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL42,Νότιο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+2b95c42a5a600042,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL523,Κιλκίς,3,2026-10-19,2026-10-19,2026-10-19
+2cdd6e19e2ebc109,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL513,Ροδόπη,3,2026-10-19,2026-10-19,2026-10-19
+2d15bf4be05a8e51,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL632,Αχαΐα,3,2026-10-19,2026-10-19,2026-10-19
+2dadb70c59c0a70e,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL4,"Νησιά Αιγαίου, Κρήτη",1,2026-10-19,2026-10-19,2026-10-19
+2dae00c9feb410ef,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL631,Αιτωλοακαρνανία,3,2026-10-19,2026-10-19,2026-10-19
+2e2ab39fd77bc991,2021TC16FFIR001,Urbact IV,Urbact IV,EL306,Δυτική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+2e43a5ade793ed4c,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL431,Ηράκλειο,3,2026-10-19,2026-10-19,2026-10-19
+2f3413734ad9949e,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL5,Βόρεια Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+2f554ecfd6267327,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL432,Λασίθι,3,2026-10-19,2026-10-19,2026-10-19
+2f5a13ee40cb5498,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL543,Ιωάννινα,3,2026-10-19,2026-10-19,2026-10-19
+2f6e6c1313a525f8,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL432,Λασίθι,3,2026-10-19,2026-10-19,2026-10-19
+2f9ed5a346269d2c,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL542,Θεσπρωτία,3,2026-10-19,2026-10-19,2026-10-19
+2fbddc47b44d13c9,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL541,"Άρτα, Πρέβεζα",3,2026-10-19,2026-10-19,2026-10-19
+30a3b7082fabaf68,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL514,Δράμα,3,2026-10-19,2026-10-19,2026-10-19
+30bfb7677aa31748,2021TC16FFIR001,Urbact IV,Urbact IV,EL41,Βόρειο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+323ac695fee92039,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL302,Δυτικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+3273bc330c4646a0,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL413,Χίος,3,2026-10-19,2026-10-19,2026-10-19
+32797cc586e4e7ae,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL42,Νότιο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+330b67eacb7294eb,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL644,Φθιώτιδα,3,2026-10-19,2026-10-19,2026-10-19
+338ea0842bf95648,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL514,Δράμα,3,2026-10-19,2026-10-19,2026-10-19
+340d5e6a39893701,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL4,"Νησιά Αιγαίου, Κρήτη",1,2026-10-19,2026-10-19,2026-10-19
+34dcbb1b340974a2,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL53,Δυτική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+364a163c881aad1d,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL301,Βόρειος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+368e9cebee0a783a,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL433,Ρέθυμνο,3,2026-10-19,2026-10-19,2026-10-19
+36edf7876ed174ec,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL514,Δράμα,3,2026-10-19,2026-10-19,2026-10-19
+37848549a870a643,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL641,Βοιωτία,3,2026-10-19,2026-10-19,2026-10-19
+383ab94ac14cc339,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL533,Φλώρινα,3,2026-10-19,2026-10-19,2026-10-19
+386c4e936b011e49,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL531,"Γρεβενά, Κοζάνη",3,2026-10-19,2026-10-19,2026-10-19
+39f82ecef50c4482,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,ELZ,Extra-Regio NUTS 1,1,2026-10-19,2026-10-19,2026-10-19
+3a234ca8568ab7ae,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL525,Πιερία,3,2026-10-19,2026-10-19,2026-10-19
+3a888303fc582c82,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL621,Ζάκυνθος,3,2026-10-19,2026-10-19,2026-10-19
+3ad0bdf981745d55,2021TC16FFIR001,Urbact IV,Urbact IV,ELZZZ,Extra-Regio NUTS 3,3,2026-10-19,2026-10-19,2026-10-19
+3ae0ede3c8c80d06,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL42,Νότιο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+3af697f6b5317fd2,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL515,"Θάσος, Καβάλα",3,2026-10-19,2026-10-19,2026-10-19
+3bcc474a8ed08215,2021TC16FFIR001,Urbact IV,Urbact IV,EL61,Θεσσαλία,2,2026-10-19,2026-10-19,2026-10-19
+3c31a3d3393be130,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL542,Θεσπρωτία,3,2026-10-19,2026-10-19,2026-10-19
+3c37ba57431c9f6a,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL61,Θεσσαλία,2,2026-10-19,2026-10-19,2026-10-19
+3d7e5a7f76959c25,2021TC16FFIR001,Urbact IV,Urbact IV,EL542,Θεσπρωτία,3,2026-10-19,2026-10-19,2026-10-19
+3e229e0fc5d4cffd,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL303,Κεντρικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+3e713c01588f02e7,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL305,Ανατολική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+3ee8dd4efc046d76,2021TC16FFIR001,Urbact IV,Urbact IV,EL514,Δράμα,3,2026-10-19,2026-10-19,2026-10-19
+3efb3d17bbff7e95,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL307,"Πειραιάς, Νήσοι",3,2026-10-19,2026-10-19,2026-10-19
+41ae3c0f96b7423e,2021TC16FFIR001,Urbact IV,Urbact IV,EL301,Βόρειος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+4204243e19f32288,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL531,"Γρεβενά, Κοζάνη",3,2026-10-19,2026-10-19,2026-10-19
+42128f84637ddbab,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL412,"Ικαρία, Σάμος",3,2026-10-19,2026-10-19,2026-10-19
+42699299034bf2b8,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL42,Νότιο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+431e90c8e907c291,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL631,Αιτωλοακαρνανία,3,2026-10-19,2026-10-19,2026-10-19
+43903ee71bdfe0b6,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL631,Αιτωλοακαρνανία,3,2026-10-19,2026-10-19,2026-10-19
+4420ea9b91925c2d,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL306,Δυτική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+450ff8255d45ed38,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL526,Σέρρες,3,2026-10-19,2026-10-19,2026-10-19
+45e41f35d550a9bf,2021TC16FFIR001,Urbact IV,Urbact IV,EL543,Ιωάννινα,3,2026-10-19,2026-10-19,2026-10-19
+45ee1bb1531cbd54,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL301,Βόρειος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+4622ab2761a4d688,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL303,Κεντρικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+463d1638ec72e23e,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL621,Ζάκυνθος,3,2026-10-19,2026-10-19,2026-10-19
+47c4ae0242146683,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL65,Πελοπόννησος,2,2026-10-19,2026-10-19,2026-10-19
+48798ea53d312132,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL525,Πιερία,3,2026-10-19,2026-10-19,2026-10-19
+499bb3c7f0bd63a8,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL511,Έβρος,3,2026-10-19,2026-10-19,2026-10-19
+4a13baf0376fdf22,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL526,Σέρρες,3,2026-10-19,2026-10-19,2026-10-19
+4ad35a859d5a7830,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL6,Κεντρική Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+4b22b30a42d3acef,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL644,Φθιώτιδα,3,2026-10-19,2026-10-19,2026-10-19
+4b8dab878621f07b,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL632,Αχαΐα,3,2026-10-19,2026-10-19,2026-10-19
+4b8e5e2e56489573,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL30,Aττική,2,2026-10-19,2026-10-19,2026-10-19
+4ba895e85f99e377,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL62,Ιόνια Νησιά,2,2026-10-19,2026-10-19,2026-10-19
+4bec4bacba9c8a18,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL512,Ξάνθη,3,2026-10-19,2026-10-19,2026-10-19
+4c1b5773ab174ce4,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL612,Λάρισα,3,2026-10-19,2026-10-19,2026-10-19
+4c9de1cfecb7e11e,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL621,Ζάκυνθος,3,2026-10-19,2026-10-19,2026-10-19
+4d90209c305c9cdc,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL652,Κορινθία,3,2026-10-19,2026-10-19,2026-10-19
+4dd727ab22265fff,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL533,Φλώρινα,3,2026-10-19,2026-10-19,2026-10-19
+4de2bbb59b2e3b84,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL421,"Κάλυμνος, Κάρπαθος – Ηρωική Νήσος Κάσος, Κως, Ρόδος",3,2026-10-19,2026-10-19,2026-10-19
+4dedbe3fc0fa2858,2021TC16FFIR001,Urbact IV,Urbact IV,EL612,Λάρισα,3,2026-10-19,2026-10-19,2026-10-19
+4e5311d42e3ad58c,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL643,Ευρυτανία,3,2026-10-19,2026-10-19,2026-10-19
+4e90b4de3aab9842,2021TC16RFCB021,Interreg VI-A - Greece-Bulgaria,(Interreg VI-A) Greece-Bulgaria,EL514,Δράμα,3,2026-10-19,2026-10-19,2026-10-19
+4ec22c1dfe5bb5b9,2021TC16FFIR001,Urbact IV,Urbact IV,EL633,Ηλεία,3,2026-10-19,2026-10-19,2026-10-19
+4f52a82f9f8f8f6f,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL513,Ροδόπη,3,2026-10-19,2026-10-19,2026-10-19
+4f759d4046a781a2,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL54,Ήπειρος,2,2026-10-19,2026-10-19,2026-10-19
+501829613f75c6a7,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL522,Θεσσαλονίκη,3,2026-10-19,2026-10-19,2026-10-19
+5046dbc836577971,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL432,Λασίθι,3,2026-10-19,2026-10-19,2026-10-19
+52ff7091c6fad6e0,2021TC16FFIR001,Urbact IV,Urbact IV,EL,Ελλάδα,0,2026-10-19,2026-10-19,2026-10-19
+5319d5c0e0935971,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL304,Νότιος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+531c29c259e4cbed,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL541,"Άρτα, Πρέβεζα",3,2026-10-19,2026-10-19,2026-10-19
+53814ab50a1433cd,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL542,Θεσπρωτία,3,2026-10-19,2026-10-19,2026-10-19
+5416f81eb2f326bd,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL532,Καστοριά,3,2026-10-19,2026-10-19,2026-10-19
+5449a5ab3360144a,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL434,Χανιά,3,2026-10-19,2026-10-19,2026-10-19
+544b646931221613,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL5,Βόρεια Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+547a6b70a8e2f1ef,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL304,Νότιος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+54e70c9710df0311,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL523,Κιλκίς,3,2026-10-19,2026-10-19,2026-10-19
+5529dc985b252014,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL434,Χανιά,3,2026-10-19,2026-10-19,2026-10-19
+55b03a608ec3510d,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL64,Στερεά Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+55c0927df1a67356,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL4,"Νησιά Αιγαίου, Κρήτη",1,2026-10-19,2026-10-19,2026-10-19
+561fe01a8a91c690,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL624,Λευκάδα,3,2026-10-19,2026-10-19,2026-10-19
+564626066c528932,2021TC16IPCB009,Interreg VI-A - IPA Greece-North Macedonia,(Interreg VI-A) IPA CBC Greece North Macedonia,EL523,Κιλκίς,3,2026-10-19,2026-10-19,2026-10-19
+566259e28bee478e,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL431,Ηράκλειο,3,2026-10-19,2026-10-19,2026-10-19
+56f3e03fe5510a67,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL432,Λασίθι,3,2026-10-19,2026-10-19,2026-10-19
+5745dc953fccd436,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL623,"Ιθάκη, Κεφαλληνία",3,2026-10-19,2026-10-19,2026-10-19
+5770a94758e4f96b,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL302,Δυτικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+57766b17910c2499,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL633,Ηλεία,3,2026-10-19,2026-10-19,2026-10-19
+57d1a875781b6189,2021TC16FFIR001,Urbact IV,Urbact IV,EL541,"Άρτα, Πρέβεζα",3,2026-10-19,2026-10-19,2026-10-19
+57dac32eec231b4b,2021TC16FFIR001,Urbact IV,Urbact IV,EL513,Ροδόπη,3,2026-10-19,2026-10-19,2026-10-19
+58e2ec26db422840,2021TC16FFIR001,Urbact IV,Urbact IV,EL525,Πιερία,3,2026-10-19,2026-10-19,2026-10-19
+596005a35542b43d,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL632,Αχαΐα,3,2026-10-19,2026-10-19,2026-10-19
+59712a9900f4125b,2021TC16RFCB021,Interreg VI-A - Greece-Bulgaria,(Interreg VI-A) Greece-Bulgaria,EL515,"Θάσος, Καβάλα",3,2026-10-19,2026-10-19,2026-10-19
+59c25179098757df,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL515,"Θάσος, Καβάλα",3,2026-10-19,2026-10-19,2026-10-19
+5a2b5ab2f3a6399f,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL305,Ανατολική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+5a585fd4fee473d2,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL54,Ήπειρος,2,2026-10-19,2026-10-19,2026-10-19
+5a98a454e3ca8bc5,2021TC16FFIR001,Urbact IV,Urbact IV,EL521,Ημαθία,3,2026-10-19,2026-10-19,2026-10-19
+5aa92604f6c79ba0,2021TC16FFIR001,Urbact IV,Urbact IV,EL653,"Λακωνία, Μεσσηνία",3,2026-10-19,2026-10-19,2026-10-19
+5befd0afda0f50e1,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL621,Ζάκυνθος,3,2026-10-19,2026-10-19,2026-10-19
+5c54335c8a6247dd,2021TC16FFIR001,Urbact IV,Urbact IV,EL641,Βοιωτία,3,2026-10-19,2026-10-19,2026-10-19
+5ca5440e7e1ef89d,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL412,"Ικαρία, Σάμος",3,2026-10-19,2026-10-19,2026-10-19
+5d83787ca166754f,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL61,Θεσσαλία,2,2026-10-19,2026-10-19,2026-10-19
+5e4191d11de1eef2,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL54,Ήπειρος,2,2026-10-19,2026-10-19,2026-10-19
+5fe73872f3b5d490,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL422,"Άνδρος, Θήρα, Κέα, Μήλος, Μύκονος, Νάξος, Πάρος, Σύρος, Τήνος",3,2026-10-19,2026-10-19,2026-10-19
+6068df5a634fb8af,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL51,"Aνατολική Μακεδονία, Θράκη",2,2026-10-19,2026-10-19,2026-10-19
+62f2781126993abc,2021TC16FFIR001,Urbact IV,Urbact IV,EL63,Δυτική Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+63c17bdfec955b9f,2021TC16FFIR001,Urbact IV,Urbact IV,EL421,"Κάλυμνος, Κάρπαθος – Ηρωική Νήσος Κάσος, Κως, Ρόδος",3,2026-10-19,2026-10-19,2026-10-19
+63e4355388d0a28e,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL422,"Άνδρος, Θήρα, Κέα, Μήλος, Μύκονος, Νάξος, Πάρος, Σύρος, Τήνος",3,2026-10-19,2026-10-19,2026-10-19
+649c65fd9a6b7f58,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL511,Έβρος,3,2026-10-19,2026-10-19,2026-10-19
+64c7b9ea69bbde0f,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL645,Φωκίδα,3,2026-10-19,2026-10-19,2026-10-19
+670808fc7f258f36,2021TC16FFIR001,Urbact IV,Urbact IV,EL30,Aττική,2,2026-10-19,2026-10-19,2026-10-19
+6781d2e950367b3f,2021TC16FFIR001,Urbact IV,Urbact IV,EL302,Δυτικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+681eb15787e899fd,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL411,"Λέσβος, Λήμνος",3,2026-10-19,2026-10-19,2026-10-19
+688f663880751760,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL433,Ρέθυμνο,3,2026-10-19,2026-10-19,2026-10-19
+68e261e6710a6630,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL62,Ιόνια Νησιά,2,2026-10-19,2026-10-19,2026-10-19
+68eb264bcfeee890,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL51,"Aνατολική Μακεδονία, Θράκη",2,2026-10-19,2026-10-19,2026-10-19
+69736a8335c2a414,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL305,Ανατολική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+69a31f3bfe1a4ecd,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL527,Χαλκιδική,3,2026-10-19,2026-10-19,2026-10-19
+6a214c4deac50194,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL301,Βόρειος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+6a7e0f6ecad05e77,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL524,Πέλλα,3,2026-10-19,2026-10-19,2026-10-19
+6ab76176e3b0bd25,2021TC16FFIR001,Urbact IV,Urbact IV,EL304,Νότιος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+6b3f7b73130eabc6,2021TC16FFIR001,Urbact IV,Urbact IV,EL431,Ηράκλειο,3,2026-10-19,2026-10-19,2026-10-19
+6c6dc83883547915,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL611,"Καρδίτσα, Τρίκαλα",3,2026-10-19,2026-10-19,2026-10-19
+6c6dd4a5617dd4c5,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL633,Ηλεία,3,2026-10-19,2026-10-19,2026-10-19
+6cd30a15a1187bbd,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL531,"Γρεβενά, Κοζάνη",3,2026-10-19,2026-10-19,2026-10-19
+6cf1b3a5db434700,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL30,Aττική,2,2026-10-19,2026-10-19,2026-10-19
+6eac826b2753a911,2021TC16FFIR001,Urbact IV,Urbact IV,EL526,Σέρρες,3,2026-10-19,2026-10-19,2026-10-19
+6f4d6874fe39b7cf,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL532,Καστοριά,3,2026-10-19,2026-10-19,2026-10-19
+6f5b56954acc17c1,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL611,"Καρδίτσα, Τρίκαλα",3,2026-10-19,2026-10-19,2026-10-19
+6f5e44b7889de0c3,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL527,Χαλκιδική,3,2026-10-19,2026-10-19,2026-10-19
+6fdb73bcf21c6a31,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL613,"Μαγνησία, Σποράδες",3,2026-10-19,2026-10-19,2026-10-19
+719acde054fab806,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL623,"Ιθάκη, Κεφαλληνία",3,2026-10-19,2026-10-19,2026-10-19
+71a39a830f87c64d,2021TC16FFIR001,Urbact IV,Urbact IV,EL645,Φωκίδα,3,2026-10-19,2026-10-19,2026-10-19
+71e9a8c83c07bdc8,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL633,Ηλεία,3,2026-10-19,2026-10-19,2026-10-19
+72a69d1410617954,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL303,Κεντρικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+73dd0c0f0344528b,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL526,Σέρρες,3,2026-10-19,2026-10-19,2026-10-19
+73f250a166f9cfc3,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL622,Κέρκυρα,3,2026-10-19,2026-10-19,2026-10-19
+74621a86234a9e65,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL6,Κεντρική Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+746b40d845092604,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL514,Δράμα,3,2026-10-19,2026-10-19,2026-10-19
+7521ef817f62841a,2021TC16FFIR001,Urbact IV,Urbact IV,EL515,"Θάσος, Καβάλα",3,2026-10-19,2026-10-19,2026-10-19
+7524706a5092024f,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL433,Ρέθυμνο,3,2026-10-19,2026-10-19,2026-10-19
+756621cadfd3b38b,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL61,Θεσσαλία,2,2026-10-19,2026-10-19,2026-10-19
+75d0d4c85f7f7389,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL622,Κέρκυρα,3,2026-10-19,2026-10-19,2026-10-19
+76d3d3910654981b,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL434,Χανιά,3,2026-10-19,2026-10-19,2026-10-19
+770de5d4012eafcd,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL644,Φθιώτιδα,3,2026-10-19,2026-10-19,2026-10-19
+774a9750ec79c594,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL652,Κορινθία,3,2026-10-19,2026-10-19,2026-10-19
+7750219880c3920c,2021TC16RFCB021,Interreg VI-A - Greece-Bulgaria,(Interreg VI-A) Greece-Bulgaria,EL51,"Aνατολική Μακεδονία, Θράκη",2,2026-10-19,2026-10-19,2026-10-19
+781221cd496a323a,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL3,Αττική,1,2026-10-19,2026-10-19,2026-10-19
+78489f6ba1f94a9a,2021TC16IPCB009,Interreg VI-A - IPA Greece-North Macedonia,(Interreg VI-A) IPA CBC Greece North Macedonia,EL533,Φλώρινα,3,2026-10-19,2026-10-19,2026-10-19
+78ab9664e9817c03,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL644,Φθιώτιδα,3,2026-10-19,2026-10-19,2026-10-19
+78b123da4562fa2d,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL524,Πέλλα,3,2026-10-19,2026-10-19,2026-10-19
+79c04247bd879dd0,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL422,"Άνδρος, Θήρα, Κέα, Μήλος, Μύκονος, Νάξος, Πάρος, Σύρος, Τήνος",3,2026-10-19,2026-10-19,2026-10-19
+79f0e6c9bbb42e72,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL306,Δυτική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+7aa9ee38fe894f3c,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL512,Ξάνθη,3,2026-10-19,2026-10-19,2026-10-19
+7ad2a68b424ad40c,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL623,"Ιθάκη, Κεφαλληνία",3,2026-10-19,2026-10-19,2026-10-19
+7b72d08c8982df25,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL62,Ιόνια Νησιά,2,2026-10-19,2026-10-19,2026-10-19
+7b8e225a4efc9532,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL304,Νότιος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+7bdfee765ffafc83,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL624,Λευκάδα,3,2026-10-19,2026-10-19,2026-10-19
+7c9930d007d0d16a,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL513,Ροδόπη,3,2026-10-19,2026-10-19,2026-10-19
+7d3754611127ce78,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL514,Δράμα,3,2026-10-19,2026-10-19,2026-10-19
+7da382718c449814,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL632,Αχαΐα,3,2026-10-19,2026-10-19,2026-10-19
+7fddd2b1e0066bb5,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL642,Εύβοια,3,2026-10-19,2026-10-19,2026-10-19
+80cc37399d9fa75c,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL643,Ευρυτανία,3,2026-10-19,2026-10-19,2026-10-19
+80e7eaa41c6383b9,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL303,Κεντρικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+8217d3cf337f2944,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL52,Κεντρική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+82690a9fc7d37107,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL61,Θεσσαλία,2,2026-10-19,2026-10-19,2026-10-19
+82e2554ded01fd41,2021TC16FFIR001,Urbact IV,Urbact IV,EL511,Έβρος,3,2026-10-19,2026-10-19,2026-10-19
+832b48cb9e4a31b6,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL645,Φωκίδα,3,2026-10-19,2026-10-19,2026-10-19
+835c6abc6f9e1f40,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL305,Ανατολική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+83e4f6426b92b6bf,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL653,"Λακωνία, Μεσσηνία",3,2026-10-19,2026-10-19,2026-10-19
+8411fa56217745bf,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL632,Αχαΐα,3,2026-10-19,2026-10-19,2026-10-19
+86032fbaf6ee32cb,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL62,Ιόνια Νησιά,2,2026-10-19,2026-10-19,2026-10-19
+8631c57e857ffd86,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL422,"Άνδρος, Θήρα, Κέα, Μήλος, Μύκονος, Νάξος, Πάρος, Σύρος, Τήνος",3,2026-10-19,2026-10-19,2026-10-19
+86e2f15631ac7b1e,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL515,"Θάσος, Καβάλα",3,2026-10-19,2026-10-19,2026-10-19
+8776e414371c0020,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL63,Δυτική Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+87d2277f177d321e,2021TC16IPCB009,Interreg VI-A - IPA Greece-North Macedonia,(Interreg VI-A) IPA CBC Greece North Macedonia,EL526,Σέρρες,3,2026-10-19,2026-10-19,2026-10-19
+87e14741bfb84ea7,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL612,Λάρισα,3,2026-10-19,2026-10-19,2026-10-19
+8846b1446e754881,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL541,"Άρτα, Πρέβεζα",3,2026-10-19,2026-10-19,2026-10-19
+8851f6e7992e9f55,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL523,Κιλκίς,3,2026-10-19,2026-10-19,2026-10-19
+888dcd270ece60a8,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL54,Ήπειρος,2,2026-10-19,2026-10-19,2026-10-19
+89032e527303c07f,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL532,Καστοριά,3,2026-10-19,2026-10-19,2026-10-19
+89a19cbc7245da61,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL304,Νότιος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+8adfef1d42e76675,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL622,Κέρκυρα,3,2026-10-19,2026-10-19,2026-10-19
+8ca50dbe661d7e03,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL513,Ροδόπη,3,2026-10-19,2026-10-19,2026-10-19
+8d23e858a22bb9f4,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL413,Χίος,3,2026-10-19,2026-10-19,2026-10-19
+8d5f02b3ea6f8a20,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL522,Θεσσαλονίκη,3,2026-10-19,2026-10-19,2026-10-19
+8e5d64d7cbf348de,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL624,Λευκάδα,3,2026-10-19,2026-10-19,2026-10-19
+903f552a34d619fb,2021TC16FFIR001,Urbact IV,Urbact IV,EL433,Ρέθυμνο,3,2026-10-19,2026-10-19,2026-10-19
+909e25687ded070b,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL52,Κεντρική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+9198450c17471546,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL41,Βόρειο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+91cf7cf4236e4f11,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL651,"Αργολίδα, Αρκαδία",3,2026-10-19,2026-10-19,2026-10-19
+923338315085d78c,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL512,Ξάνθη,3,2026-10-19,2026-10-19,2026-10-19
+948dee9bf5b4be70,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL622,Κέρκυρα,3,2026-10-19,2026-10-19,2026-10-19
+949a28555cdc0812,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL523,Κιλκίς,3,2026-10-19,2026-10-19,2026-10-19
+951fc72d8fd70b8e,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL511,Έβρος,3,2026-10-19,2026-10-19,2026-10-19
+95be5e84bc7d286e,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL633,Ηλεία,3,2026-10-19,2026-10-19,2026-10-19
+96a0915e7344a9ad,2021TC16RFCB021,Interreg VI-A - Greece-Bulgaria,(Interreg VI-A) Greece-Bulgaria,EL512,Ξάνθη,3,2026-10-19,2026-10-19,2026-10-19
+971b12a8a62815fb,2021TC16FFIR001,Urbact IV,Urbact IV,EL611,"Καρδίτσα, Τρίκαλα",3,2026-10-19,2026-10-19,2026-10-19
+97521846c2816532,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL525,Πιερία,3,2026-10-19,2026-10-19,2026-10-19
+979ccdfa74f69edf,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL533,Φλώρινα,3,2026-10-19,2026-10-19,2026-10-19
+97c112413e5419ba,2021TC16FFIR001,Urbact IV,Urbact IV,EL64,Στερεά Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+97c7f75f372affaa,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL631,Αιτωλοακαρνανία,3,2026-10-19,2026-10-19,2026-10-19
+9829a004946a517e,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL653,"Λακωνία, Μεσσηνία",3,2026-10-19,2026-10-19,2026-10-19
+986dc59c2c13de74,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL422,"Άνδρος, Θήρα, Κέα, Μήλος, Μύκονος, Νάξος, Πάρος, Σύρος, Τήνος",3,2026-10-19,2026-10-19,2026-10-19
+98ccfd4fe013bd06,2021TC16FFIR001,Urbact IV,Urbact IV,EL51,"Aνατολική Μακεδονία, Θράκη",2,2026-10-19,2026-10-19,2026-10-19
+9926454cbd170588,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL621,Ζάκυνθος,3,2026-10-19,2026-10-19,2026-10-19
+994d41f6beacea4d,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL302,Δυτικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+9b651d49e8427b81,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL53,Δυτική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+9b8ee7782e4a7db4,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL543,Ιωάννινα,3,2026-10-19,2026-10-19,2026-10-19
+9be6c1460ac2fccf,2021TC16FFIR001,Urbact IV,Urbact IV,EL53,Δυτική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+9c36b0206f9c3f29,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL622,Κέρκυρα,3,2026-10-19,2026-10-19,2026-10-19
+9c6629fdcc19a296,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL43,Κρήτη,2,2026-10-19,2026-10-19,2026-10-19
+9cad48c322adf744,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL641,Βοιωτία,3,2026-10-19,2026-10-19,2026-10-19
+9cccd80566d2da86,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL543,Ιωάννινα,3,2026-10-19,2026-10-19,2026-10-19
+9cce736c1bbddd0a,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL521,Ημαθία,3,2026-10-19,2026-10-19,2026-10-19
+9ce4f11d7ccccc9d,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL533,Φλώρινα,3,2026-10-19,2026-10-19,2026-10-19
+9d42204484e24db6,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL533,Φλώρινα,3,2026-10-19,2026-10-19,2026-10-19
+9d8a22942172793b,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL651,"Αργολίδα, Αρκαδία",3,2026-10-19,2026-10-19,2026-10-19
+9dae230b579eff1a,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL411,"Λέσβος, Λήμνος",3,2026-10-19,2026-10-19,2026-10-19
+9e9d732780ff703c,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL434,Χανιά,3,2026-10-19,2026-10-19,2026-10-19
+9f5b96cf8414b318,2021TC16FFIR001,Urbact IV,Urbact IV,EL6,Κεντρική Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+9f5ff55f2090343e,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL653,"Λακωνία, Μεσσηνία",3,2026-10-19,2026-10-19,2026-10-19
+9f9b42b91aca0d04,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL515,"Θάσος, Καβάλα",3,2026-10-19,2026-10-19,2026-10-19
+a04f429df5c7ecfc,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL64,Στερεά Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+a1b4cb5e322bc75e,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL62,Ιόνια Νησιά,2,2026-10-19,2026-10-19,2026-10-19
+a24607955666ae42,2021TC16FFIR001,Urbact IV,Urbact IV,EL5,Βόρεια Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+a273a622b07687a8,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL645,Φωκίδα,3,2026-10-19,2026-10-19,2026-10-19
+a3099424c0d915fc,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL511,Έβρος,3,2026-10-19,2026-10-19,2026-10-19
+a32d1ccb05be37cd,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL432,Λασίθι,3,2026-10-19,2026-10-19,2026-10-19
+a3300c2a2cacb71f,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL421,"Κάλυμνος, Κάρπαθος – Ηρωική Νήσος Κάσος, Κως, Ρόδος",3,2026-10-19,2026-10-19,2026-10-19
+a339148ff069175f,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL30,Aττική,2,2026-10-19,2026-10-19,2026-10-19
+a4185bdc6acd8db0,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL641,Βοιωτία,3,2026-10-19,2026-10-19,2026-10-19
+a4244dde3171af1d,2021TC16FFIR001,Urbact IV,Urbact IV,EL531,"Γρεβενά, Κοζάνη",3,2026-10-19,2026-10-19,2026-10-19
+a48dc31b5b4250f2,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL5,Βόρεια Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+a4e506aab7974bf3,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL522,Θεσσαλονίκη,3,2026-10-19,2026-10-19,2026-10-19
+a500e6cb882a7807,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL532,Καστοριά,3,2026-10-19,2026-10-19,2026-10-19
+a57e4d51bc967630,2021TC16RFCB021,Interreg VI-A - Greece-Bulgaria,(Interreg VI-A) Greece-Bulgaria,EL511,Έβρος,3,2026-10-19,2026-10-19,2026-10-19
+a5ceaf00320c3936,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL62,Ιόνια Νησιά,2,2026-10-19,2026-10-19,2026-10-19
+a68942ff78ed2406,2021TC16FFIR001,Urbact IV,Urbact IV,EL305,Ανατολική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+a6bad5ded469350e,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL51,"Aνατολική Μακεδονία, Θράκη",2,2026-10-19,2026-10-19,2026-10-19
+a6f5b648faa100b3,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL305,Ανατολική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+a78262438a5f6439,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL524,Πέλλα,3,2026-10-19,2026-10-19,2026-10-19
+a7c4d63e62075c87,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL526,Σέρρες,3,2026-10-19,2026-10-19,2026-10-19
+a8507ac8cddd83ae,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL645,Φωκίδα,3,2026-10-19,2026-10-19,2026-10-19
+a95d51f7a31cfee5,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL53,Δυτική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+a9a64272c03a9787,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL30,Aττική,2,2026-10-19,2026-10-19,2026-10-19
+a9d28cd59191b662,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL433,Ρέθυμνο,3,2026-10-19,2026-10-19,2026-10-19
+ab42fccee0a8c07e,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL64,Στερεά Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+ab6322199bb709f7,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL642,Εύβοια,3,2026-10-19,2026-10-19,2026-10-19
+ab71d4416c5efc79,2021TC16IPCB009,Interreg VI-A - IPA Greece-North Macedonia,(Interreg VI-A) IPA CBC Greece North Macedonia,EL522,Θεσσαλονίκη,3,2026-10-19,2026-10-19,2026-10-19
+ac15f5b6b7f99ded,2021TC16FFIR001,Urbact IV,Urbact IV,EL62,Ιόνια Νησιά,2,2026-10-19,2026-10-19,2026-10-19
+aca2a1eefef27609,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL301,Βόρειος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+adf295d3854ef0c2,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL421,"Κάλυμνος, Κάρπαθος – Ηρωική Νήσος Κάσος, Κως, Ρόδος",3,2026-10-19,2026-10-19,2026-10-19
+af46325b5c85616e,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL422,"Άνδρος, Θήρα, Κέα, Μήλος, Μύκονος, Νάξος, Πάρος, Σύρος, Τήνος",3,2026-10-19,2026-10-19,2026-10-19
+b05e5f617d333d70,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL524,Πέλλα,3,2026-10-19,2026-10-19,2026-10-19
+b0ccc1d950cde951,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL3,Αττική,1,2026-10-19,2026-10-19,2026-10-19
+b19459aa6eb0e0d2,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL421,"Κάλυμνος, Κάρπαθος – Ηρωική Νήσος Κάσος, Κως, Ρόδος",3,2026-10-19,2026-10-19,2026-10-19
+b2fbd65200ee7004,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL43,Κρήτη,2,2026-10-19,2026-10-19,2026-10-19
+b376632b0c7612c0,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL511,Έβρος,3,2026-10-19,2026-10-19,2026-10-19
+b443b573b44b3326,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL41,Βόρειο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+b49bf2a3e021e410,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL613,"Μαγνησία, Σποράδες",3,2026-10-19,2026-10-19,2026-10-19
+b621e780a1a39752,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL621,Ζάκυνθος,3,2026-10-19,2026-10-19,2026-10-19
+b65d8ad17b89bdd6,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL41,Βόρειο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+b66977de468f0273,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL411,"Λέσβος, Λήμνος",3,2026-10-19,2026-10-19,2026-10-19
+b6988a08016145cc,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL651,"Αργολίδα, Αρκαδία",3,2026-10-19,2026-10-19,2026-10-19
+b75a248187dc33f9,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL523,Κιλκίς,3,2026-10-19,2026-10-19,2026-10-19
+b777e5e03f2fac18,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL54,Ήπειρος,2,2026-10-19,2026-10-19,2026-10-19
+b90b1d7ac4dbda9e,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL433,Ρέθυμνο,3,2026-10-19,2026-10-19,2026-10-19
+b98286cc3767e8fe,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL5,Βόρεια Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+ba7bac7a0d39b990,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL421,"Κάλυμνος, Κάρπαθος – Ηρωική Νήσος Κάσος, Κως, Ρόδος",3,2026-10-19,2026-10-19,2026-10-19
+ba7e1005d2ad7b80,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL526,Σέρρες,3,2026-10-19,2026-10-19,2026-10-19
+ba895440452679a6,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL522,Θεσσαλονίκη,3,2026-10-19,2026-10-19,2026-10-19
+bac24136cab6415e,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL633,Ηλεία,3,2026-10-19,2026-10-19,2026-10-19
+bb198162c1a96c3f,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL43,Κρήτη,2,2026-10-19,2026-10-19,2026-10-19
+bba16363105fe97e,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL306,Δυτική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+bbe6a15eb797a902,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL41,Βόρειο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+bd4ec77c57f0eb0d,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL302,Δυτικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+be02a81a30651153,2021TC16FFIR001,Urbact IV,Urbact IV,EL631,Αιτωλοακαρνανία,3,2026-10-19,2026-10-19,2026-10-19
+beaf274f7f747af6,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL527,Χαλκιδική,3,2026-10-19,2026-10-19,2026-10-19
+bee489be0b60eeab,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL513,Ροδόπη,3,2026-10-19,2026-10-19,2026-10-19
+bf68f09ad020fb47,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL434,Χανιά,3,2026-10-19,2026-10-19,2026-10-19
+bff03f41850a7f48,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL307,"Πειραιάς, Νήσοι",3,2026-10-19,2026-10-19,2026-10-19
+c0ac906f1acb80ad,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL525,Πιερία,3,2026-10-19,2026-10-19,2026-10-19
+c0dd527a91238d6e,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL63,Δυτική Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+c173f51a2d81d653,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL52,Κεντρική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+c1ec99ed044deccf,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL512,Ξάνθη,3,2026-10-19,2026-10-19,2026-10-19
+c278a36752a42ecd,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL643,Ευρυτανία,3,2026-10-19,2026-10-19,2026-10-19
+c2b10cdab8347f25,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL432,Λασίθι,3,2026-10-19,2026-10-19,2026-10-19
+c3f6d1ed42647d25,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL65,Πελοπόννησος,2,2026-10-19,2026-10-19,2026-10-19
+c4dc14bb782dce00,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL65,Πελοπόννησος,2,2026-10-19,2026-10-19,2026-10-19
+c5731676c656789a,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL4,"Νησιά Αιγαίου, Κρήτη",1,2026-10-19,2026-10-19,2026-10-19
+c5b50ebd96beef9e,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL533,Φλώρινα,3,2026-10-19,2026-10-19,2026-10-19
+c5f33742f69a632b,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL515,"Θάσος, Καβάλα",3,2026-10-19,2026-10-19,2026-10-19
+c68eb504505e517b,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL411,"Λέσβος, Λήμνος",3,2026-10-19,2026-10-19,2026-10-19
+c6d550c0ecd753da,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL5,Βόρεια Ελλάδα,1,2026-10-19,2026-10-19,2026-10-19
+c76c1e637d70500b,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL306,Δυτική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+c7c1b56ba637a254,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL542,Θεσπρωτία,3,2026-10-19,2026-10-19,2026-10-19
+c80f60c1dd13d421,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL51,"Aνατολική Μακεδονία, Θράκη",2,2026-10-19,2026-10-19,2026-10-19
+c81984bd42907e29,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL52,Κεντρική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+c97dec4721b53396,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL542,Θεσπρωτία,3,2026-10-19,2026-10-19,2026-10-19
+cb8cec7f1e348349,2021TC16FFIR001,Urbact IV,Urbact IV,EL303,Κεντρικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+cc39e5a5cfdd9968,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL522,Θεσσαλονίκη,3,2026-10-19,2026-10-19,2026-10-19
+cd3996bf973762ba,2021TC16FFIR001,Urbact IV,Urbact IV,EL522,Θεσσαλονίκη,3,2026-10-19,2026-10-19,2026-10-19
+ce1dd5a54ee8477a,2021TC16FFIR001,Urbact IV,Urbact IV,EL54,Ήπειρος,2,2026-10-19,2026-10-19,2026-10-19
+ce33651f65611ac9,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL53,Δυτική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+ce430c4bb454812f,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL53,Δυτική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+ce8ecd419ad7d4ec,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL526,Σέρρες,3,2026-10-19,2026-10-19,2026-10-19
+cf590c42507f4fac,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL64,Στερεά Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+d02e7d7800b95c4b,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL3,Αττική,1,2026-10-19,2026-10-19,2026-10-19
+d0b5856392c64b32,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL541,"Άρτα, Πρέβεζα",3,2026-10-19,2026-10-19,2026-10-19
+d2ad4338ac40fae9,2021TC16FFIR001,Urbact IV,Urbact IV,EL432,Λασίθι,3,2026-10-19,2026-10-19,2026-10-19
+d407459aad57d5c6,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL651,"Αργολίδα, Αρκαδία",3,2026-10-19,2026-10-19,2026-10-19
+d4385181fa8a4de0,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL622,Κέρκυρα,3,2026-10-19,2026-10-19,2026-10-19
+d473fd4df6afe912,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL431,Ηράκλειο,3,2026-10-19,2026-10-19,2026-10-19
+d4a61dcff82a83c5,2021TC16FFIR001,Urbact IV,Urbact IV,EL632,Αχαΐα,3,2026-10-19,2026-10-19,2026-10-19
+d50952589ee23b35,2021TC16FFIR001,Urbact IV,Urbact IV,EL43,Κρήτη,2,2026-10-19,2026-10-19,2026-10-19
+d51ecde75c9bf005,2021TC16FFIR001,Urbact IV,Urbact IV,EL533,Φλώρινα,3,2026-10-19,2026-10-19,2026-10-19
+d56aa9916c05759c,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL521,Ημαθία,3,2026-10-19,2026-10-19,2026-10-19
+d572b102cb269425,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL63,Δυτική Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+d6d3d0791d139917,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL522,Θεσσαλονίκη,3,2026-10-19,2026-10-19,2026-10-19
+d75ca39127c5b831,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL531,"Γρεβενά, Κοζάνη",3,2026-10-19,2026-10-19,2026-10-19
+d7ba2b177f660f83,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL525,Πιερία,3,2026-10-19,2026-10-19,2026-10-19
+d7d7f130dfab411d,2021TC16FFIR001,Urbact IV,Urbact IV,EL652,Κορινθία,3,2026-10-19,2026-10-19,2026-10-19
+d85e2684910b6021,2021TC16FFIR001,Urbact IV,Urbact IV,ELZZ,Extra-Regio NUTS 2,2,2026-10-19,2026-10-19,2026-10-19
+d8f53915cc9331d1,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL42,Νότιο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+d92ea6da2740bd1e,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL303,Κεντρικός Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+d964ca21fa984953,2021TC16FFIR001,Urbact IV,Urbact IV,EL523,Κιλκίς,3,2026-10-19,2026-10-19,2026-10-19
+d9c926201b633995,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL513,Ροδόπη,3,2026-10-19,2026-10-19,2026-10-19
+da98efb70832d7ca,2021TC16FFIR001,Urbact IV,Urbact IV,EL613,"Μαγνησία, Σποράδες",3,2026-10-19,2026-10-19,2026-10-19
+db0ac4fe20533c9e,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL51,"Aνατολική Μακεδονία, Θράκη",2,2026-10-19,2026-10-19,2026-10-19
+db26ed741b82f628,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL61,Θεσσαλία,2,2026-10-19,2026-10-19,2026-10-19
+dc3ed00825101f73,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL652,Κορινθία,3,2026-10-19,2026-10-19,2026-10-19
+dcaccff5c5bc6dc3,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL613,"Μαγνησία, Σποράδες",3,2026-10-19,2026-10-19,2026-10-19
+dcf132463c08885b,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL531,"Γρεβενά, Κοζάνη",3,2026-10-19,2026-10-19,2026-10-19
+dd2f65dce7ecd53b,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL532,Καστοριά,3,2026-10-19,2026-10-19,2026-10-19
+de3b76fa515595cd,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL543,Ιωάννινα,3,2026-10-19,2026-10-19,2026-10-19
+de5312714fbc49cb,2021TC16RFCB019,Interreg VI-A - Greece-Italy,(Interreg VI-A) Greece-Italy,EL541,"Άρτα, Πρέβεζα",3,2026-10-19,2026-10-19,2026-10-19
+dfd6e104241b79a1,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL542,Θεσπρωτία,3,2026-10-19,2026-10-19,2026-10-19
+e0ced99f56ae4203,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL43,Κρήτη,2,2026-10-19,2026-10-19,2026-10-19
+e10622251fc63bc4,2021TC16FFIR001,Urbact IV,Urbact IV,EL411,"Λέσβος, Λήμνος",3,2026-10-19,2026-10-19,2026-10-19
+e297e372f4f4d50b,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL512,Ξάνθη,3,2026-10-19,2026-10-19,2026-10-19
+e2b0253ee55fa111,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL642,Εύβοια,3,2026-10-19,2026-10-19,2026-10-19
+e306e7995eab6c43,2021TC16FFIR001,Urbact IV,Urbact IV,EL422,"Άνδρος, Θήρα, Κέα, Μήλος, Μύκονος, Νάξος, Πάρος, Σύρος, Τήνος",3,2026-10-19,2026-10-19,2026-10-19
+e32536bfab47706b,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL65,Πελοπόννησος,2,2026-10-19,2026-10-19,2026-10-19
+e401c482b00ad6a1,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL,Ελλάδα,0,2026-10-19,2026-10-19,2026-10-19
+e4437ae386f9a517,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL651,"Αργολίδα, Αρκαδία",3,2026-10-19,2026-10-19,2026-10-19
+e49ca0b0f34462a2,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL43,Κρήτη,2,2026-10-19,2026-10-19,2026-10-19
+e5340e31b9a77c8a,2021TC16FFIR001,Urbact IV,Urbact IV,EL644,Φθιώτιδα,3,2026-10-19,2026-10-19,2026-10-19
+e56084f64447bc9d,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL42,Νότιο Αιγαίο,2,2026-10-19,2026-10-19,2026-10-19
+e5d5487aae4177c7,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL652,Κορινθία,3,2026-10-19,2026-10-19,2026-10-19
+e775db3151ef3eff,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL51,"Aνατολική Μακεδονία, Θράκη",2,2026-10-19,2026-10-19,2026-10-19
+e7d3c429397f4e09,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL52,Κεντρική Μακεδονία,2,2026-10-19,2026-10-19,2026-10-19
+e811d3ea9889436f,2021TC16IPCB009,Interreg VI-A - IPA Greece-North Macedonia,(Interreg VI-A) IPA CBC Greece North Macedonia,EL524,Πέλλα,3,2026-10-19,2026-10-19,2026-10-19
+e8424bcec077883d,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL631,Αιτωλοακαρνανία,3,2026-10-19,2026-10-19,2026-10-19
+e87f7852f5861b6d,2021TC16FFIR001,Urbact IV,Urbact IV,EL4,"Νησιά Αιγαίου, Κρήτη",1,2026-10-19,2026-10-19,2026-10-19
+e97cdc10258f05eb,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,ELZZ,Extra-Regio NUTS 2,2,2026-10-19,2026-10-19,2026-10-19
+e99d59bbe23b4443,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL524,Πέλλα,3,2026-10-19,2026-10-19,2026-10-19
+ebc467cdc3c4d17c,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL412,"Ικαρία, Σάμος",3,2026-10-19,2026-10-19,2026-10-19
+ec6810119390a2e6,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL514,Δράμα,3,2026-10-19,2026-10-19,2026-10-19
+ecf47dc2aca3f51e,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL527,Χαλκιδική,3,2026-10-19,2026-10-19,2026-10-19
+ed36482baefea2e0,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL301,Βόρειος Τομέας Αθηνών,3,2026-10-19,2026-10-19,2026-10-19
+ee207abcb5cf057e,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL642,Εύβοια,3,2026-10-19,2026-10-19,2026-10-19
+eeb3ac3587c7327d,2021TC16FFIR001,Urbact IV,Urbact IV,EL527,Χαλκιδική,3,2026-10-19,2026-10-19,2026-10-19
+ef1fef5eccf9618e,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL624,Λευκάδα,3,2026-10-19,2026-10-19,2026-10-19
+ef9dd4a5e2b79696,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL653,"Λακωνία, Μεσσηνία",3,2026-10-19,2026-10-19,2026-10-19
+f0157579c4eb8afc,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL65,Πελοπόννησος,2,2026-10-19,2026-10-19,2026-10-19
+f1c6bb2f41cce9ab,2021TC16RFCB021,Interreg VI-A - Greece-Bulgaria,(Interreg VI-A) Greece-Bulgaria,EL522,Θεσσαλονίκη,3,2026-10-19,2026-10-19,2026-10-19
+f287c7daf6e892bb,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL624,Λευκάδα,3,2026-10-19,2026-10-19,2026-10-19
+f2e6bf57027f7998,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL532,Καστοριά,3,2026-10-19,2026-10-19,2026-10-19
+f34e1b98cb604b72,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL54,Ήπειρος,2,2026-10-19,2026-10-19,2026-10-19
+f3b812da96e5504a,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL623,"Ιθάκη, Κεφαλληνία",3,2026-10-19,2026-10-19,2026-10-19
+f48ca489c6b12f4e,2021TC16FFIR001,Urbact IV,Urbact IV,EL622,Κέρκυρα,3,2026-10-19,2026-10-19,2026-10-19
+f599df89427305b9,2021TC16NXTN002,Interreg VI-B - NEXT Black Sea,(Interreg VI-B) Interreg NEXT Black Sea Basin,EL521,Ημαθία,3,2026-10-19,2026-10-19,2026-10-19
+f5cb8203bed789ab,2021TC16IPCB010,Interreg VI-A - IPA Greece-Albania,(Interreg VI-A) IPA CBC Greece Albania,EL623,"Ιθάκη, Κεφαλληνία",3,2026-10-19,2026-10-19,2026-10-19
+f726bf05a7fdde75,2021TC16RFCB047,Interreg VI-A - Greece-Cyprus,(Interreg VI-A) Greece-Cyprus,EL411,"Λέσβος, Λήμνος",3,2026-10-19,2026-10-19,2026-10-19
+f7f63c1220382410,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL307,"Πειραιάς, Νήσοι",3,2026-10-19,2026-10-19,2026-10-19
+f9a5ae1b56622759,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL631,Αιτωλοακαρνανία,3,2026-10-19,2026-10-19,2026-10-19
+fa00244a7fc95c9a,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL413,Χίος,3,2026-10-19,2026-10-19,2026-10-19
+fa5b5c71ef03349d,2021TC16FFIR001,Urbact IV,Urbact IV,EL412,"Ικαρία, Σάμος",3,2026-10-19,2026-10-19,2026-10-19
+fad0433fdd66659b,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL54,Ήπειρος,2,2026-10-19,2026-10-19,2026-10-19
+fb24eb928244cb89,2021TC16FFIR001,Urbact IV,Urbact IV,EL623,"Ιθάκη, Κεφαλληνία",3,2026-10-19,2026-10-19,2026-10-19
+fbd9914bbdc0a9ea,2021TC16FFTN001,Interreg VI-B - EURO MED,(Interreg VI-B) Euro Mediterranean (EURO MED),EL434,Χανιά,3,2026-10-19,2026-10-19,2026-10-19
+fc2c8a0ca95e4a52,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL63,Δυτική Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+fca1dfa66dc95bc0,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL612,Λάρισα,3,2026-10-19,2026-10-19,2026-10-19
+fcbcbf018ad2494b,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL613,"Μαγνησία, Σποράδες",3,2026-10-19,2026-10-19,2026-10-19
+fcfd8cd1081e82be,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL63,Δυτική Ελλάδα,2,2026-10-19,2026-10-19,2026-10-19
+fd1e81e58f1d2df8,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,ELZZZ,Extra-Regio NUTS 3,3,2026-10-19,2026-10-19,2026-10-19
+fd8c96cd303077cf,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL611,"Καρδίτσα, Τρίκαλα",3,2026-10-19,2026-10-19,2026-10-19
+fda2cb41d3963f51,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL3,Αττική,1,2026-10-19,2026-10-19,2026-10-19
+fdb84a6e5c7d037f,2021TC16IPTN001,Interreg VI-B - IPA Adrion,(Interreg VI-B) Adriatic-Ionian,EL306,Δυτική Αττική,3,2026-10-19,2026-10-19,2026-10-19
+fdc4c37dac967f47,2021TC16RFIR002,Interreg VI-C - Interact,(Interreg VI-C) Interact,EL511,Έβρος,3,2026-10-19,2026-10-19,2026-10-19
+fdc4f16ddd8aa361,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL512,Ξάνθη,3,2026-10-19,2026-10-19,2026-10-19
+fdd5d9e007f98f56,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL652,Κορινθία,3,2026-10-19,2026-10-19,2026-10-19
+fdee8642704f88d5,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL644,Φθιώτιδα,3,2026-10-19,2026-10-19,2026-10-19
+fdf6994f883c4c38,2021TC16NXTN001,Interreg VI-B - NEXT MED,(Interreg VI-B) NEXT Mediterranean Sea Basin (NEXT MED),EL525,Πιερία,3,2026-10-19,2026-10-19,2026-10-19
+fed5a6ded3890659,2021TC16RFIR001,Interreg VI-C - Interreg Europe,(Interreg VI-C) Interreg Europe,EL641,Βοιωτία,3,2026-10-19,2026-10-19,2026-10-19
+ff527fc9a5c24581,2021TC16FFIR001,Urbact IV,Urbact IV,EL651,"Αργολίδα, Αρκαδία",3,2026-10-19,2026-10-19,2026-10-19

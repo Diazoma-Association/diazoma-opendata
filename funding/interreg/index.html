@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Προγραμματισμένες χρηματοδοτικές κατανομές των προγραμμάτων Interreg 2021–2027 στα οποία συμμετέχει η Ελλάδα: διασυνοριακή, διακρατική και διαπεριφερειακή συνεργασία.">
+<title>Interreg 2021–2027 | Διάζωμα</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../../assets/css/dashboard.css">
+<style>
+.note-box{margin:0;padding:11px 14px;border-left:3px solid var(--gold);background:#f8efdf;border-radius:6px;font-size:12px;color:#654c28}
+.tag{display:inline-block;padding:2px 8px;border-radius:100px;font-size:11px;background:#edf2e9;color:#294535;margin-top:3px}
+.ip{display:grid;grid-template-columns:minmax(130px,1.4fr) 2fr 96px;gap:10px;align-items:center;font-size:12px;padding:5px;border-radius:8px;border:1px solid transparent;background:none;color:inherit;text-align:left;width:100%}
+button.ip{cursor:pointer}button.ip:hover,.ip.sel{background:#f1f5ee;border-color:#dce6da}.ip .val{text-align:right;font-variant-numeric:tabular-nums;color:#536258}
+.table-wrap td:nth-child(-n+2),.table-wrap th:nth-child(-n+2){white-space:normal;min-width:140px;text-align:left}
+</style>
+</head>
+<body>
+<header class="hero"><div class="eyebrow"><a class="home-link" href="../../">Διάζωμα · πολιτισμός και δεδομένα</a></div><h1>Interreg: διασυνοριακή και διακρατική συνεργασία</h1>
+<p>Προγραμματισμένες ετήσιες χρηματοδοτικές κατανομές της ΕΕ για τα προγράμματα Interreg 2021–2027 στα οποία συμμετέχει η Ελλάδα, με βάση τα εδάφη που καλύπτει κάθε πρόγραμμα.</p>
+<div class="hero-meta"><span class="pill">Προγραμματισμένες κατανομές</span><span class="pill" id="countPill"></span><span class="pill">Κομισιόν · Cohesion Open Data</span><a class="pill" href="../">← Χρηματοδοτήσεις και δημόσιες επενδύσεις</a></div></header>
+<main class="page">
+<section class="filters" aria-label="Φίλτρα">
+<div class="field"><label for="type">Τύπος συνεργασίας</label><select id="type"></select></div>
+<div class="field"><label for="fund">Ταμείο</label><select id="fund"></select></div>
+<div class="field"><label for="programme">Πρόγραμμα</label><select id="programme"></select></div>
+<button class="reset" id="reset" type="button">Καθαρισμός</button></section>
+<div class="sectionline"><h2>Η εικόνα των προγραμμάτων Interreg</h2><div class="period" id="scope"></div></div>
+<section class="kpis" id="kpis" aria-live="polite"></section>
+<section class="grid">
+<article class="card wide"><div class="note-box"><strong>Προγραμματισμένες κατανομές, όχι δαπάνες.</strong> Τα ποσά είναι οι ετήσιες δεσμεύσεις της ΕΕ που προβλέπονται στα εγκεκριμένα προγράμματα και αφορούν <strong>ολόκληρο το πρόγραμμα</strong>, με όλες τις συμμετέχουσες χώρες. Δεν είναι το μερίδιο της Ελλάδας ούτε πραγματικές πληρωμές ή δαπάνες.</div></article>
+<article class="card"><div class="panel-title"><div><h3>Προγράμματα με ελληνική συμμετοχή</h3><p>Συνολικές προγραμματισμένες δεσμεύσεις ΕΕ 2021–2027. Επιλέξτε πρόγραμμα για να ενημερωθεί η σελίδα.</p></div></div><div class="hbars" id="progBars"></div></article>
+<article class="card"><div class="panel-title"><div><h3>Ανά τύπο συνεργασίας</h3><p id="typeSub"></p></div></div><div class="hbars" id="typeBars"></div></article>
+<article class="card wide"><div class="panel-title"><div><h3>Προγραμματισμένες ετήσιες δεσμεύσεις</h3><p id="yearSub"></p></div></div><div class="legend" id="yearLegend"></div><div id="yearChart"></div><p class="insight" id="yearInsight"></p></article>
+<article class="card wide"><div class="panel-title"><div><h3>Πίνακας προγραμμάτων</h3><p>Ταμεία, κατάσταση έγκρισης και ελληνικές περιφέρειες που καλύπτει κάθε πρόγραμμα.</p></div></div><div class="table-wrap" id="progTable"></div></article>
+<article class="card wide"><div class="panel-title"><div><h3>Σημειώσεις και μεθοδολογία</h3><p>Πώς προέκυψε η λίστα και τι δείχνουν τα ποσά.</p></div></div>
+<ul class="notes">
+<li>Πηγή των ποσών: Ευρωπαϊκή Επιτροπή, Cohesion Open Data, «2021-2027 Financial Plan details by year (All CPR funds)» (σύνολο δεδομένων 9qee-iv7c), στο οποίο βασίζεται το γράφημα «21-27 Interreg EU allocations». Περιλαμβάνει τις προγραμματισμένες ετήσιες δεσμεύσεις της ΕΕ ανά πρόγραμμα και ταμείο. Άδεια CC0.</li>
+<li>Η συμμετοχή της Ελλάδας προκύπτει από τον πίνακα «2021-2027 cohesion CCI / NUTS Lookup table» της Κομισιόν: εμφανίζονται τα προγράμματα Interreg που καλύπτουν τουλάχιστον ένα ελληνικό έδαφος (NUTS). Τα προγράμματα με ευρωπαϊκή εμβέλεια (Interreg Europe, URBACT, ESPON, Interact) καλύπτουν όλη την Ελλάδα.</li>
+<li>Οι τιμές είναι προγραμματισμένες δεσμεύσεις του προϋπολογισμού της ΕΕ ανά έτος. Δεν διαθέτουμε επιμερισμό ανά χώρα, γι' αυτό δεν εκτιμάται το μερίδιο της Ελλάδας. Η ευρωπαϊκή χρηματοδοτική υλοποίηση των προγραμμάτων Interreg δεν περιλαμβάνεται σε αυτή την ενότητα.</li>
+<li>Για ορισμένα προγράμματα υπάρχουν περισσότερες γραμμές, ανά ταμείο (π.χ. ΕΤΠΑ, IPA III, NDICI). Οι τύποι συνεργασίας προκύπτουν από την ονομασία του προγράμματος: VI-A διασυνοριακή, VI-B διακρατική, VI-C και λοιπά ευρωπαϊκά δίκτυα διαπεριφερειακή.</li>
+<li>Οι ονομασίες των προγραμμάτων είναι οι επίσημες αγγλικές της πηγής. Οι προγραμματισμένες κατανομές του 2026 και του 2027 μπορεί να αναθεωρηθούν μετά την ενδιάμεση αναθεώρηση της πολιτικής συνοχής.</li>
+</ul></article>
+</section>
+<footer class="footer"><div class="source-attribution"><div>Πηγή: <a href="https://cohesiondata.ec.europa.eu/2021-2027-Finances/21-27-Interreg-EU-allocations/upqa-iza8" target="_blank" rel="noopener">Ευρωπαϊκή Επιτροπή · Cohesion Open Data · Interreg EU allocations</a> (σύνολο 9qee-iv7c)</div><div class="initiative-note-row"><img class="initiative-logo" src="../../assets/img/diazoma-logo-header.png" alt="Λογότυπο Σωματείου ΔΙΑΖΩΜΑ"><p class="initiative-note">Η πλατφόρμα αποτελεί πρωτοβουλία του Σωματείου ΔΙΑΖΩΜΑ για την πιο προσιτή και κατανοητή παρουσίαση δεδομένων που αφορούν τον πολιτισμό και τον τουρισμό στην Ελλάδα.</p></div></div>
+<div class="source-links"><a href="../../data/funding/interreg_allocations.csv" download>Λήψη κατανομών Interreg (CSV)</a><a href="../../data/funding/interreg_greek_territories.csv" download>Λήψη ελληνικών εδαφών προγραμμάτων (CSV)</a><a href="../../data/funding/sync_log.csv" download>Αρχείο εισαγωγών (CSV)</a><a href="../../data/README.md" target="_blank" rel="noopener">Πηγή και μέθοδος επεξεργασίας</a></div></footer>
+</main>
+
+<script id="funding-interreg-data" type="application/json">{"years":[2021,2022,2023,2024,2025,2026,2027],"programmes":[{"cci":"2021TC16FFIR001","name":"Urbact IV","type":"Διαπεριφερειακή συνεργασία και ευρωπαϊκά δίκτυα","status":"Adopted by EC","version":"2.1","lines":[{"fund":"NDICI","fundName":"NDICI","category":"","years":[0,0,354590,360317,366142,286006,632945],"total":2000000},{"fund":"ERDF","fundName":"ΕΤΠΑ","category":"","years":[0,13627089,13845981,14069251,14296986,11846778,12083714],"total":79769799},{"fund":"IPA3","fundName":"IPA III","category":"","years":[0,839033,861750,873234,890708,760023,775252],"total":5000000}],"regions":["EL30","EL41","EL42","EL43","EL51","EL52","EL53","EL54","EL61","EL62","EL63","EL64","EL65","ELZZ"],"units":53},{"cci":"2021TC16FFTN001","name":"Interreg VI-B - EURO MED","type":"Διακρατική συνεργασία","status":"Adopted by EC","version":"1.1","lines":[{"fund":"INTERREG","fundName":"Interreg","category":"","years":[0,40072427,40750001,41398256,42080608,34949420,35648514],"total":234899226}],"regions":["EL30","EL41","EL42","EL43","EL51","EL52","EL53","EL54","EL61","EL62","EL63","EL64","EL65"],"units":52},{"cci":"2021TC16IPCB009","name":"Interreg VI-A - IPA Greece-North Macedonia","type":"Διασυνοριακή συνεργασία","status":"Adopted by EC","version":"1.1","lines":[{"fund":"IPA3","fundName":"IPA III","category":"","years":[0,4511353,4609044,4676779,4761599,4005520,4085705],"total":26650000}],"regions":[],"units":6},{"cci":"2021TC16IPCB010","name":"Interreg VI-A - IPA Greece-Albania","type":"Διασυνοριακή συνεργασία","status":"Adopted by EC","version":"1.2","lines":[{"fund":"IPA3","fundName":"IPA III","category":"","years":[0,4511353,4609044,4676779,4761599,4005520,4085705],"total":26650000}],"regions":["EL53","EL54","EL62"],"units":10},{"cci":"2021TC16IPTN001","name":"Interreg VI-B - IPA Adrion","type":"Διακρατική συνεργασία","status":"Adopted by EC","version":"1.1","lines":[{"fund":"INTERREG","fundName":"Interreg","category":"","years":[0,23136337,23638886,23985886,24421458,20547305,20958643],"total":136688515}],"regions":["EL30","EL41","EL42","EL43","EL51","EL52","EL53","EL54","EL61","EL62","EL63","EL64","EL65"],"units":52},{"cci":"2021TC16NXTN001","name":"Interreg VI-B - NEXT MED","type":"Διακρατική συνεργασία","status":"Adopted by EC","version":"2.0","lines":[{"fund":"INTERREG","fundName":"Interreg","category":"","years":[0,49376676,52697308,43616643,44328499,35567362,37508237],"total":263094725}],"regions":["EL30","EL41","EL42","EL43","EL51","EL52","EL53","EL54","EL61","EL62","EL63","EL64","EL65"],"units":52},{"cci":"2021TC16NXTN002","name":"Interreg VI-B - NEXT Black Sea","type":"Διακρατική συνεργασία","status":"Adopted by EC","version":"3.1","lines":[{"fund":"INTERREG","fundName":"Interreg","category":"","years":[0,14115090,14970814,15207915,15460209,12322453,12934075],"total":85010556}],"regions":["EL51","EL52"],"units":12},{"cci":"2021TC16RFCB019","name":"Interreg VI-A - Greece-Italy","type":"Διασυνοριακή συνεργασία","status":"Adopted by EC","version":"2","lines":[{"fund":"ERDF","fundName":"ΕΤΠΑ","category":"","years":[0,13595169,13813543,14036292,14263495,11819027,12055402],"total":79582928}],"regions":["EL54","EL62","EL63"],"units":10},{"cci":"2021TC16RFCB021","name":"Interreg VI-A - Greece-Bulgaria","type":"Διασυνοριακή συνεργασία","status":"Adopted by EC","version":"2","lines":[{"fund":"ERDF","fundName":"ΕΤΠΑ","category":"","years":[0,11473458,11657757,11845740,12037484,9974507,10173999],"total":67162945}],"regions":["EL51"],"units":7},{"cci":"2021TC16RFCB047","name":"Interreg VI-A - Greece-Cyprus","type":"Διασυνοριακή συνεργασία","status":"Adopted by MS","version":"2","lines":[{"fund":"ERDF","fundName":"ΕΤΠΑ","category":"","years":[0,7856687,7982890,8111616,8242917,6830250,6966854],"total":45991214}],"regions":["EL41","EL42","EL43"],"units":9},{"cci":"2021TC16RFIR001","name":"Interreg VI-C - Interreg Europe","type":"Διαπεριφερειακή συνεργασία και ευρωπαϊκά δίκτυα","status":"Adopted by EC","version":"3.1","lines":[{"fund":"ERDF","fundName":"ΕΤΠΑ","category":"","years":[0,64827095,66754886,67831347,71929296,60072772,63067274],"total":394482670}],"regions":["EL30","EL41","EL42","EL43","EL51","EL52","EL53","EL54","EL61","EL62","EL63","EL64","EL65"],"units":52},{"cci":"2021TC16RFIR002","name":"Interreg VI-C - Interact","type":"Διαπεριφερειακή συνεργασία και ευρωπαϊκά δίκτυα","status":"Adopted by EC","version":"1.1","lines":[{"fund":"ERDF","fundName":"ΕΤΠΑ","category":"","years":[0,7687358,7810840,7936792,8065263,6683043,6816704],"total":45000000}],"regions":["EL30","EL41","EL42","EL43","EL51","EL52","EL53","EL54","EL61","EL62","EL63","EL64","EL65","ELZZ"],"units":53},{"cci":"2021TC16RFIR004","name":"ESPON 2030","type":"Διαπεριφερειακή συνεργασία και ευρωπαϊκά δίκτυα","status":"Adopted by EC","version":"1.2","lines":[{"fund":"ERDF","fundName":"ΕΤΠΑ","category":"","years":[0,8199849,8331563,8465911,8602947,7128579,7271151],"total":48000000}],"regions":[],"units":0}],"allProgrammes":86,"allTotal":10598096860}</script>
+<script>
+const D = JSON.parse(document.getElementById('funding-interreg-data').textContent);
+const nf = new Intl.NumberFormat('el-GR');
+const pf = new Intl.NumberFormat('el-GR', {maximumFractionDigits:1});
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const money = v => Math.abs(v) >= 1e9 ? pf.format(v / 1e9) + ' δισ. €' : Math.abs(v) >= 1e6 ? pf.format(v / 1e6) + ' εκ. €' : nf.format(Math.round(v)) + ' €';
+const REGIONS = {EL30:'Αττική', EL41:'Βόρειο Αιγαίο', EL42:'Νότιο Αιγαίο', EL43:'Κρήτη', EL51:'Ανατολική Μακεδονία και Θράκη', EL52:'Κεντρική Μακεδονία', EL53:'Δυτική Μακεδονία',
+  EL54:'Ήπειρος', EL61:'Θεσσαλία', EL62:'Ιόνια Νησιά', EL63:'Δυτική Ελλάδα', EL64:'Στερεά Ελλάδα', EL65:'Πελοπόννησος'};
+const TYPES = ['Διασυνοριακή συνεργασία', 'Διακρατική συνεργασία', 'Διαπεριφερειακή συνεργασία και ευρωπαϊκά δίκτυα'];
+const TYPE_COLOR = {[TYPES[0]]:'#315b46', [TYPES[1]]:'#c58b3d', [TYPES[2]]:'#8a9a86'};
+const state = {type:'', fund:'', prog:''};
+const total = p => p.lines.reduce((t, l) => t + l.total, 0);
+// Rows (one per programme and fund) that match the filters.
+function lines() {
+  const out = [];
+  for (const p of D.programmes) {
+    if (state.type && p.type !== state.type || state.prog && p.cci !== state.prog) continue;
+    for (const l of p.lines) if (!state.fund || l.fund === state.fund) out.push({p, l});
+  }
+  return out;
+}
+const regionsText = p => p.regions.length >= 13 ? 'Όλη η χώρα' : p.regions.map(c => REGIONS[c] || c).join(', ') || '—';
+
+function renderKpis() {
+  const rows = lines(), progs = new Set(rows.map(r => r.p.cci)), sumAll = rows.reduce((t, r) => t + r.l.total, 0);
+  const regions = new Set(); rows.forEach(r => r.p.regions.forEach(c => regions.add(c)));
+  const wholeCountry = rows.some(r => r.p.regions.length >= 13);
+  const items = [
+    ['Προγράμματα με ελληνική συμμετοχή', nf.format(progs.size), `από ${D.allProgrammes} προγράμματα Interreg συνολικά`],
+    ['Προγραμματισμένες δεσμεύσεις ΕΕ', money(sumAll), 'ολόκληρα τα προγράμματα, 2021–2027'],
+    ['Μερίδιο στο σύνολο Interreg', pf.format(sumAll / D.allTotal * 100) + '%', `του ${money(D.allTotal)} των ${D.allProgrammes} προγραμμάτων`],
+    ['Ελληνικές περιφέρειες', wholeCountry ? 'Όλη η χώρα' : nf.format(regions.size), wholeCountry ? 'τουλάχιστον ένα πρόγραμμα καλύπτει όλη την Ελλάδα' : 'περιφέρειες που καλύπτουν τα προγράμματα της επιλογής'],
+  ];
+  $('kpis').innerHTML = items.map(([l, v, s]) => `<article class="card"><div class="kpi-label">${esc(l)}</div><div class="kpi-value">${esc(v)}</div><div class="kpi-sub">${esc(s)}</div></article>`).join('');
+  const parts = [state.type || 'Όλοι οι τύποι', state.fund ? (D.programmes.flatMap(p => p.lines).find(l => l.fund === state.fund) || {}).fundName : 'όλα τα ταμεία', state.prog ? D.programmes.find(p => p.cci === state.prog).name : 'όλα τα προγράμματα'];
+  $('scope').textContent = parts.join(' · ');
+  $('countPill').textContent = `${D.programmes.length} προγράμματα με ελληνική συμμετοχή`;
+}
+
+function renderPrograms() {
+  const totals = new Map();
+  for (const {p, l} of lines()) totals.set(p.cci, (totals.get(p.cci) || 0) + l.total);
+  const rows = [...totals.entries()].map(([cci, v]) => ({p: D.programmes.find(p => p.cci === cci), v})).sort((a, b) => b.v - a.v), max = Math.max(...rows.map(r => r.v), 1);
+  $('progBars').innerHTML = rows.map(({p, v}) => `<button type="button" class="ip${state.prog === p.cci ? ' sel' : ''}" data-c="${p.cci}"><span class="name">${esc(p.name)}<br><span class="tag">${esc(p.type)}</span></span>
+    <span class="track"><span style="width:${v / max * 100}%;background:${TYPE_COLOR[p.type]}"></span></span><span class="val">${money(v)}</span></button>`).join('') || '<p class="empty">Δεν υπάρχουν στοιχεία.</p>';
+  document.querySelectorAll('#progBars button').forEach(b => b.onclick = () => { state.prog = state.prog === b.dataset.c ? '' : b.dataset.c; renderAll(); });
+  const byType = new Map(TYPES.map(t => [t, 0])), counts = new Map(TYPES.map(t => [t, new Set()]));
+  for (const {p, l} of lines()) { byType.set(p.type, byType.get(p.type) + l.total); counts.get(p.type).add(p.cci); }
+  const tmax = Math.max(...byType.values(), 1);
+  $('typeSub').textContent = 'Προγραμματισμένες δεσμεύσεις ΕΕ ανά τύπο συνεργασίας, για την τρέχουσα επιλογή.';
+  $('typeBars').innerHTML = TYPES.map(t => `<div class="ip"><span class="name">${esc(t)}<br><span class="tag">${counts.get(t).size} προγράμματα</span></span><span class="track"><span style="width:${byType.get(t) / tmax * 100}%;background:${TYPE_COLOR[t]}"></span></span><span class="val">${money(byType.get(t))}</span></div>`).join('');
+}
+
+function renderYears() {
+  const rows = lines(), years = D.years, byYear = years.map(() => Object.fromEntries(TYPES.map(t => [t, 0])));
+  for (const {p, l} of rows) l.years.forEach((v, i) => { byYear[i][p.type] += v; });
+  const totals = byYear.map(o => Object.values(o).reduce((a, b) => a + b, 0)), max = Math.max(...totals, 1);
+  const W = 900, H = 300, L = 70, R = 10, T = 14, B = 30, slot = (W - L - R) / years.length, bw = Math.min(slot * 0.6, 70);
+  const raw = max / 5, mag = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / mag, step = (f <= 1 ? 1 : f <= 2 ? 2 : f <= 5 ? 5 : 10) * mag, top = Math.ceil(max / step) * step || step;
+  const y = v => T + (1 - v / top) * (H - T - B);
+  let g = '';
+  for (let v = 0; v <= top + step / 1000; v += step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="#e2e7dd"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${money(v)}</text>`;
+  years.forEach((yr, i) => {
+    const cx = L + slot * (i + 0.5); let acc = 0;
+    for (const t of TYPES) { const v = byYear[i][t]; if (!v) continue; g += `<rect x="${(cx - bw / 2).toFixed(1)}" y="${y(acc + v).toFixed(1)}" width="${bw.toFixed(1)}" height="${(y(acc) - y(acc + v)).toFixed(1)}" fill="${TYPE_COLOR[t]}"><title>${yr} · ${esc(t)}: ${money(v)}</title></rect>`; acc += v; }
+    g += `<text x="${cx}" y="${H - 8}" text-anchor="middle">${yr}</text>`;
+    if (totals[i]) g += `<text x="${cx}" y="${y(totals[i]) - 5}" text-anchor="middle">${money(totals[i])}</text>`;
+  });
+  $('yearChart').innerHTML = `<svg class="line" viewBox="0 0 ${W} ${H}" role="img" aria-label="Προγραμματισμένες ετήσιες δεσμεύσεις">${g}</svg>`;
+  $('yearLegend').innerHTML = TYPES.map(t => `<span><i style="background:${TYPE_COLOR[t]}"></i>${esc(t)}</span>`).join('');
+  $('yearSub').textContent = 'Προγραμματισμένες ετήσιες δεσμεύσεις της ΕΕ (όχι δαπάνες), για την τρέχουσα επιλογή.';
+  const sum = totals.reduce((a, b) => a + b, 0), peak = totals.indexOf(Math.max(...totals));
+  $('yearInsight').textContent = sum ? `Συνολικά ${money(sum)} για το 2021–2027. Η μεγαλύτερη ετήσια κατανομή προβλέπεται για το ${years[peak]} (${money(totals[peak])}).` : 'Δεν υπάρχουν στοιχεία για την επιλογή.';
+}
+
+function renderTable() {
+  const progs = new Map();
+  for (const {p, l} of lines()) { const t = progs.get(p.cci) || {p, funds: [], total: 0}; t.funds.push(l.fundName); t.total += l.total; progs.set(p.cci, t); }
+  const rows = [...progs.values()].sort((a, b) => b.total - a.total);
+  $('progTable').innerHTML = rows.length ? `<table><thead><tr><th style="text-align:left">Πρόγραμμα</th><th style="text-align:left">Τύπος</th><th>Ταμεία</th><th>Κατάσταση</th><th>Προγραμματισμένες δεσμεύσεις ΕΕ</th><th style="text-align:left">Ελληνικές περιφέρειες</th></tr></thead><tbody>${
+    rows.map(t => `<tr><td>${esc(t.p.name)}</td><td>${esc(t.p.type)}</td><td>${esc([...new Set(t.funds)].join(', '))}</td><td>${esc(t.p.status)} (έκδοση ${esc(t.p.version)})</td><td>${money(t.total)}</td><td style="text-align:left;white-space:normal;min-width:200px">${esc(regionsText(t.p))}</td></tr>`).join('')}</tbody></table>` : '<p class="empty">Δεν υπάρχουν στοιχεία.</p>';
+}
+
+function renderAll() { renderKpis(); renderPrograms(); renderYears(); renderTable(); syncSelects(); }
+function syncSelects() {
+  const opt = (v, l, cur) => `<option value="${esc(v)}"${v === cur ? ' selected' : ''}>${esc(l)}</option>`;
+  $('type').innerHTML = opt('', 'Όλοι οι τύποι', state.type) + TYPES.map(t => opt(t, t, state.type)).join('');
+  const funds = [...new Map(D.programmes.flatMap(p => p.lines).map(l => [l.fund, l.fundName])).entries()];
+  $('fund').innerHTML = opt('', 'Όλα τα ταμεία', state.fund) + funds.map(([c, n]) => opt(c, n, state.fund)).join('');
+  $('programme').innerHTML = opt('', 'Όλα τα προγράμματα', state.prog) + [...D.programmes].sort((a, b) => a.name.localeCompare(b.name)).map(p => opt(p.cci, p.name, state.prog)).join('');
+}
+$('type').onchange = e => { state.type = e.target.value; renderAll(); };
+$('fund').onchange = e => { state.fund = e.target.value; renderAll(); };
+$('programme').onchange = e => { state.prog = e.target.value; renderAll(); };
+$('reset').onclick = () => { Object.assign(state, {type: '', fund: '', prog: ''}); renderAll(); };
+renderAll();
+</script>
+</body>
+</html>

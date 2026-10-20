@@ -37,6 +37,9 @@ jobs:
       - name: Check embedded agriculture data matches the CSV sources
         run: python3 scripts/build_agriculture_data.py --check
 
+      - name: Check embedded funding data matches the CSV sources
+        run: python3 scripts/build_funding_data.py --check
+
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -77,4 +80,11 @@ jobs:
           for page in holdings livestock economy employment prices regional-profile aquaculture; do
             sed -n '/^<script>$/,/^<\/script>/p' agrifood/$page/index.html | sed '1d;$d' > agri-$page.js
             node --check agri-$page.js
+          done
+
+      - name: Check funding dashboards JavaScript syntax
+        run: |
+          for page in funding/progress funding/interreg funding; do
+            sed -n '/^<script>$/,/^<\/script>/p' $page/index.html | sed '1d;$d' > funding.js
+            node --check funding.js
           done

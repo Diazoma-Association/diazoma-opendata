@@ -61,6 +61,10 @@ ANCHORS = [
     ("fs_livestock_units", 2023, "EL43", "fs_livestock_units.synolo", "livestock_units", "", 312008, 0, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: Κρήτη, 312.008 ζωικές μονάδες"),
     ("fs_livestock_units", 2023, "EL63", "fs_livestock_units.synolo", "livestock_units", "", 276615, 0, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: Δυτική Ελλάδα, 276.615 ζωικές μονάδες"),
     ("fs_livestock_units", 2023, "EL52", "fs_livestock_units.synolo", "livestock_units", "", 267609, 0, "ΕΛΣΤΑΤ, δελτίο τύπου ΕΔΓΚΕ 2023: Κεντρική Μακεδονία, 267.609 ζωικές μονάδες"),
+    ("aq_production", 2024, "EL", "aq_production.geniko_synolo", "quantity_kg", "total", 127495100, 50000, "ΕΛΣΤΑΤ, δελτίο τύπου Έρευνας Υδατοκαλλιεργειών 2024: 127.495,1 τόνοι"),
+    ("aq_production", 2024, "EL", "aq_production.geniko_synolo", "value_eur", "total", 689461000, 50000, "ΕΛΣΤΑΤ, δελτίο τύπου Έρευνας Υδατοκαλλιεργειών 2024: 689.461,0 χιλ. ευρώ"),
+    ("aq_production", 2024, "EL", "aq_production.psaria.synolo_omadas", "quantity_kg", "total", 114805300, 50000, "ΕΛΣΤΑΤ, δελτίο τύπου Έρευνας Υδατοκαλλιεργειών 2024: ψάρια 114.805,3 τόνοι"),
+    ("aq_production", 2024, "EL", "aq_production.psaria.lavraki", "quantity_kg", "total", 48042700, 50000, "ΕΛΣΤΑΤ, δελτίο τύπου Έρευνας Υδατοκαλλιεργειών 2024: λαβράκι 48.042,7 τόνοι"),
 ]
 
 # Shares printed in the press releases of the farm structure survey (SPG12 employment): numerator, denominator (a total

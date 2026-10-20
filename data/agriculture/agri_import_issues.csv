@@ -1,4 +1,49 @@
 dataset,edition,doc_id,sheet,severity,code,message
+SPA06,2002,112632,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2002,112634,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2002,112635,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2002,112636,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2002,112637,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2003,112638,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2003,112640,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2003,112641,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2003,112642,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2003,112643,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2004,112644,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2004,112646,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2004,112647,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2004,112648,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2004,112649,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2005,112650,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2005,112652,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2005,112653,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2005,112654,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2005,112655,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2006,112656,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2006,112658,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2006,112659,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2006,112660,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2006,112661,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2007,112662,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2007,112664,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2007,112665,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2007,112666,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2007,112667,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2008,112668,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2008,112670,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2008,112671,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2008,112672,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2008,112673,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2009,112674,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2009,112676,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2009,112677,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2009,112678,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2009,112679,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2010,112680,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2010,112682,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2010,112683,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2010,112684,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2010,112685,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SEL61,2010,540750,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,the year label of the sheet reads «Ετος 2010 B»
 SEL61,2010,540750,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2010,540750,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
@@ -49,6 +94,10 @@ SPK33,2011,206174,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπ�
 SPK33,2011,206174,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
 SPK33,2011,206174,Sheet1,warning,total_differs_from_parts,"2 published totals differ from the sum of their parts, e.g. EL52 Κερί [production]: parts add up to 111.779, region total is 120.993"
 SPK33,2011,206175,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
+SPA06,2011,457247,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2011,457248,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2011,457249,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2011,457251,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SEL61,2011,540755,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2011,540755,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SEL61,2011,540755,Βασικές Τιμές · Λογαριασμός: από την ενδιάμεση ανάλωση στο εισόδημα,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
@@ -57,6 +106,10 @@ SEL61,2011,540755,Βασικές Τιμές · Παραγωγή του γεωρ�
 SEL61,2011,540755,Βασικές Τιμές · Παραγωγή του γεωργικού κλάδου,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SEL61,2011,540755,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2011,540755,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
+SPA06,2012,112692,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2012,112694,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2012,112695,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2012,112696,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
 SPK33,2012,201654,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
 SPK33,2012,201655,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
 SPK33,2012,201656,Sheet1,warning,region_row_missing,the row of region EL53 is missing; its units follow the row of EL52
@@ -103,6 +156,10 @@ SEL61,2012,540761,Βασικές Τιμές · Παραγωγή του γεωρ�
 SEL61,2012,540761,Βασικές Τιμές · Παραγωγή του γεωργικού κλάδου,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SEL61,2012,540761,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2012,540761,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
+SPA06,2013,255384,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2013,255385,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2013,255387,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2013,255388,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SPG06,2013,368457,ΠΙΝΑΚΑΣ 7 ΔΕΥΤΕΡΟΓΕΝΗ ΠΡΟΪΟΝΤΑ,warning,total_differs_from_parts,"2 published totals differ from the sum of their parts, e.g. EL Ελαιόλαδο [production]: regions add up to 291396, country total is 331946"
 SPG06,2013,368459,Sheet1,warning,total_differs_from_parts,"27 published totals differ from the sum of their parts, e.g. EL Μηλιές [trees_total]: regions add up to 8.3873e+06, country total is 5.42757e+06"
 SPG06,2013,368461,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2013 publication; ignored as a stale sheet
@@ -131,6 +188,10 @@ SEL61,2013,540767,Βασικές Τιμές · Παραγωγή του γεωρ�
 SEL61,2013,540767,Βασικές Τιμές · Παραγωγή του γεωργικού κλάδου,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SEL61,2013,540767,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2013,540767,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
+SPA06,2014,255445,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2014,255446,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2014,255447,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2014,255448,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SPG06,2014,350091,Sheet1,warning,total_differs_from_parts,"32 published totals differ from the sum of their parts, e.g. EL51 Μανταρινιές [trees_regular]: units add up to 80, region total is 0"
 SPG06,2014,350091,Sheet2,warning,skipped_sheet,values in kilograms (1000 × Sheet1) although the unit line says tonnes; Sheet1 is the same table in tonnes
 SPG06,2014,350093,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2014 publication; ignored as a stale sheet
@@ -148,6 +209,10 @@ SEL61,2014,540772,Βασικές Τιμές · Παραγωγή του γεωρ�
 SEL61,2014,540772,Βασικές Τιμές · Παραγωγή του γεωργικού κλάδου,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SEL61,2014,540772,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2014,540772,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
+SPA06,2015,306264,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2015,306266,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2015,306267,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2015,306268,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SPG06,2015,356927,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2015 publication; ignored as a stale sheet
 SPG06,2015,356927,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
 SPG06,2015,356929,Sheet2,warning,skipped_sheet,the 2014 table with values in kilograms although the unit line says tonnes; the 2014 publication has it in tonnes
@@ -169,6 +234,10 @@ SPG06,2016,337966,Πίνακας4α (2),warning,continuation_sheet,continuation 
 SPG06,2016,337968,Sheet2,warning,stale_sheet,sheet is for 2014 in the 2016 publication; ignored as a stale sheet
 SPK33,2016,338107,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
 SPK33,2016,338107,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPA06,2016,360009,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2016,360011,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2016,360012,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2016,360013,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SEL61,2016,540782,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2016,540782,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SEL61,2016,540782,Βασικές Τιμές · Λογαριασμός: από την ενδιάμεση ανάλωση στο εισόδημα,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
@@ -187,6 +256,10 @@ SPG06,2017,371351,Sheet1,warning,skipped_column,column 20 (Ροδιές) not imp
 SPG06,2017,371351,Sheet1,warning,skipped_column,column 21 (Ροδιές) not imported: column 21 (Ροδιές) has no marker although the table numbers its measures
 SPK33,2017,371395,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
 SPK33,2017,371395,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPA06,2017,398001,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2017,398002,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2017,398003,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2017,398010,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SEL61,2017,540787,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2017,540787,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SEL61,2017,540787,Βασικές Τιμές · Λογαριασμός: από την ενδιάμεση ανάλωση στο εισόδημα,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
@@ -195,6 +268,10 @@ SEL61,2017,540787,Βασικές Τιμές · Παραγωγή του γεωρ�
 SEL61,2017,540787,Βασικές Τιμές · Παραγωγή του γεωργικού κλάδου,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SEL61,2017,540787,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2017,540787,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
+SPA06,2018,406710,Τελικό · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2018,406712,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2018,406713,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2018,406714,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SEL61,2018,540792,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2018,540792,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SEL61,2018,540792,Βασικές Τιμές · Λογαριασμός: από την ενδιάμεση ανάλωση στο εισόδημα,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
@@ -213,6 +290,10 @@ SPG06,2018,569168,Sheet1,warning,skipped_column,column 20 (Ροδιές) not imp
 SPG06,2018,569168,Sheet1,warning,skipped_column,column 21 (Ροδιές) not imported: column 21 (Ροδιές) has no marker although the table numbers its measures
 SPK33,2018,569337,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
 SPK33,2018,569337,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPA06,2019,433838,spr_yda_ds5_19 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2019,433839,Πίνακας 1 Εγκαταστάσεις,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2019,433840,spr_yda_ds4_19 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2019,433841,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SPG06,2019,444302,ΠΙΝΑΚΑΣ 2(η),warning,total_differs_from_parts,"13 published totals differ from the sum of their parts, e.g. EL51 Πατάτες > Σύνολο [area]: units add up to 0, region total is 28511"
 SPG06,2019,444305,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2019 publication; ignored as a stale sheet
 SPG06,2019,444305,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
@@ -233,6 +314,10 @@ SEL61,2019,540797,Βασικές Τιμές · Παραγωγή του γεωρ�
 SEL61,2019,540797,Βασικές Τιμές · Παραγωγή του γεωργικού κλάδου,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SEL61,2019,540797,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2019,540797,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
+SPA06,2020,457226,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2020,457227,spr_yda_ds4_19 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2020,457228,Πίνακας 1 Εγκαταστάσεις,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2020,457229,spr_yda_ds5_19 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SPG06,2020,503799,Sheet2,warning,skipped_column,column 14 (Αραβόσιτος χλωρός) not imported: column 14 (Αραβόσιτος χλωρός) has no marker although the table numbers its measures
 SPG06,2020,503799,Sheet2,warning,skipped_column,column 15 (Αραβόσιτος χλωρός) not imported: column 15 (Αραβόσιτος χλωρός) has no marker although the table numbers its measures
 SPG06,2020,503804,Sheet1,info,source_correction,"the title says 2021, but the values equal the 2020 garden land of table 1 in the same publication"
@@ -249,6 +334,10 @@ SEL61,2020,540802,Βασικές Τιμές · Παραγωγή του γεωρ�
 SEL61,2020,540802,Βασικές Τιμές · Παραγωγή του γεωργικού κλάδου,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SEL61,2020,540802,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
 SEL61,2020,540802,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
+SPA06,2021,488820,spr_yda_ds5_19 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2021,488821,Πίνακας 1 Εγκαταστάσεις,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2021,488822,spr_yda_ds4_19 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2021,488824,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SPG06,2021,505471,Πίνακας2(δ),warning,total_differs_from_parts,"2 published totals differ from the sum of their parts, e.g. EL53 Λοιπά [area]: units add up to 71, region total is 5558"
 SPG06,2021,505472,Sheet2,warning,skipped_column,column 14 (Αραβόσιτος χλωρός) not imported: column 14 (Αραβόσιτος χλωρός) has no marker although the table numbers its measures
 SPG06,2021,505472,Sheet2,warning,skipped_column,column 15 (Αραβόσιτος χλωρός) not imported: column 15 (Αραβόσιτος χλωρός) has no marker although the table numbers its measures
@@ -268,6 +357,11 @@ SEL61,2021,540807,Βασικές Τιμές · Φυτική παραγωγή α�
 SEL61,2021,540807,Βασικές Τιμές · Φυτική παραγωγή ανά προϊόν,info,source_note,"Τα δεδομένα των Οικονομικών Λογαριασμών Γεωργίας κατά γεωγραφική ζώνη και περιφέρεια για την περίοδο 2010-2022, έχουν αναθεωρηθεί ώστε να είναι σε συνάφεια με την αναθεώρηση έτους βάσης των ετήσιων εθνικών λογαριασμών."
 SPK33,2021,569301,Sheet1,warning,skipped_column,column 1 (Δέρματα νωπά (τεμάχια) > Μικρών ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
 SPK33,2021,569301,Sheet1,warning,skipped_column,column 2 (Δέρματα νωπά (τεμάχια) > Μεγάλων ζώων) not imported: skins: the header says pieces but the figures alternate between pieces and thousand pieces from year to year
+SPA06,2022,512702,spr_yda_ds2_22 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2022,512703,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2022,512704,spr_yda_ds4_22 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2022,512705,spr_yda_ds1_22,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2022,512706,spr_yda_ds5_22 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SPK33,2022,525057,,warning,year_on_year_jump,lv_other.koykoylia_chlora (production): 36.562 in 2021 and 2120.37 in 2022 for the whole country; check the unit and the definition before comparing the two years
 SEL61,2022,540812,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,* Προσωρινά στοιχεία
 SEL61,2022,540812,Βασικές Τιμές · Ζωική παραγωγή ανά προϊόν,info,source_note,"Οι εργασίες αναθεώρησης των δεδομένων για την περίοδο 2000-2009 είναι σε εξέλιξη, και ως εκ τούτου στο έτος 2010 υπάρχει διακοπή της χρονοσειράς, μεταξύ των μη αναθεωρημένων δεδομένων της περιόδου 2000-2009 και των αναθεωρημένων της περιόδου 2010-2022."
@@ -285,6 +379,12 @@ SPG06,2022,569472,Sheet2,warning,skipped_column,column 14 (Αραβόσιτος 
 SPG06,2022,569472,Sheet2,warning,skipped_column,column 15 (Αραβόσιτος χλωρός) not imported: column 15 (Αραβόσιτος χλωρός) has no marker although the table numbers its measures
 SPG06,2022,569476,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2022 publication; ignored as a stale sheet
 SPG06,2022,569476,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
+SPA06,2023,547491,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2023,547492,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2023,547493,Φύλλο1,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2023,547493,Φύλλο2,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2023,547493,Φύλλο3,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2023,547494,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 SPG06,2023,569405,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2023 publication; ignored as a stale sheet
 SPG06,2023,569405,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
 SPK33,2023,574436,,warning,year_on_year_jump,lv_stock.kypseles_melisson.egchories (hives): 108645 in 2022 and 3662 in 2023 for the whole country; check the unit and the definition before comparing the two years
@@ -294,6 +394,11 @@ SPG32,2023,579662,ΠΙΝΑΚΑΣ (TABLE) 09,warning,total_differs_from_parts,"1 
 SEL61,2023,579762,Φύλλο1 · Λογαριασμός: από την ενδιάμεση ανάλωση στο εισόδημα,warning,total_differs_from_parts,"49 published totals differ from the sum of their parts, e.g. EL 22: the formula (20-21) gives 5173.93, the table has 6084.73"
 SPG06,2024,595891,Πίνακας4α (1),warning,stale_sheet,sheet is for 2011 in the 2024 publication; ignored as a stale sheet
 SPG06,2024,595891,Πίνακας4α (2),warning,continuation_sheet,continuation sheet of a table that is already complete in the workbook
+SPA06,2024,598024,Φύλλο1 · Απασχολούμενοι στις υδατοκαλλιέργειες,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2024,598025,Φύλλο3,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2024,598026,Φύλλο1 · Παραγωγή γόνου,info,ref_year_from_publication,the sheet title states no year; the publication year is used
+SPA06,2024,598027,Φύλλο2,warning,skipped_sheet,sheet not imported: the table of facilities or of the rearing methods
+SPA06,2024,598028,Φύλλο1 · Ποσότητα και αξία εκτρεφόμενων ειδών,info,ref_year_from_publication,the sheet title states no year; the publication year is used
 DKT33,2025,114688,ΑΣΠ-2025 · 2000,info,source_note,the annual change of the first year is empty in the source
 DKT33,2025,114688,ΑΣΠ-2025 · 2001,info,source_note,the annual change of the first year is empty in the source
 DKT33,2025,114688,ΑΣΠ-2025 · 2002,info,source_note,the annual change of the first year is empty in the source

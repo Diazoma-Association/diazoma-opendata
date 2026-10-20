@@ -51,6 +51,12 @@ SOURCES = {
         "first_year": 2000, "editions": None, "latest_only": True,
         "release": lambda title: "Δείκτες Τιμών Εισροών-Εκροών στη Γεωργία" in title,
     },
+    "SPA06": {
+        "dir": "spa06", "module": "agri_aquaculture", "title": "Ετήσια Έρευνα Υδατοκαλλιεργειών", "frequency": "Ετήσια",
+        "description": "Ποσότητα και αξία εκτρεφόμενων ειδών, παραγωγή γόνου και απασχολούμενοι στις υδατοκαλλιέργειες· μόνο σύνολο χώρας.",
+        "first_year": 2002, "editions": None,
+        "release": lambda title: title.strip().rstrip(".") == "Έρευνα Υδατοκαλλιεργειών",
+    },
     "SPK33": {
         "dir": "spk33", "module": "agri_livestock", "title": "Ετήσια Στατιστική Έρευνα Ζωικού Κεφαλαίου και Κτηνοτροφικής Παραγωγής",
         "frequency": "Ετήσια", "description": "Ζωικό κεφάλαιο, γεννήσεις, αρμεγμένα ζώα και κτηνοτροφικά προϊόντα ανά Περιφέρεια και Περιφερειακή Ενότητα.",

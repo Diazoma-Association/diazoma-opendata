@@ -222,6 +222,44 @@ def build_prices():
     return json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
 
 
+AQUA_HTML = ROOT / "agrifood" / "aquaculture" / "index.html"
+AQUA_BLOCK = re.compile(r'(<script id="agri-aqua" type="application/json">)(.*?)(</script>)', re.S)
+
+
+def build_aquaculture():
+    """Payload of the aquaculture page (national totals only).
+
+    tables  [[table_key, name], …]
+    items   [[product code, table index, name, group, total?], …]
+    data    per item: {variable: {water: {year: number | "d" (dash of the source) | "x" (confidential)}}}
+    tab     {table_key: {year: [edition, document id, stage, publication date, "", last update]}}
+    """
+    names = {"aq_production": "Ποσότητα και αξία εκτρεφόμενων ειδών", "aq_juveniles": "Παραγωγή γόνου", "aq_employment": "Απασχολούμενοι"}
+    products = [p for p in read("agri_products.csv") if p["dataset"] == "SPA06"]
+    tables = [t for t in names if any(p["table_key"] == t for p in products)]
+    order = ["Γενικό σύνολο", "Σύνολο ομάδας"]
+    products.sort(key=lambda p: (tables.index(p["table_key"]), 0 if p["path"] == "Γενικό σύνολο" else 1,
+                                 ["Ψάρια", "Καρκινοειδή", "Μαλάκια", "Υδρόβια φυτά και φύκη"].index(p["subcategory"]) if p["subcategory"] in ("Ψάρια", "Καρκινοειδή", "Μαλάκια", "Υδρόβια φυτά και φύκη") else 9,
+                                 0 if p["name_el"].endswith("Σύνολο ομάδας") else 1, p["name_el"]))
+    index = {p["product_code"]: i for i, p in enumerate(products)}
+    data = [{} for _ in products]
+    updated = {}
+    observations = [o for o in read("agri_observations.csv") if o["dataset"] == "SPA06"]
+    for o in observations:
+        v = number(o["value"]) if o["status"] == "ok" else ("d" if o["status"] == "dash" else "x" if o["status"] == "confidential" else None)
+        data[index[o["product_code"]]].setdefault(o["variable"], {}).setdefault(o["qualifier"], {})[o["ref_year"]] = v
+        updated[(o["table_key"], o["ref_year"])] = max(updated.get((o["table_key"], o["ref_year"]), ""), o["last_updated"])
+    tab = defaultdict(dict)
+    for p in read("agri_publications.csv"):
+        if p["dataset"] == "SPA06":
+            tab[p["table_key"]][p["ref_year"]] = [int(p["edition"]), p["doc_id"], p["stage"], p["publication_date"], "", updated.get((p["table_key"], p["ref_year"]), "")]
+    issues = sorted({i["message"] for i in read("agri_import_issues.csv") if i["dataset"] == "SPA06" and i["code"] == "total_differs_from_parts"})
+    payload = {"meta": {"statistics": len(observations), "updated": max(updated.values())}, "tables": [[t, names[t]] for t in tables],
+               "items": [[p["product_code"], tables.index(p["table_key"]), p["name_el"].replace(" – ", " · "), p["subcategory"], int(p["is_total"] == "1")] for p in products],
+               "data": data, "tab": tab, "issues": issues}
+    return json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+
+
 PROFILE_HTML = ROOT / "agrifood" / "regional-profile" / "index.html"
 PROFILE_BLOCK = re.compile(r'(<script id="agri-profile" type="application/json">)(.*?)(</script>)', re.S)
 REGION_CODES = ["EL51", "EL52", "EL53", "EL54", "EL61", "EL62", "EL63", "EL64", "EL65", "EL30", "EL41", "EL42", "EL43"]
@@ -397,6 +435,19 @@ def main():
         else:
             PROFILE_HTML.write_text(document, encoding="utf-8")
             print(f"regional-profile: wrote {len(blocks[0][1]):,} characters of data into {PROFILE_HTML.relative_to(ROOT)}")
+    if AQUA_HTML.exists():
+        document = AQUA_HTML.read_text(encoding="utf-8")
+        generated = build_aquaculture()
+        match = AQUA_BLOCK.search(document)
+        if not match:
+            sys.exit(f"no agri-aqua block found in {AQUA_HTML}")
+        if check:
+            if match.group(2).strip() != generated:
+                sys.exit(f"agri-aqua in {AQUA_HTML.relative_to(ROOT)} is out of date with the CSV files; run scripts/build_agriculture_data.py")
+            print(f"OK: aquaculture: data in the dashboard matches the CSVs ({len(generated):,} characters).")
+        else:
+            AQUA_HTML.write_text(document[:match.start(2)] + generated + document[match.end(2):], encoding="utf-8")
+            print(f"aquaculture: wrote {len(generated):,} characters of data into {AQUA_HTML.relative_to(ROOT)}")
     if PRICES_HTML.exists():
         document = PRICES_HTML.read_text(encoding="utf-8")
         generated = build_prices()
